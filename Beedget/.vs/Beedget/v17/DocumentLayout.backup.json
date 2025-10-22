@@ -1,0 +1,81 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admig\\Documents\\Beedget system\\Beedget\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4EE91C20-E518-4A42-929C-4BE56A1A4D8C}|Beedget\\Beedget.csproj|C:\\Users\\Admig\\Documents\\Beedget system\\Beedget\\beedget\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EE91C20-E518-4A42-929C-4BE56A1A4D8C}|Beedget\\Beedget.csproj|solutionrelative:beedget\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EE91C20-E518-4A42-929C-4BE56A1A4D8C}|Beedget\\Beedget.csproj|c:\\users\\admig\\documents\\beedget system\\beedget\\beedget\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EE91C20-E518-4A42-929C-4BE56A1A4D8C}|Beedget\\Beedget.csproj|solutionrelative:beedget\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EE91C20-E518-4A42-929C-4BE56A1A4D8C}|Beedget\\Beedget.csproj|C:\\Users\\Admig\\Documents\\Beedget system\\Beedget\\beedget\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EE91C20-E518-4A42-929C-4BE56A1A4D8C}|Beedget\\Beedget.csproj|solutionrelative:beedget\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LogIn.cs",
+              "DocumentMoniker": "C:\\Users\\Admig\\Documents\\Beedget system\\Beedget\\Beedget\\LogIn.cs",
+              "RelativeDocumentMoniker": "Beedget\\LogIn.cs",
+              "ToolTip": "C:\\Users\\Admig\\Documents\\Beedget system\\Beedget\\Beedget\\LogIn.cs",
+              "RelativeToolTip": "Beedget\\LogIn.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAEwEEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T09:48:16.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LogIn.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admig\\Documents\\Beedget system\\Beedget\\Beedget\\LogIn.cs",
+              "RelativeDocumentMoniker": "Beedget\\LogIn.cs",
+              "ToolTip": "C:\\Users\\Admig\\Documents\\Beedget system\\Beedget\\Beedget\\LogIn.cs [Design]",
+              "RelativeToolTip": "Beedget\\LogIn.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T07:41:13.157Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Signup.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admig\\Documents\\Beedget system\\Beedget\\Beedget\\Signup.cs",
+              "RelativeDocumentMoniker": "Beedget\\Signup.cs",
+              "ToolTip": "C:\\Users\\Admig\\Documents\\Beedget system\\Beedget\\Beedget\\Signup.cs [Design]",
+              "RelativeToolTip": "Beedget\\Signup.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T09:17:43.528Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

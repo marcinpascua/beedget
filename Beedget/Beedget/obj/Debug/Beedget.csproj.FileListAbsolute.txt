@@ -1,0 +1,12 @@
+C:\Users\Admig\source\repos\Beedget\Beedget\bin\Debug\Beedget.exe.config
+C:\Users\Admig\source\repos\Beedget\Beedget\bin\Debug\Beedget.exe
+C:\Users\Admig\source\repos\Beedget\Beedget\bin\Debug\Beedget.pdb
+C:\Users\Admig\source\repos\Beedget\Beedget\obj\Debug\Beedget.csproj.AssemblyReference.cache
+C:\Users\Admig\source\repos\Beedget\Beedget\obj\Debug\Beedget.LogIn.resources
+C:\Users\Admig\source\repos\Beedget\Beedget\obj\Debug\Beedget.Properties.Resources.resources
+C:\Users\Admig\source\repos\Beedget\Beedget\obj\Debug\Beedget.csproj.GenerateResource.cache
+C:\Users\Admig\source\repos\Beedget\Beedget\obj\Debug\Beedget.csproj.CoreCompileInputs.cache
+C:\Users\Admig\source\repos\Beedget\Beedget\obj\Debug\Beedget.exe
+C:\Users\Admig\source\repos\Beedget\Beedget\obj\Debug\Beedget.pdb
+C:\Users\Admig\source\repos\Beedget\Beedget\obj\Debug\Beedget.exe.config
+C:\Users\Admig\source\repos\Beedget\Beedget\obj\Debug\Beedget.Signup.resources
