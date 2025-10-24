@@ -12,9 +12,21 @@ namespace Beedget
 {
     public partial class LogIn : Form
     {
+        private BeedgetDBEntities db = new BeedgetDBEntities();
+
         public LogIn()
         {
             InitializeComponent();
+        }
+
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public static void LoadData()
+        {
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -42,10 +54,7 @@ namespace Beedget
 
         }
 
-        private void login_btn_Click_1(object sender, EventArgs e)
-        {
-
-        }
+   
 
         private void username_bg_Click(object sender, EventArgs e)
         {
@@ -63,5 +72,7 @@ namespace Beedget
             signupForm.Show();
             this.Hide();
         }
+
+    
     }
 }

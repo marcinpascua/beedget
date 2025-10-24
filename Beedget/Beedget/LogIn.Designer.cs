@@ -34,18 +34,20 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.login_btn = new System.Windows.Forms.PictureBox();
-            this.username_bg = new System.Windows.Forms.PictureBox();
-            this.password_tb = new System.Windows.Forms.PictureBox();
-            this.tb_password = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.signup_link = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.tb_password = new System.Windows.Forms.TextBox();
+            this.password_tb = new System.Windows.Forms.PictureBox();
+            this.username_bg = new System.Windows.Forms.PictureBox();
+            this.subheader = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.login_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.username_bg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.password_tb)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.password_tb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.username_bg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subheader)).BeginInit();
             this.SuspendLayout();
             // 
             // username_label
@@ -84,11 +86,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.login_btn);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.tb_password);
             this.panel1.Controls.Add(this.password_tb);
             this.panel1.Controls.Add(this.tb_username);
-            this.panel1.Controls.Add(this.login_btn);
             this.panel1.Controls.Add(this.username_bg);
             this.panel1.Controls.Add(this.username_label);
             this.panel1.Location = new System.Drawing.Point(64, 352);
@@ -101,47 +103,20 @@
             this.login_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("login_btn.BackgroundImage")));
             this.login_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.login_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.login_btn.Location = new System.Drawing.Point(20, 171);
+            this.login_btn.Location = new System.Drawing.Point(20, 163);
             this.login_btn.Name = "login_btn";
-            this.login_btn.Size = new System.Drawing.Size(372, 80);
-            this.login_btn.TabIndex = 8;
+            this.login_btn.Size = new System.Drawing.Size(372, 79);
+            this.login_btn.TabIndex = 10;
             this.login_btn.TabStop = false;
             // 
-            // username_bg
+            // panel2
             // 
-            this.username_bg.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("username_bg.BackgroundImage")));
-            this.username_bg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.username_bg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.username_bg.Location = new System.Drawing.Point(20, 3);
-            this.username_bg.Name = "username_bg";
-            this.username_bg.Size = new System.Drawing.Size(372, 74);
-            this.username_bg.TabIndex = 9;
-            this.username_bg.TabStop = false;
-            this.username_bg.Click += new System.EventHandler(this.username_bg_Click);
-            // 
-            // password_tb
-            // 
-            this.password_tb.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("password_tb.BackgroundImage")));
-            this.password_tb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.password_tb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.password_tb.Location = new System.Drawing.Point(20, 91);
-            this.password_tb.Name = "password_tb";
-            this.password_tb.Size = new System.Drawing.Size(372, 74);
-            this.password_tb.TabIndex = 10;
-            this.password_tb.TabStop = false;
-            // 
-            // tb_password
-            // 
-            this.tb_password.BackColor = System.Drawing.Color.White;
-            this.tb_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_password.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_password.ForeColor = System.Drawing.Color.Black;
-            this.tb_password.Location = new System.Drawing.Point(66, 110);
-            this.tb_password.Margin = new System.Windows.Forms.Padding(5);
-            this.tb_password.Name = "tb_password";
-            this.tb_password.Size = new System.Drawing.Size(316, 31);
-            this.tb_password.TabIndex = 11;
-            this.tb_password.Text = "password";
+            this.panel2.Controls.Add(this.signup_link);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(0, 249);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(409, 46);
+            this.panel2.TabIndex = 10;
             // 
             // signup_link
             // 
@@ -166,14 +141,52 @@
             this.label1.Text = "Don\'t have an account?";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // panel2
+            // tb_password
             // 
-            this.panel2.Controls.Add(this.signup_link);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(0, 249);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(409, 46);
-            this.panel2.TabIndex = 10;
+            this.tb_password.BackColor = System.Drawing.Color.White;
+            this.tb_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_password.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_password.ForeColor = System.Drawing.Color.Black;
+            this.tb_password.Location = new System.Drawing.Point(66, 101);
+            this.tb_password.Margin = new System.Windows.Forms.Padding(5);
+            this.tb_password.Name = "tb_password";
+            this.tb_password.Size = new System.Drawing.Size(316, 31);
+            this.tb_password.TabIndex = 11;
+            this.tb_password.Text = "password";
+            // 
+            // password_tb
+            // 
+            this.password_tb.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("password_tb.BackgroundImage")));
+            this.password_tb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.password_tb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.password_tb.Location = new System.Drawing.Point(20, 83);
+            this.password_tb.Name = "password_tb";
+            this.password_tb.Size = new System.Drawing.Size(372, 74);
+            this.password_tb.TabIndex = 10;
+            this.password_tb.TabStop = false;
+            // 
+            // username_bg
+            // 
+            this.username_bg.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("username_bg.BackgroundImage")));
+            this.username_bg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.username_bg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.username_bg.Location = new System.Drawing.Point(20, 3);
+            this.username_bg.Name = "username_bg";
+            this.username_bg.Size = new System.Drawing.Size(372, 74);
+            this.username_bg.TabIndex = 9;
+            this.username_bg.TabStop = false;
+            this.username_bg.Click += new System.EventHandler(this.username_bg_Click);
+            // 
+            // subheader
+            // 
+            this.subheader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.subheader.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("subheader.BackgroundImage")));
+            this.subheader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.subheader.Location = new System.Drawing.Point(110, 282);
+            this.subheader.Name = "subheader";
+            this.subheader.Size = new System.Drawing.Size(315, 32);
+            this.subheader.TabIndex = 8;
+            this.subheader.TabStop = false;
             // 
             // LogIn
             // 
@@ -181,6 +194,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(86)))));
             this.ClientSize = new System.Drawing.Size(546, 814);
+            this.Controls.Add(this.subheader);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -188,14 +202,16 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log in";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.Load += new System.EventHandler(this.LogIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.login_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.username_bg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.password_tb)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.password_tb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.username_bg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subheader)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -205,13 +221,14 @@
         private System.Windows.Forms.TextBox tb_username;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox login_btn;
         private System.Windows.Forms.PictureBox username_bg;
         private System.Windows.Forms.PictureBox password_tb;
         private System.Windows.Forms.TextBox tb_password;
         private System.Windows.Forms.Label signup_link;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox login_btn;
+        private System.Windows.Forms.PictureBox subheader;
     }
 }
 

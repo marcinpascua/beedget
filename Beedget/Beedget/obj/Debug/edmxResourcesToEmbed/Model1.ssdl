@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Beedget.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BeedgetDB.dbo.Checklist' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Checklist">
+    <Key>
+      <PropertyRef Name="GoalID" />
+      <PropertyRef Name="CategoryID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="GoalName" />
+      <PropertyRef Name="DateAchieved" />
+    </Key>
+    <Property Name="GoalID" Type="int" Nullable="false" />
+    <Property Name="CategoryID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="GoalName" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="DateAchieved" Type="date" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BeedgetDB.dbo.ExpenseType' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ExpenseType">
+    <Key>
+      <PropertyRef Name="ExpenseID" />
+      <PropertyRef Name="CategoryID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="ExpenseName" />
+      <PropertyRef Name="Amount" />
+      <PropertyRef Name="Date" />
+    </Key>
+    <Property Name="ExpenseID" Type="int" Nullable="false" />
+    <Property Name="CategoryID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="ExpenseName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BeedgetDB.dbo.SavingsType' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SavingsType">
+    <Key>
+      <PropertyRef Name="SavingsID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="SavingsName" />
+      <PropertyRef Name="CategoryName" />
+      <PropertyRef Name="TargetAmount" />
+      <PropertyRef Name="CurrentAmount" />
+      <PropertyRef Name="TargetDate" />
+    </Key>
+    <Property Name="SavingsID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="SavingsName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TargetAmount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CurrentAmount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="TargetDate" Type="date" Nullable="false" />
+    <Property Name="AddNotes" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BeedgetDB.dbo.User' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="Username" />
+      <PropertyRef Name="Email" />
+      <PropertyRef Name="Password" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="BeedgetStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Checklist" EntityType="Self.Checklist" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Checklist].[GoalID] AS [GoalID], 
+[Checklist].[CategoryID] AS [CategoryID], 
+[Checklist].[UserID] AS [UserID], 
+[Checklist].[GoalName] AS [GoalName], 
+[Checklist].[DateAchieved] AS [DateAchieved]
+FROM [dbo].[Checklist] AS [Checklist]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ExpenseType" EntityType="Self.ExpenseType" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[ExpenseType].[ExpenseID] AS [ExpenseID], 
+[ExpenseType].[CategoryID] AS [CategoryID], 
+[ExpenseType].[UserID] AS [UserID], 
+[ExpenseType].[ExpenseName] AS [ExpenseName], 
+[ExpenseType].[Amount] AS [Amount], 
+[ExpenseType].[Date] AS [Date]
+FROM [dbo].[ExpenseType] AS [ExpenseType]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SavingsType" EntityType="Self.SavingsType" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[SavingsType].[SavingsID] AS [SavingsID], 
+[SavingsType].[UserID] AS [UserID], 
+[SavingsType].[SavingsName] AS [SavingsName], 
+[SavingsType].[CategoryName] AS [CategoryName], 
+[SavingsType].[TargetAmount] AS [TargetAmount], 
+[SavingsType].[CurrentAmount] AS [CurrentAmount], 
+[SavingsType].[TargetDate] AS [TargetDate], 
+[SavingsType].[AddNotes] AS [AddNotes]
+FROM [dbo].[SavingsType] AS [SavingsType]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="User" EntityType="Self.User" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[User].[UserID] AS [UserID], 
+[User].[Username] AS [Username], 
+[User].[Email] AS [Email], 
+[User].[Password] AS [Password]
+FROM [dbo].[User] AS [User]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

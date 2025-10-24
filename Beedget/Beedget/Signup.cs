@@ -16,5 +16,10 @@ namespace Beedget
         {
             InitializeComponent();
         }
+
+        private void tb_password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

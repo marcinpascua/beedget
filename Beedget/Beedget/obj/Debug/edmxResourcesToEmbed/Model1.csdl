@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Beedget" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Checklist">
+    <Key>
+      <PropertyRef Name="GoalID" />
+      <PropertyRef Name="CategoryID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="GoalName" />
+      <PropertyRef Name="DateAchieved" />
+    </Key>
+    <Property Name="GoalID" Type="Int32" Nullable="false" />
+    <Property Name="CategoryID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="GoalName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="DateAchieved" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="ExpenseType">
+    <Key>
+      <PropertyRef Name="ExpenseID" />
+      <PropertyRef Name="CategoryID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="ExpenseName" />
+      <PropertyRef Name="Amount" />
+      <PropertyRef Name="Date" />
+    </Key>
+    <Property Name="ExpenseID" Type="Int32" Nullable="false" />
+    <Property Name="CategoryID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="ExpenseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="SavingsType">
+    <Key>
+      <PropertyRef Name="SavingsID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="SavingsName" />
+      <PropertyRef Name="CategoryName" />
+      <PropertyRef Name="TargetAmount" />
+      <PropertyRef Name="CurrentAmount" />
+      <PropertyRef Name="TargetDate" />
+    </Key>
+    <Property Name="SavingsID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="SavingsName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TargetAmount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CurrentAmount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="TargetDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="AddNotes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="Username" />
+      <PropertyRef Name="Email" />
+      <PropertyRef Name="Password" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="BeedgetDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Checklist" EntityType="Self.Checklist" />
+    <EntitySet Name="ExpenseType" EntityType="Self.ExpenseType" />
+    <EntitySet Name="SavingsType" EntityType="Self.SavingsType" />
+    <EntitySet Name="User" EntityType="Self.User" />
+  </EntityContainer>
+</Schema>
