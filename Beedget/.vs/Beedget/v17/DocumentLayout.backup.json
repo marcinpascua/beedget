@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{4EE91C20-E518-4A42-929C-4BE56A1A4D8C}|Beedget\\Beedget.csproj|solutionrelative:beedget\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{4EE91C20-E518-4A42-929C-4BE56A1A4D8C}|Beedget\\Beedget.csproj|C:\\Users\\Admig\\Documents\\Beedget\\Beedget\\beedget\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{4EE91C20-E518-4A42-929C-4BE56A1A4D8C}|Beedget\\Beedget.csproj|solutionrelative:beedget\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4EE91C20-E518-4A42-929C-4BE56A1A4D8C}|Beedget\\Beedget.csproj|c:\\users\\admig\\documents\\beedget\\beedget\\beedget\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4EE91C20-E518-4A42-929C-4BE56A1A4D8C}|Beedget\\Beedget.csproj|solutionrelative:beedget\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4EE91C20-E518-4A42-929C-4BE56A1A4D8C}|Beedget\\Beedget.csproj|C:\\Users\\Admig\\Documents\\Beedget\\Beedget\\beedget\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4EE91C20-E518-4A42-929C-4BE56A1A4D8C}|Beedget\\Beedget.csproj|solutionrelative:beedget\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EE91C20-E518-4A42-929C-4BE56A1A4D8C}|Beedget\\Beedget.csproj|C:\\Users\\Admig\\Documents\\Beedget\\Beedget\\beedget\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
-      "RelativeMoniker": "D:0:0:{4EE91C20-E518-4A42-929C-4BE56A1A4D8C}|Beedget\\Beedget.csproj|solutionrelative:beedget\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4EE91C20-E518-4A42-929C-4BE56A1A4D8C}|Beedget\\Beedget.csproj|C:\\Users\\Admig\\Documents\\Beedget\\Beedget\\beedget\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +42,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Dashboard.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admig\\Documents\\Beedget\\Beedget\\Beedget\\Dashboard.cs",
               "RelativeDocumentMoniker": "Beedget\\Dashboard.cs",
@@ -54,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Dashboard.cs",
               "DocumentMoniker": "C:\\Users\\Admig\\Documents\\Beedget\\Beedget\\Beedget\\Dashboard.cs",
               "RelativeDocumentMoniker": "Beedget\\Dashboard.cs",
@@ -67,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Signup.cs",
               "DocumentMoniker": "C:\\Users\\Admig\\Documents\\Beedget\\Beedget\\Beedget\\Signup.cs",
               "RelativeDocumentMoniker": "Beedget\\Signup.cs",
@@ -80,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Model1.edmx [Diagram1]",
               "DocumentMoniker": "C:\\Users\\Admig\\Documents\\Beedget\\Beedget\\Beedget\\Model1.edmx",
               "RelativeDocumentMoniker": "Beedget\\Model1.edmx",
