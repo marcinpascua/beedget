@@ -13,10 +13,10 @@ namespace Beedget
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BeedgetDBEntities : DbContext
+    public partial class BeedgetEntities : DbContext
     {
-        public BeedgetDBEntities()
-            : base("name=BeedgetDBEntities")
+        public BeedgetEntities()
+            : base("name=BeedgetEntities")
         {
         }
     
@@ -25,10 +25,10 @@ namespace Beedget
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<Budget> Budget { get; set; }
+        public DbSet<BudgetType> BudgetType { get; set; }
+        public DbSet<Roles> Roles { get; set; }
         public DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public DbSet<Checklist> Checklist { get; set; }
-        public DbSet<ExpenseType> ExpenseType { get; set; }
-        public DbSet<SavingsType> SavingsType { get; set; }
-        public DbSet<User> User { get; set; }
+        public DbSet<Users> Users { get; set; }
     }
 }

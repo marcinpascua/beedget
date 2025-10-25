@@ -71,7 +71,7 @@
             this.tb_username.Size = new System.Drawing.Size(316, 31);
             this.tb_username.TabIndex = 2;
             this.tb_username.Text = "username";
-            this.tb_username.TextChanged += new System.EventHandler(this.tb_username_TextChanged);
+            this.tb_username.Click += new System.EventHandler(this.tb_username_TextChanged);
             // 
             // pictureBox1
             // 
@@ -108,6 +108,7 @@
             this.login_btn.Size = new System.Drawing.Size(372, 79);
             this.login_btn.TabIndex = 10;
             this.login_btn.TabStop = false;
+            this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
             // 
             // panel2
             // 
@@ -139,7 +140,6 @@
             this.label1.Size = new System.Drawing.Size(199, 22);
             this.label1.TabIndex = 9;
             this.label1.Text = "Don\'t have an account?";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tb_password
             // 
@@ -147,12 +147,13 @@
             this.tb_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_password.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_password.ForeColor = System.Drawing.Color.Black;
-            this.tb_password.Location = new System.Drawing.Point(66, 101);
+            this.tb_password.Location = new System.Drawing.Point(66, 104);
             this.tb_password.Margin = new System.Windows.Forms.Padding(5);
             this.tb_password.Name = "tb_password";
             this.tb_password.Size = new System.Drawing.Size(316, 31);
             this.tb_password.TabIndex = 11;
             this.tb_password.Text = "password";
+            this.tb_password.Click += new System.EventHandler(this.tb_password_TextChanged);
             // 
             // password_tb
             // 
@@ -175,7 +176,6 @@
             this.username_bg.Size = new System.Drawing.Size(372, 74);
             this.username_bg.TabIndex = 9;
             this.username_bg.TabStop = false;
-            this.username_bg.Click += new System.EventHandler(this.username_bg_Click);
             // 
             // subheader
             // 
@@ -200,8 +200,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Log in";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.Text = "Beedget | Log in";
             this.Load += new System.EventHandler(this.LogIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);

@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.notif_btn = new System.Windows.Forms.Panel();
-            this.add_btn = new System.Windows.Forms.Panel();
             this.checklist_btn = new System.Windows.Forms.Panel();
+            this.add_btn = new System.Windows.Forms.Panel();
+            this.notif_btn = new System.Windows.Forms.Panel();
             this.home_btn = new System.Windows.Forms.PictureBox();
             this.logout_btn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -65,16 +65,16 @@
             this.panel1.Size = new System.Drawing.Size(472, 100);
             this.panel1.TabIndex = 2;
             // 
-            // notif_btn
+            // checklist_btn
             // 
-            this.notif_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.notif_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("notif_btn.BackgroundImage")));
-            this.notif_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.notif_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.notif_btn.Location = new System.Drawing.Point(79, 16);
-            this.notif_btn.Name = "notif_btn";
-            this.notif_btn.Size = new System.Drawing.Size(58, 68);
-            this.notif_btn.TabIndex = 0;
+            this.checklist_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.checklist_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checklist_btn.BackgroundImage")));
+            this.checklist_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.checklist_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checklist_btn.Location = new System.Drawing.Point(329, 16);
+            this.checklist_btn.Name = "checklist_btn";
+            this.checklist_btn.Size = new System.Drawing.Size(58, 68);
+            this.checklist_btn.TabIndex = 2;
             // 
             // add_btn
             // 
@@ -87,16 +87,16 @@
             this.add_btn.Size = new System.Drawing.Size(58, 68);
             this.add_btn.TabIndex = 1;
             // 
-            // checklist_btn
+            // notif_btn
             // 
-            this.checklist_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.checklist_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checklist_btn.BackgroundImage")));
-            this.checklist_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.checklist_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checklist_btn.Location = new System.Drawing.Point(329, 16);
-            this.checklist_btn.Name = "checklist_btn";
-            this.checklist_btn.Size = new System.Drawing.Size(58, 68);
-            this.checklist_btn.TabIndex = 2;
+            this.notif_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.notif_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("notif_btn.BackgroundImage")));
+            this.notif_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.notif_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.notif_btn.Location = new System.Drawing.Point(79, 16);
+            this.notif_btn.Name = "notif_btn";
+            this.notif_btn.Size = new System.Drawing.Size(58, 68);
+            this.notif_btn.TabIndex = 0;
             // 
             // home_btn
             // 
@@ -136,6 +136,7 @@
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

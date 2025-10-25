@@ -1,8 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="BeedgetStoreContainer" CdmEntityContainer="BeedgetDBEntities">
+  <EntityContainerMapping StorageEntityContainer="BeedgetDBModelStoreContainer" CdmEntityContainer="BeedgetEntities">
+    <EntitySetMapping Name="Budget">
+      <EntityTypeMapping TypeName="BeedgetDBModel.Budget">
+        <MappingFragment StoreEntitySet="Budget">
+          <ScalarProperty Name="BudgetID" ColumnName="BudgetID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="TargetAmount" ColumnName="TargetAmount" />
+          <ScalarProperty Name="CurrentAmount" ColumnName="CurrentAmount" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="TargetDate" ColumnName="TargetDate" />
+          <ScalarProperty Name="isAchieved" ColumnName="isAchieved" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="BudgetTypeID" ColumnName="BudgetTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BudgetType">
+      <EntityTypeMapping TypeName="BeedgetDBModel.BudgetType">
+        <MappingFragment StoreEntitySet="BudgetType">
+          <ScalarProperty Name="BudgetTypeID" ColumnName="BudgetTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="BeedgetDBModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="Beedget.sysdiagrams">
+      <EntityTypeMapping TypeName="BeedgetDBModel.sysdiagrams">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -12,50 +43,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Checklist">
-      <EntityTypeMapping TypeName="Beedget.Checklist">
-        <MappingFragment StoreEntitySet="Checklist">
-          <ScalarProperty Name="GoalID" ColumnName="GoalID" />
-          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
-          <ScalarProperty Name="UserID" ColumnName="UserID" />
-          <ScalarProperty Name="GoalName" ColumnName="GoalName" />
-          <ScalarProperty Name="DateAchieved" ColumnName="DateAchieved" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="ExpenseType">
-      <EntityTypeMapping TypeName="Beedget.ExpenseType">
-        <MappingFragment StoreEntitySet="ExpenseType">
-          <ScalarProperty Name="ExpenseID" ColumnName="ExpenseID" />
-          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
-          <ScalarProperty Name="UserID" ColumnName="UserID" />
-          <ScalarProperty Name="ExpenseName" ColumnName="ExpenseName" />
-          <ScalarProperty Name="Amount" ColumnName="Amount" />
-          <ScalarProperty Name="Date" ColumnName="Date" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="SavingsType">
-      <EntityTypeMapping TypeName="Beedget.SavingsType">
-        <MappingFragment StoreEntitySet="SavingsType">
-          <ScalarProperty Name="SavingsID" ColumnName="SavingsID" />
-          <ScalarProperty Name="UserID" ColumnName="UserID" />
-          <ScalarProperty Name="SavingsName" ColumnName="SavingsName" />
-          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
-          <ScalarProperty Name="TargetAmount" ColumnName="TargetAmount" />
-          <ScalarProperty Name="CurrentAmount" ColumnName="CurrentAmount" />
-          <ScalarProperty Name="TargetDate" ColumnName="TargetDate" />
-          <ScalarProperty Name="AddNotes" ColumnName="AddNotes" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="User">
-      <EntityTypeMapping TypeName="Beedget.User">
-        <MappingFragment StoreEntitySet="User">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="BeedgetDBModel.Users">
+        <MappingFragment StoreEntitySet="Users">
           <ScalarProperty Name="UserID" ColumnName="UserID" />
           <ScalarProperty Name="Username" ColumnName="Username" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

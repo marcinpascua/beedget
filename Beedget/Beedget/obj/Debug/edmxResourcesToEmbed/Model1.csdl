@@ -1,5 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="Beedget" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="BeedgetDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Budget">
+    <Key>
+      <PropertyRef Name="BudgetID" />
+    </Key>
+    <Property Name="BudgetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TargetAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CurrentAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DateAdded" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TargetDate" Type="DateTime" Precision="0" />
+    <Property Name="isAchieved" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="BudgetTypeID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BudgetType" Relationship="Self.FK_Budget_BudgetType" FromRole="Budget" ToRole="BudgetType" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Budget_Users" FromRole="Budget" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="BudgetType">
+    <Key>
+      <PropertyRef Name="BudgetTypeID" />
+    </Key>
+    <Property Name="BudgetTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Budget" Relationship="Self.FK_Budget_BudgetType" FromRole="BudgetType" ToRole="Budget" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Users_Roles" FromRole="Roles" ToRole="Users" />
+  </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
       <PropertyRef Name="diagram_id" />
@@ -10,72 +42,71 @@
     <Property Name="version" Type="Int32" />
     <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
-  <EntityType Name="Checklist">
-    <Key>
-      <PropertyRef Name="GoalID" />
-      <PropertyRef Name="CategoryID" />
-      <PropertyRef Name="UserID" />
-      <PropertyRef Name="GoalName" />
-      <PropertyRef Name="DateAchieved" />
-    </Key>
-    <Property Name="GoalID" Type="Int32" Nullable="false" />
-    <Property Name="CategoryID" Type="Int32" Nullable="false" />
-    <Property Name="UserID" Type="Int32" Nullable="false" />
-    <Property Name="GoalName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="DateAchieved" Type="DateTime" Nullable="false" Precision="0" />
-  </EntityType>
-  <EntityType Name="ExpenseType">
-    <Key>
-      <PropertyRef Name="ExpenseID" />
-      <PropertyRef Name="CategoryID" />
-      <PropertyRef Name="UserID" />
-      <PropertyRef Name="ExpenseName" />
-      <PropertyRef Name="Amount" />
-      <PropertyRef Name="Date" />
-    </Key>
-    <Property Name="ExpenseID" Type="Int32" Nullable="false" />
-    <Property Name="CategoryID" Type="Int32" Nullable="false" />
-    <Property Name="UserID" Type="Int32" Nullable="false" />
-    <Property Name="ExpenseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Amount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
-  </EntityType>
-  <EntityType Name="SavingsType">
-    <Key>
-      <PropertyRef Name="SavingsID" />
-      <PropertyRef Name="UserID" />
-      <PropertyRef Name="SavingsName" />
-      <PropertyRef Name="CategoryName" />
-      <PropertyRef Name="TargetAmount" />
-      <PropertyRef Name="CurrentAmount" />
-      <PropertyRef Name="TargetDate" />
-    </Key>
-    <Property Name="SavingsID" Type="Int32" Nullable="false" />
-    <Property Name="UserID" Type="Int32" Nullable="false" />
-    <Property Name="SavingsName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="TargetAmount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="CurrentAmount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="TargetDate" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="AddNotes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-  </EntityType>
-  <EntityType Name="User">
+  <EntityType Name="Users">
     <Key>
       <PropertyRef Name="UserID" />
-      <PropertyRef Name="Username" />
-      <PropertyRef Name="Email" />
-      <PropertyRef Name="Password" />
     </Key>
-    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Budget" Relationship="Self.FK_Budget_Users" FromRole="Users" ToRole="Budget" />
+    <NavigationProperty Name="Roles" Relationship="Self.FK_Users_Roles" FromRole="Users" ToRole="Roles" />
   </EntityType>
-  <EntityContainer Name="BeedgetDBEntities" annotation:LazyLoadingEnabled="true">
+  <Association Name="FK_Budget_BudgetType">
+    <End Role="BudgetType" Type="Self.BudgetType" Multiplicity="1" />
+    <End Role="Budget" Type="Self.Budget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BudgetType">
+        <PropertyRef Name="BudgetTypeID" />
+      </Principal>
+      <Dependent Role="Budget">
+        <PropertyRef Name="BudgetTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Budget_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Budget" Type="Self.Budget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Budget">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Roles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BeedgetEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Budget" EntityType="Self.Budget" />
+    <EntitySet Name="BudgetType" EntityType="Self.BudgetType" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-    <EntitySet Name="Checklist" EntityType="Self.Checklist" />
-    <EntitySet Name="ExpenseType" EntityType="Self.ExpenseType" />
-    <EntitySet Name="SavingsType" EntityType="Self.SavingsType" />
-    <EntitySet Name="User" EntityType="Self.User" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <AssociationSet Name="FK_Budget_BudgetType" Association="Self.FK_Budget_BudgetType">
+      <End Role="BudgetType" EntitySet="BudgetType" />
+      <End Role="Budget" EntitySet="Budget" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Budget_Users" Association="Self.FK_Budget_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Budget" EntitySet="Budget" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Roles" Association="Self.FK_Users_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

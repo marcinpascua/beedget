@@ -12,11 +12,19 @@ namespace Beedget
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class Budget
     {
+        public int BudgetID { get; set; }
+        public string Title { get; set; }
+        public Nullable<decimal> TargetAmount { get; set; }
+        public decimal CurrentAmount { get; set; }
+        public System.DateTime DateAdded { get; set; }
+        public Nullable<System.DateTime> TargetDate { get; set; }
+        public int isAchieved { get; set; }
         public int UserID { get; set; }
-        public string Username { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
+        public int BudgetTypeID { get; set; }
+    
+        public virtual BudgetType BudgetType { get; set; }
+        public virtual Users Users { get; set; }
     }
 }

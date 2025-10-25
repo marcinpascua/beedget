@@ -12,15 +12,16 @@ namespace Beedget
     using System;
     using System.Collections.Generic;
     
-    public partial class SavingsType
+    public partial class Roles
     {
-        public int SavingsID { get; set; }
-        public int UserID { get; set; }
-        public string SavingsName { get; set; }
-        public string CategoryName { get; set; }
-        public decimal TargetAmount { get; set; }
-        public decimal CurrentAmount { get; set; }
-        public System.DateTime TargetDate { get; set; }
-        public string AddNotes { get; set; }
+        public Roles()
+        {
+            this.Users = new HashSet<Users>();
+        }
+    
+        public int RoleID { get; set; }
+        public string RoleName { get; set; }
+    
+        public virtual ICollection<Users> Users { get; set; }
     }
 }

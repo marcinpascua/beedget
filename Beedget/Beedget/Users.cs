@@ -12,12 +12,20 @@ namespace Beedget
     using System;
     using System.Collections.Generic;
     
-    public partial class Checklist
+    public partial class Users
     {
-        public int GoalID { get; set; }
-        public int CategoryID { get; set; }
+        public Users()
+        {
+            this.Budget = new HashSet<Budget>();
+        }
+    
         public int UserID { get; set; }
-        public string GoalName { get; set; }
-        public System.DateTime DateAchieved { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string Email { get; set; }
+        public int RoleID { get; set; }
+    
+        public virtual ICollection<Budget> Budget { get; set; }
+        public virtual Roles Roles { get; set; }
     }
 }

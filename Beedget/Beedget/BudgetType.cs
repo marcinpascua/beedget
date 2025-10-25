@@ -12,13 +12,16 @@ namespace Beedget
     using System;
     using System.Collections.Generic;
     
-    public partial class ExpenseType
+    public partial class BudgetType
     {
-        public int ExpenseID { get; set; }
-        public int CategoryID { get; set; }
-        public int UserID { get; set; }
-        public string ExpenseName { get; set; }
-        public decimal Amount { get; set; }
-        public System.DateTime Date { get; set; }
+        public BudgetType()
+        {
+            this.Budget = new HashSet<Budget>();
+        }
+    
+        public int BudgetTypeID { get; set; }
+        public string Name { get; set; }
+    
+        public virtual ICollection<Budget> Budget { get; set; }
     }
 }

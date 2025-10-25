@@ -35,13 +35,13 @@
             this.tb_password = new System.Windows.Forms.TextBox();
             this.password_tb = new System.Windows.Forms.PictureBox();
             this.tb_username = new System.Windows.Forms.TextBox();
-            this.login_btn = new System.Windows.Forms.PictureBox();
+            this.signup_btn = new System.Windows.Forms.PictureBox();
             this.username_bg = new System.Windows.Forms.PictureBox();
             this.username_label = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.password_tb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.login_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.signup_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.username_bg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +53,7 @@
             this.panel1.Controls.Add(this.tb_password);
             this.panel1.Controls.Add(this.password_tb);
             this.panel1.Controls.Add(this.tb_username);
-            this.panel1.Controls.Add(this.login_btn);
+            this.panel1.Controls.Add(this.signup_btn);
             this.panel1.Controls.Add(this.username_bg);
             this.panel1.Controls.Add(this.username_label);
             this.panel1.Location = new System.Drawing.Point(58, 445);
@@ -73,6 +73,7 @@
             this.tb_confirmpass.Size = new System.Drawing.Size(316, 31);
             this.tb_confirmpass.TabIndex = 13;
             this.tb_confirmpass.Text = "confirm password";
+            this.tb_confirmpass.Click += new System.EventHandler(this.tb_confirmpass_TextChanged);
             // 
             // pictureBox1
             // 
@@ -97,7 +98,7 @@
             this.tb_password.Size = new System.Drawing.Size(316, 31);
             this.tb_password.TabIndex = 11;
             this.tb_password.Text = "password";
-            this.tb_password.TextChanged += new System.EventHandler(this.tb_password_TextChanged);
+            this.tb_password.Click += new System.EventHandler(this.tb_password_TextChanged);
             // 
             // password_tb
             // 
@@ -122,17 +123,19 @@
             this.tb_username.Size = new System.Drawing.Size(316, 31);
             this.tb_username.TabIndex = 2;
             this.tb_username.Text = "username";
+            this.tb_username.Click += new System.EventHandler(this.tb_username_TextChanged);
             // 
-            // login_btn
+            // signup_btn
             // 
-            this.login_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("login_btn.BackgroundImage")));
-            this.login_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.login_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.login_btn.Location = new System.Drawing.Point(20, 243);
-            this.login_btn.Name = "login_btn";
-            this.login_btn.Size = new System.Drawing.Size(372, 80);
-            this.login_btn.TabIndex = 8;
-            this.login_btn.TabStop = false;
+            this.signup_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("signup_btn.BackgroundImage")));
+            this.signup_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.signup_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.signup_btn.Location = new System.Drawing.Point(20, 243);
+            this.signup_btn.Name = "signup_btn";
+            this.signup_btn.Size = new System.Drawing.Size(372, 80);
+            this.signup_btn.TabIndex = 8;
+            this.signup_btn.TabStop = false;
+            this.signup_btn.Click += new System.EventHandler(this.signup_btn_Click);
             // 
             // username_bg
             // 
@@ -168,12 +171,11 @@
             this.Name = "Signup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Signup";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.password_tb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.login_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.signup_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.username_bg)).EndInit();
             this.ResumeLayout(false);
 
@@ -185,7 +187,7 @@
         private System.Windows.Forms.TextBox tb_password;
         private System.Windows.Forms.PictureBox password_tb;
         private System.Windows.Forms.TextBox tb_username;
-        private System.Windows.Forms.PictureBox login_btn;
+        private System.Windows.Forms.PictureBox signup_btn;
         private System.Windows.Forms.PictureBox username_bg;
         private System.Windows.Forms.Label username_label;
         private System.Windows.Forms.PictureBox pictureBox1;
