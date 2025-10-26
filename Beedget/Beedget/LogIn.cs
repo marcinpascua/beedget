@@ -69,7 +69,11 @@ namespace Beedget
             if (tb_password.Text == "password")
             {
                 tb_password.Text = "";
+                tb_password.ForeColor = Color.Black;
+                tb_password.PasswordChar = '•';
             }
         }
+
+      
     }
 }

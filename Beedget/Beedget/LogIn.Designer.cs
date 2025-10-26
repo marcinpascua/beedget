@@ -147,6 +147,7 @@
             this.tb_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_password.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_password.ForeColor = System.Drawing.Color.Black;
+            this.tb_password.HideSelection = false;
             this.tb_password.Location = new System.Drawing.Point(66, 104);
             this.tb_password.Margin = new System.Windows.Forms.Padding(5);
             this.tb_password.Name = "tb_password";

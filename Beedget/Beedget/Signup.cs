@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Beedget
 {
     public partial class Signup : Form
     {
-        BeedgetEntities db = new BeedgetEntities();
+        private static BeedgetEntities db = new BeedgetEntities();
 
         public Signup()
         {
@@ -38,6 +39,28 @@ namespace Beedget
                 return;
             }
 
+            var newUser = new Users
+            {
+                Username = username,
+                Password = password,
+                Email = null,
+                RoleID = 2
+            };
+
+            // Add to database
+            db.Users.Add(newUser);
+            db.SaveChanges();
+            MessageBox.Show("Account created successfully!", "Signup Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            foreach (Form form in Application.OpenForms.Cast<Form>().ToList())
+            {
+                form.Close();
+            }
+
+            // Reopen the login form
+            LogIn login= new LogIn();
+            login.Show();
+            this.Hide();
 
         }
 
@@ -54,6 +77,8 @@ namespace Beedget
             if (tb_password.Text == "password")
             {
                 tb_password.Text = "";
+                tb_password.ForeColor = Color.Black;
+                tb_password.PasswordChar = '•';
             }
         }
 
@@ -63,6 +88,8 @@ namespace Beedget
             if (tb_confirmpass.Text == "confirm password")
             {
                 tb_confirmpass.Text = "";
+                tb_confirmpass.ForeColor = Color.Black;
+                tb_confirmpass.PasswordChar = '•';
             }
         }
 
