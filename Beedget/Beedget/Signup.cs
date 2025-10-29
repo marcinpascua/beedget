@@ -43,7 +43,6 @@ namespace Beedget
             {
                 Username = username,
                 Password = password,
-                Email = null,
                 RoleID = 2
             };
 
@@ -52,10 +51,10 @@ namespace Beedget
             db.SaveChanges();
             MessageBox.Show("Account created successfully!", "Signup Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            foreach (Form form in Application.OpenForms.Cast<Form>().ToList())
-            {
-                form.Close();
-            }
+            //foreach (Form form in Application.OpenForms.Cast<Form>().ToList())
+            //{
+            //    form.Close();
+            //}
 
             // Reopen the login form
             LogIn login= new LogIn();

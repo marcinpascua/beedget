@@ -12,6 +12,8 @@ namespace Beedget
 {
     public partial class Dashboard: Form
     {
+        private BeedgetEntities db = new BeedgetEntities();
+
         public Dashboard()
         {
             InitializeComponent();
@@ -24,6 +26,13 @@ namespace Beedget
 
         private void logout_btn_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void add_btn_Paint(object sender, PaintEventArgs e)
+        {
+            OptionDialog selection = new OptionDialog();
+            selection.Show();
 
         }
     }

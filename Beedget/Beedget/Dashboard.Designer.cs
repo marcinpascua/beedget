@@ -44,12 +44,13 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.ErrorImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(60, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(195, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(117, 55);
+            this.pictureBox2.Size = new System.Drawing.Size(167, 70);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
@@ -86,6 +87,7 @@
             this.add_btn.Name = "add_btn";
             this.add_btn.Size = new System.Drawing.Size(58, 68);
             this.add_btn.TabIndex = 1;
+            this.add_btn.Paint += new System.Windows.Forms.PaintEventHandler(this.add_btn_Paint);
             // 
             // notif_btn
             // 
@@ -103,7 +105,7 @@
             this.home_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("home_btn.BackgroundImage")));
             this.home_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.home_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.home_btn.Location = new System.Drawing.Point(396, 27);
+            this.home_btn.Location = new System.Drawing.Point(71, 31);
             this.home_btn.Name = "home_btn";
             this.home_btn.Size = new System.Drawing.Size(48, 40);
             this.home_btn.TabIndex = 3;
@@ -114,7 +116,7 @@
             this.logout_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logout_btn.BackgroundImage")));
             this.logout_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.logout_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logout_btn.Location = new System.Drawing.Point(464, 27);
+            this.logout_btn.Location = new System.Drawing.Point(450, 31);
             this.logout_btn.Name = "logout_btn";
             this.logout_btn.Size = new System.Drawing.Size(48, 44);
             this.logout_btn.TabIndex = 4;
