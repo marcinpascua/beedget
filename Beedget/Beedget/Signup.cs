@@ -51,11 +51,6 @@ namespace Beedget
             db.SaveChanges();
             MessageBox.Show("Account created successfully!", "Signup Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            //foreach (Form form in Application.OpenForms.Cast<Form>().ToList())
-            //{
-            //    form.Close();
-            //}
-
             // Reopen the login form
             LogIn login= new LogIn();
             login.Show();
@@ -92,6 +87,9 @@ namespace Beedget
             }
         }
 
-      
+        private void Signup_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

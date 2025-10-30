@@ -29,11 +29,14 @@ namespace Beedget
 
         }
 
-        private void add_btn_Paint(object sender, PaintEventArgs e)
-        {
-            OptionDialog selection = new OptionDialog();
-            selection.Show();
+      
 
+        private void add_button_Click(object sender, EventArgs e)
+        {
+            OptionDialog dialog = new OptionDialog();
+            dialog.Show();
         }
+
+        
     }
 }

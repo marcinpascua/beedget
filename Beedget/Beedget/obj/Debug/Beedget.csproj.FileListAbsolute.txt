@@ -26,3 +26,5 @@ C:\Users\Admig\Documents\Beedget\Beedget\Beedget\bin\Debug\EntityFramework.dll
 C:\Users\Admig\Documents\Beedget\Beedget\Beedget\bin\Debug\EntityFramework.xml
 C:\Users\Admig\Documents\Beedget\Beedget\Beedget\obj\Debug\Beedget.Dashboard.resources
 C:\Users\Admig\Documents\Beedget\Beedget\Beedget\obj\Debug\Beedget.csproj.Up2Date
+C:\Users\Admig\Documents\Beedget\Beedget\Beedget\obj\Debug\Beedget.OptionDialog.resources
+C:\Users\Admig\Documents\Beedget\Beedget\Beedget\obj\Debug\Beedget.Savings.resources

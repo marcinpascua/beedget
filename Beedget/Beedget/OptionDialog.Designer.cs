@@ -1,6 +1,6 @@
 ﻿namespace Beedget
 {
-    partial class option
+    partial class OptionDialog
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(option));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionDialog));
             this.panel1 = new System.Windows.Forms.Panel();
             this.expense_btn = new System.Windows.Forms.Panel();
             this.savings_btn = new System.Windows.Forms.Panel();
@@ -50,19 +50,24 @@
             // 
             this.expense_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("expense_btn.BackgroundImage")));
             this.expense_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.expense_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.expense_btn.Location = new System.Drawing.Point(260, 143);
             this.expense_btn.Name = "expense_btn";
             this.expense_btn.Size = new System.Drawing.Size(190, 79);
             this.expense_btn.TabIndex = 2;
+            this.expense_btn.Click += new System.EventHandler(this.expense_btn_Click);
             // 
             // savings_btn
             // 
             this.savings_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("savings_btn.BackgroundImage")));
-            this.savings_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.savings_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.savings_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.savings_btn.Location = new System.Drawing.Point(12, 143);
             this.savings_btn.Name = "savings_btn";
             this.savings_btn.Size = new System.Drawing.Size(190, 79);
             this.savings_btn.TabIndex = 1;
+            this.savings_btn.Click += new System.EventHandler(this.savings_btn_Click);
+            this.savings_btn.Paint += new System.Windows.Forms.PaintEventHandler(this.savings_btn_Paint);
             // 
             // panel2
             // 
@@ -73,7 +78,7 @@
             this.panel2.Size = new System.Drawing.Size(438, 109);
             this.panel2.TabIndex = 0;
             // 
-            // option
+            // OptionDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -81,7 +86,7 @@
             this.ClientSize = new System.Drawing.Size(476, 255);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "option";
+            this.Name = "OptionDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Selection";
             this.panel1.ResumeLayout(false);
