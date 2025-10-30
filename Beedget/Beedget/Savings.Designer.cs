@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Savings));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tb_currentAmount = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.upload_btn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,8 +45,6 @@
             this.addedDate = new System.Windows.Forms.DateTimePicker();
             this.category = new System.Windows.Forms.ComboBox();
             this.tb_title = new System.Windows.Forms.TextBox();
-            this.tb_currentAmount = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -55,7 +55,7 @@
             this.flowLayoutPanel1.Controls.Add(this.panel3);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 1);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(471, 605);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(471, 579);
             this.flowLayoutPanel1.TabIndex = 8;
             // 
             // panel3
@@ -76,8 +76,32 @@
             this.panel3.Controls.Add(this.tb_title);
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(467, 589);
+            this.panel3.Size = new System.Drawing.Size(467, 576);
             this.panel3.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(21, 447);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(181, 31);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Current Amount";
+            // 
+            // tb_currentAmount
+            // 
+            this.tb_currentAmount.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_currentAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_currentAmount.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 16F, System.Drawing.FontStyle.Bold);
+            this.tb_currentAmount.ForeColor = System.Drawing.Color.Black;
+            this.tb_currentAmount.Location = new System.Drawing.Point(246, 447);
+            this.tb_currentAmount.Margin = new System.Windows.Forms.Padding(5);
+            this.tb_currentAmount.Name = "tb_currentAmount";
+            this.tb_currentAmount.Size = new System.Drawing.Size(194, 43);
+            this.tb_currentAmount.TabIndex = 15;
             // 
             // panel1
             // 
@@ -135,7 +159,6 @@
             this.tb_targetAmount.Name = "tb_targetAmount";
             this.tb_targetAmount.Size = new System.Drawing.Size(194, 43);
             this.tb_targetAmount.TabIndex = 3;
-            this.tb_targetAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // save_btn
             // 
@@ -143,10 +166,11 @@
             this.save_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("save_btn.BackgroundImage")));
             this.save_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.save_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.save_btn.Location = new System.Drawing.Point(155, 513);
+            this.save_btn.Location = new System.Drawing.Point(155, 508);
             this.save_btn.Name = "save_btn";
             this.save_btn.Size = new System.Drawing.Size(162, 56);
             this.save_btn.TabIndex = 4;
+            this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
             // 
             // dateTimePicker1
             // 
@@ -236,37 +260,12 @@
             this.tb_title.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_title.TextChanged += new System.EventHandler(this.tb_title_TextChanged);
             // 
-            // tb_currentAmount
-            // 
-            this.tb_currentAmount.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tb_currentAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_currentAmount.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.tb_currentAmount.ForeColor = System.Drawing.Color.Black;
-            this.tb_currentAmount.Location = new System.Drawing.Point(246, 447);
-            this.tb_currentAmount.Margin = new System.Windows.Forms.Padding(5);
-            this.tb_currentAmount.Name = "tb_currentAmount";
-            this.tb_currentAmount.Size = new System.Drawing.Size(194, 43);
-            this.tb_currentAmount.TabIndex = 15;
-            this.tb_currentAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(21, 447);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(181, 31);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Current Amount";
-            // 
             // Savings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(474, 592);
+            this.ClientSize = new System.Drawing.Size(474, 583);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Savings";

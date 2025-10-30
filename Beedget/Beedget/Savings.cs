@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace Beedget
 {
@@ -31,5 +33,33 @@ namespace Beedget
                 tb_title.Text = "";
             }
         }
+
+        private void save_btn_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=DESKTOP-59MK36R\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "INSERT INTO Budget(Title, TargetAmount, CurrentAmount, Category, Dateadded, TargetDate, isAchieved, BudgetTypeID, UserID ) VALUES(@Title, @TargetAmount, @CurrentAmount, @Category, @Dateadded, @TargetDate, @isAchieved, @BudgetTypeID, @UserID)";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Title", tb_title.Text);
+                    cmd.Parameters.AddWithValue("@CurrentAmount", tb_currentAmount.Text);
+                    cmd.Parameters.AddWithValue("@TargetAmount", tb_targetAmount.Text);
+                    cmd.Parameters.AddWithValue("@Category", category.Text);
+                    cmd.Parameters.AddWithValue("@Dateadded", DateTime.Now);
+                    cmd.Parameters.AddWithValue("@TargetDate", dateTimePicker1.Value);
+                    cmd.Parameters.AddWithValue("@isAchieved", false);
+                    cmd.Parameters.AddWithValue("@BudgetTypeID", );
+                    cmd.Parameters.AddWithValue("@UserID", );
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Savings goal saved successfully!");
+                }
+
+            }
+        }
+
     }
 }

@@ -117,7 +117,6 @@
             this.tb_currentAmount.Name = "tb_currentAmount";
             this.tb_currentAmount.Size = new System.Drawing.Size(194, 43);
             this.tb_currentAmount.TabIndex = 3;
-            this.tb_currentAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // save_btn
             // 
