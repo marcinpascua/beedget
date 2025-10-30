@@ -31,23 +31,5 @@ namespace Beedget
                 tb_title.Text = "";
             }
         }
-
-        private void tb_targetAmount_TextChanged(object sender, EventArgs e)
-        {
-            if (tb_targetAmount.Text == "Target Amount")
-            {
-                tb_targetAmount.Text = "";
-            }
-        }
-
-        private void tb_currentAmount_TextChanged(object sender, EventArgs e)
-        {
-            if (tb_currentAmount.Text == "Current Amount")
-            {
-                tb_currentAmount.Text = "";
-            }
-        }
-
-     
     }
 }

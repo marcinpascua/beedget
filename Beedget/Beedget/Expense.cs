@@ -22,14 +22,6 @@ namespace Beedget
 
         }
 
-        private void tb_currentAmount_TextChanged(object sender, EventArgs e)
-        {
-            if (tb_currentAmount.Text == "Amount")
-            {
-                tb_currentAmount.Text = "";
-            }
-        }
-
         private void tb_title_TextChanged(object sender, EventArgs e)
         {
             if (tb_title.Text == "Title")

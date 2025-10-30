@@ -30,65 +30,105 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Expense));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.upload_btn = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tb_currentAmount = new System.Windows.Forms.TextBox();
+            this.save_btn = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.addedDate = new System.Windows.Forms.DateTimePicker();
             this.category = new System.Windows.Forms.ComboBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.tb_currentAmount = new System.Windows.Forms.TextBox();
             this.tb_title = new System.Windows.Forms.TextBox();
-            this.save_btn = new System.Windows.Forms.FlowLayoutPanel();
-            this.upload_btn = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
             // 
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Controls.Add(this.panel1);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.tb_currentAmount);
             this.panel3.Controls.Add(this.save_btn);
-            this.panel3.Controls.Add(this.dateTimePicker1);
-            this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.addedDate);
             this.panel3.Controls.Add(this.category);
-            this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.tb_title);
-            this.panel3.Controls.Add(this.panel4);
             this.panel3.Location = new System.Drawing.Point(4, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(467, 518);
+            this.panel3.Size = new System.Drawing.Size(467, 536);
             this.panel3.TabIndex = 1;
             // 
-            // dateTimePicker1
+            // panel1
             // 
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.White;
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.White;
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.Black;
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.Black;
-            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.Black;
-            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(246, 371);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(194, 38);
-            this.dateTimePicker1.TabIndex = 11;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.upload_btn);
+            this.panel1.Location = new System.Drawing.Point(157, 29);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(160, 137);
+            this.panel1.TabIndex = 14;
             // 
-            // label3
+            // upload_btn
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(240, 337);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 31);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Target Date";
+            this.upload_btn.BackColor = System.Drawing.Color.White;
+            this.upload_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.upload_btn.Location = new System.Drawing.Point(40, 46);
+            this.upload_btn.Name = "upload_btn";
+            this.upload_btn.Size = new System.Drawing.Size(80, 43);
+            this.upload_btn.TabIndex = 0;
+            this.upload_btn.Text = "upload";
+            this.upload_btn.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(240, 241);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(109, 31);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Category";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(21, 241);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 31);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Amount";
+            // 
+            // tb_currentAmount
+            // 
+            this.tb_currentAmount.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tb_currentAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_currentAmount.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 16F, System.Drawing.FontStyle.Bold);
+            this.tb_currentAmount.ForeColor = System.Drawing.Color.Black;
+            this.tb_currentAmount.Location = new System.Drawing.Point(27, 277);
+            this.tb_currentAmount.Margin = new System.Windows.Forms.Padding(5);
+            this.tb_currentAmount.Name = "tb_currentAmount";
+            this.tb_currentAmount.Size = new System.Drawing.Size(194, 43);
+            this.tb_currentAmount.TabIndex = 3;
+            this.tb_currentAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // save_btn
+            // 
+            this.save_btn.BackColor = System.Drawing.Color.Transparent;
+            this.save_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("save_btn.BackgroundImage")));
+            this.save_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.save_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.save_btn.Location = new System.Drawing.Point(155, 445);
+            this.save_btn.Name = "save_btn";
+            this.save_btn.Size = new System.Drawing.Size(162, 56);
+            this.save_btn.TabIndex = 4;
             // 
             // label2
             // 
@@ -96,7 +136,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(21, 337);
+            this.label2.Location = new System.Drawing.Point(21, 340);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 31);
             this.label2.TabIndex = 7;
@@ -110,68 +150,40 @@
             this.addedDate.CalendarTitleForeColor = System.Drawing.Color.Black;
             this.addedDate.CalendarTrailingForeColor = System.Drawing.Color.Black;
             this.addedDate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addedDate.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addedDate.Font = new System.Drawing.Font("Yu Gothic UI", 16F);
             this.addedDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.addedDate.Location = new System.Drawing.Point(27, 371);
+            this.addedDate.Location = new System.Drawing.Point(27, 374);
             this.addedDate.Name = "addedDate";
-            this.addedDate.Size = new System.Drawing.Size(194, 38);
+            this.addedDate.Size = new System.Drawing.Size(413, 43);
             this.addedDate.TabIndex = 5;
             // 
             // category
             // 
-            this.category.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(65)))), ((int)(((byte)(42)))));
+            this.category.BackColor = System.Drawing.Color.WhiteSmoke;
             this.category.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.category.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.category.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.category.ForeColor = System.Drawing.Color.White;
+            this.category.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 16F, System.Drawing.FontStyle.Bold);
+            this.category.ForeColor = System.Drawing.Color.Black;
             this.category.FormattingEnabled = true;
-            this.category.ItemHeight = 31;
+            this.category.ItemHeight = 37;
             this.category.Items.AddRange(new object[] {
             "Clothing",
             "Emergency Fund",
             "Education Fund",
             "Travel",
             "Health Fund",
-            "Others: Please specify"});
-            this.category.Location = new System.Drawing.Point(27, 286);
+            "Others"});
+            this.category.Location = new System.Drawing.Point(246, 275);
             this.category.Name = "category";
-            this.category.Size = new System.Drawing.Size(413, 39);
+            this.category.Size = new System.Drawing.Size(194, 45);
             this.category.TabIndex = 0;
-            this.category.Text = "Category";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Controls.Add(this.tb_currentAmount);
-            this.panel6.Location = new System.Drawing.Point(27, 206);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(413, 59);
-            this.panel6.TabIndex = 4;
-            // 
-            // tb_currentAmount
-            // 
-            this.tb_currentAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(65)))), ((int)(((byte)(42)))));
-            this.tb_currentAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_currentAmount.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.tb_currentAmount.ForeColor = System.Drawing.Color.White;
-            this.tb_currentAmount.Location = new System.Drawing.Point(15, 14);
-            this.tb_currentAmount.Margin = new System.Windows.Forms.Padding(5);
-            this.tb_currentAmount.Name = "tb_currentAmount";
-            this.tb_currentAmount.Size = new System.Drawing.Size(381, 32);
-            this.tb_currentAmount.TabIndex = 3;
-            this.tb_currentAmount.Text = "Amount";
-            this.tb_currentAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tb_currentAmount.TextChanged += new System.EventHandler(this.tb_currentAmount_TextChanged);
             // 
             // tb_title
             // 
-            this.tb_title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
+            this.tb_title.BackColor = System.Drawing.Color.White;
             this.tb_title.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_title.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 20F, System.Drawing.FontStyle.Bold);
             this.tb_title.ForeColor = System.Drawing.Color.Black;
-            this.tb_title.Location = new System.Drawing.Point(80, 153);
+            this.tb_title.Location = new System.Drawing.Point(76, 174);
             this.tb_title.Margin = new System.Windows.Forms.Padding(5);
             this.tb_title.Name = "tb_title";
             this.tb_title.Size = new System.Drawing.Size(316, 45);
@@ -180,44 +192,12 @@
             this.tb_title.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_title.TextChanged += new System.EventHandler(this.tb_title_TextChanged);
             // 
-            // save_btn
-            // 
-            this.save_btn.BackColor = System.Drawing.Color.Transparent;
-            this.save_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("save_btn.BackgroundImage")));
-            this.save_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.save_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.save_btn.Location = new System.Drawing.Point(155, 436);
-            this.save_btn.Name = "save_btn";
-            this.save_btn.Size = new System.Drawing.Size(162, 56);
-            this.save_btn.TabIndex = 4;
-            // 
-            // upload_btn
-            // 
-            this.upload_btn.BackColor = System.Drawing.Color.White;
-            this.upload_btn.Location = new System.Drawing.Point(39, 91);
-            this.upload_btn.Name = "upload_btn";
-            this.upload_btn.Size = new System.Drawing.Size(80, 43);
-            this.upload_btn.TabIndex = 0;
-            this.upload_btn.Text = "upload";
-            this.upload_btn.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Controls.Add(this.upload_btn);
-            this.panel4.Location = new System.Drawing.Point(160, 8);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(157, 137);
-            this.panel4.TabIndex = 0;
-            // 
             // Expense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
-            this.ClientSize = new System.Drawing.Size(474, 526);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(474, 540);
             this.Controls.Add(this.panel3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Expense";
@@ -226,9 +206,7 @@
             this.Load += new System.EventHandler(this.Expense_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel4.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -236,16 +214,15 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker addedDate;
         private System.Windows.Forms.ComboBox category;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox tb_currentAmount;
         private System.Windows.Forms.TextBox tb_title;
         private System.Windows.Forms.FlowLayoutPanel save_btn;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button upload_btn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -60,8 +60,6 @@ namespace Beedget
             if (tb_username.Text == "username") { 
                 tb_username.Text = "";
             }
-
-
         }
 
         private void tb_password_TextChanged(object sender, EventArgs e)
@@ -73,7 +71,5 @@ namespace Beedget
                 tb_password.PasswordChar = '•';
             }
         }
-
-      
     }
 }
