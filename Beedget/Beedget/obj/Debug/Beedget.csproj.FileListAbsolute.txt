@@ -28,3 +28,4 @@ C:\Users\Admig\Documents\Beedget\Beedget\Beedget\obj\Debug\Beedget.Dashboard.res
 C:\Users\Admig\Documents\Beedget\Beedget\Beedget\obj\Debug\Beedget.csproj.Up2Date
 C:\Users\Admig\Documents\Beedget\Beedget\Beedget\obj\Debug\Beedget.OptionDialog.resources
 C:\Users\Admig\Documents\Beedget\Beedget\Beedget\obj\Debug\Beedget.Savings.resources
+C:\Users\Admig\Documents\Beedget\Beedget\Beedget\obj\Debug\Beedget.Expense.resources

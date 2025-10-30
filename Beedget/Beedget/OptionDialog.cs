@@ -29,11 +29,10 @@ namespace Beedget
 
         private void expense_btn_Click(object sender, EventArgs e)
         {
-
+            Expense expenseForm = new Expense();
+            this.Hide();
+            expenseForm.Show();
         }
-
-     
-
     
         private void savings_btn_Click(object sender, EventArgs e)
         {
@@ -43,6 +42,11 @@ namespace Beedget
         }
 
         private void savings_btn_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void expense_btn_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -34,12 +34,10 @@
             this.add_button = new System.Windows.Forms.Panel();
             this.checklist_btn = new System.Windows.Forms.Panel();
             this.notif_btn = new System.Windows.Forms.Panel();
-            this.home_btn = new System.Windows.Forms.PictureBox();
             this.logout_btn = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.home_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout_btn)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -102,17 +100,6 @@
             this.notif_btn.Size = new System.Drawing.Size(58, 68);
             this.notif_btn.TabIndex = 0;
             // 
-            // home_btn
-            // 
-            this.home_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("home_btn.BackgroundImage")));
-            this.home_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.home_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.home_btn.Location = new System.Drawing.Point(47, 33);
-            this.home_btn.Name = "home_btn";
-            this.home_btn.Size = new System.Drawing.Size(48, 40);
-            this.home_btn.TabIndex = 3;
-            this.home_btn.TabStop = false;
-            // 
             // logout_btn
             // 
             this.logout_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logout_btn.BackgroundImage")));
@@ -128,7 +115,6 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.logout_btn);
-            this.panel2.Controls.Add(this.home_btn);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(2, 1);
             this.panel2.Name = "panel2";
@@ -153,7 +139,6 @@
             this.Load += new System.EventHandler(this.Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.home_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout_btn)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -167,7 +152,6 @@
         private System.Windows.Forms.Panel notif_btn;
         private System.Windows.Forms.Panel checklist_btn;
         private System.Windows.Forms.Panel add_btn;
-        private System.Windows.Forms.PictureBox home_btn;
         private System.Windows.Forms.PictureBox logout_btn;
         private System.Windows.Forms.Panel add_button;
         private System.Windows.Forms.Panel panel2;
