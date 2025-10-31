@@ -128,6 +128,8 @@
             this.save_btn.Name = "save_btn";
             this.save_btn.Size = new System.Drawing.Size(162, 56);
             this.save_btn.TabIndex = 4;
+            this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
+            this.save_btn.Paint += new System.Windows.Forms.PaintEventHandler(this.save_btn_Paint);
             // 
             // label2
             // 
@@ -189,7 +191,7 @@
             this.tb_title.TabIndex = 4;
             this.tb_title.Text = "Title";
             this.tb_title.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tb_title.TextChanged += new System.EventHandler(this.tb_title_TextChanged);
+            this.tb_title.Click += new System.EventHandler(this.tb_title_Click);
             // 
             // Expense
             // 

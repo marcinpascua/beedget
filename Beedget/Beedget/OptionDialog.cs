@@ -28,7 +28,7 @@ namespace Beedget
 
         private void expense_btn_Click(object sender, EventArgs e)
         {
-            Expense expenseForm = new Expense();
+            Expense expenseForm = new Expense(currentUser);
             this.Hide();
             expenseForm.Show();
         }

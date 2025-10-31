@@ -27,14 +27,6 @@ namespace Beedget
            
         }
 
-        private void tb_title_TextChanged(object sender, EventArgs e)
-        {
-            if(tb_title.Text == "Title")
-            {
-                tb_title.Text = "";
-            }
-        }
-
         private void save_btn_Click(object sender, EventArgs e)
         {
             string connectionString = "Data Source=DESKTOP-59MK36R\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
@@ -88,6 +80,14 @@ namespace Beedget
                 }
             }
             this.Close();
+        }
+
+        private void tb_title_Click(object sender, EventArgs e)
+        {
+            if (tb_title.Text == "Title")
+            {
+                tb_title.Text = "";
+            }
         }
     }
 }

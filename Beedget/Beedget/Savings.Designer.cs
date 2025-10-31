@@ -258,7 +258,7 @@
             this.tb_title.TabIndex = 4;
             this.tb_title.Text = "Title";
             this.tb_title.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tb_title.TextChanged += new System.EventHandler(this.tb_title_TextChanged);
+            this.tb_title.Click += new System.EventHandler(this.tb_title_Click);
             // 
             // Savings
             // 
