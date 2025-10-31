@@ -23,6 +23,7 @@ namespace Beedget
         public int isAchieved { get; set; }
         public int UserID { get; set; }
         public int BudgetTypeID { get; set; }
+        public string Category { get; set; }
     
         public virtual BudgetType BudgetType { get; set; }
         public virtual Users Users { get; set; }

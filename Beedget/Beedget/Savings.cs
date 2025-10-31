@@ -15,10 +15,11 @@ namespace Beedget
     public partial class Savings : Form
     {
         private BeedgetEntities db = new BeedgetEntities();
-
-        public Savings()
+        private Users currentUser = null;
+        public Savings(Users currentUser)
         {
             InitializeComponent();
+            this.currentUser = currentUser;
         }
 
         private void Savings_Load(object sender, EventArgs e)
@@ -37,6 +38,34 @@ namespace Beedget
         private void save_btn_Click(object sender, EventArgs e)
         {
             string connectionString = "Data Source=DESKTOP-59MK36R\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
+            string title = tb_title.Text;
+            string targetAmount = tb_targetAmount.Text;
+            string currentAmount = tb_currentAmount.Text;
+            var categoryname = category.Text;
+            var targetDate = dateTimePicker1.Value;
+
+            if (title == "Title" || title == "") { 
+                MessageBox.Show("Please enter a valid title for your savings goal.");
+                return;
+            }
+
+            if (targetAmount == "")
+            {
+                MessageBox.Show("Kindly enter a target amount.");
+                return;
+            }
+
+            if(categoryname == "")
+            {
+                MessageBox.Show("Please select a category for your savings goal.");
+                return;
+            }
+
+            if (currentAmount == "")
+            {
+                MessageBox.Show("Kindly enter a current amount.");
+                return;
+            }
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -52,14 +81,13 @@ namespace Beedget
                     cmd.Parameters.AddWithValue("@Dateadded", DateTime.Now);
                     cmd.Parameters.AddWithValue("@TargetDate", dateTimePicker1.Value);
                     cmd.Parameters.AddWithValue("@isAchieved", false);
-                    cmd.Parameters.AddWithValue("@BudgetTypeID", );
-                    cmd.Parameters.AddWithValue("@UserID", );
+                    cmd.Parameters.AddWithValue("@BudgetTypeID", 1);
+                    cmd.Parameters.AddWithValue("@UserID", currentUser.UserID);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Savings goal saved successfully!");
                 }
-
             }
+            this.Close();
         }
-
     }
 }

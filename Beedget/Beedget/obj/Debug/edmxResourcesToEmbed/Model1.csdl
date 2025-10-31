@@ -15,6 +15,7 @@
     <Property Name="BudgetTypeID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="BudgetType" Relationship="Self.FK_Budget_BudgetType" FromRole="Budget" ToRole="BudgetType" />
     <NavigationProperty Name="Users" Relationship="Self.FK_Budget_Users" FromRole="Budget" ToRole="Users" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="BudgetType">
     <Key>

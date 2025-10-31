@@ -44,7 +44,7 @@ namespace Beedget
             var user = db.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
             if (user != null)
             {
-                Dashboard dashboardForm = new Dashboard();
+                Dashboard dashboardForm = new Dashboard(user);
                 dashboardForm.Show();
                 this.Hide();
             }

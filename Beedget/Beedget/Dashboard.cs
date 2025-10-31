@@ -14,9 +14,14 @@ namespace Beedget
     {
         private BeedgetEntities db = new BeedgetEntities();
 
-        public Dashboard()
+        private Users currentUser = null;
+        OptionDialog dialog = null;
+
+        public Dashboard(Users currentUser)
         {
             InitializeComponent();
+            this.currentUser = currentUser;
+            dialog = new OptionDialog(currentUser);
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -29,14 +34,12 @@ namespace Beedget
 
         }
 
-      
-
+     
         private void add_button_Click(object sender, EventArgs e)
         {
-            OptionDialog dialog = new OptionDialog();
+            
             dialog.Show();
         }
-
         
     }
 }

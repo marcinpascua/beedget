@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Budget">
       <EntityTypeMapping TypeName="BeedgetDBModel.Budget">
         <MappingFragment StoreEntitySet="Budget">
+          <ScalarProperty Name="Category" ColumnName="Category" />
           <ScalarProperty Name="BudgetID" ColumnName="BudgetID" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="TargetAmount" ColumnName="TargetAmount" />
