@@ -26,7 +26,7 @@ namespace Beedget
 
         public static void LoadData()
         {
-            
+
         }
 
         private void signup_link_Click(object sender, EventArgs e)
@@ -56,8 +56,9 @@ namespace Beedget
 
         private void tb_username_TextChanged(object sender, EventArgs e)
         {
-            
-            if (tb_username.Text == "username") { 
+
+            if (tb_username.Text == "username")
+            {
                 tb_username.Text = "";
             }
         }

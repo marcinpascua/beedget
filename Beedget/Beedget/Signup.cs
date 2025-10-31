@@ -52,7 +52,7 @@ namespace Beedget
             MessageBox.Show("Account created successfully!", "Signup Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Reopen the login form
-            LogIn login= new LogIn();
+            LogIn login = new LogIn();
             login.Show();
             this.Hide();
 
@@ -91,5 +91,13 @@ namespace Beedget
         {
 
         }
+
+        private void back_btn_Click(object sender, EventArgs e)
+        {
+            LogIn login = new LogIn();
+            login.Show();
+            this.Close();
+        }
     }
 }
+

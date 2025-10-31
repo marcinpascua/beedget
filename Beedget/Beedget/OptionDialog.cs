@@ -50,9 +50,5 @@ namespace Beedget
 
         }
 
-        private void OptionDialog_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
