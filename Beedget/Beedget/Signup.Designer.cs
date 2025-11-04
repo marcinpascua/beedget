@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Signup));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.back_btn = new System.Windows.Forms.Label();
             this.tb_confirmpass = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tb_password = new System.Windows.Forms.TextBox();
@@ -38,7 +39,6 @@
             this.signup_btn = new System.Windows.Forms.PictureBox();
             this.username_bg = new System.Windows.Forms.PictureBox();
             this.username_label = new System.Windows.Forms.Label();
-            this.back_btn = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.password_tb)).BeginInit();
@@ -58,10 +58,22 @@
             this.panel1.Controls.Add(this.signup_btn);
             this.panel1.Controls.Add(this.username_bg);
             this.panel1.Controls.Add(this.username_label);
-            this.panel1.Location = new System.Drawing.Point(60, 431);
+            this.panel1.Location = new System.Drawing.Point(61, 409);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(412, 377);
             this.panel1.TabIndex = 8;
+            // 
+            // back_btn
+            // 
+            this.back_btn.AutoSize = true;
+            this.back_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.back_btn.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold);
+            this.back_btn.Location = new System.Drawing.Point(14, 326);
+            this.back_btn.Name = "back_btn";
+            this.back_btn.Size = new System.Drawing.Size(74, 28);
+            this.back_btn.TabIndex = 14;
+            this.back_btn.Text = "< back";
+            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
             // 
             // tb_confirmpass
             // 
@@ -158,18 +170,6 @@
             this.username_label.Name = "username_label";
             this.username_label.Size = new System.Drawing.Size(0, 28);
             this.username_label.TabIndex = 1;
-            // 
-            // back_btn
-            // 
-            this.back_btn.AutoSize = true;
-            this.back_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.back_btn.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold);
-            this.back_btn.Location = new System.Drawing.Point(14, 326);
-            this.back_btn.Name = "back_btn";
-            this.back_btn.Size = new System.Drawing.Size(74, 28);
-            this.back_btn.TabIndex = 14;
-            this.back_btn.Text = "< back";
-            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
             // 
             // Signup
             // 

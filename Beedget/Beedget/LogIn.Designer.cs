@@ -102,6 +102,7 @@
             this.login_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("login_btn.BackgroundImage")));
             this.login_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.login_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.login_btn.ErrorImage = null;
             this.login_btn.Location = new System.Drawing.Point(20, 163);
             this.login_btn.Name = "login_btn";
             this.login_btn.Size = new System.Drawing.Size(372, 79);

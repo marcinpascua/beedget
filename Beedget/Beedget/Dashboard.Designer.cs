@@ -61,7 +61,7 @@
             this.panel1.Controls.Add(this.add_button);
             this.panel1.Controls.Add(this.checklist_btn);
             this.panel1.Controls.Add(this.notif_btn);
-            this.panel1.Location = new System.Drawing.Point(37, 702);
+            this.panel1.Location = new System.Drawing.Point(38, 690);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(472, 100);
             this.panel1.TabIndex = 2;
@@ -74,7 +74,7 @@
             this.add_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.add_button.Location = new System.Drawing.Point(202, 16);
             this.add_button.Name = "add_button";
-            this.add_button.Size = new System.Drawing.Size(58, 68);
+            this.add_button.Size = new System.Drawing.Size(70, 70);
             this.add_button.TabIndex = 1;
             this.add_button.Click += new System.EventHandler(this.add_button_Click);
             // 
@@ -86,7 +86,7 @@
             this.checklist_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checklist_btn.Location = new System.Drawing.Point(329, 16);
             this.checklist_btn.Name = "checklist_btn";
-            this.checklist_btn.Size = new System.Drawing.Size(58, 68);
+            this.checklist_btn.Size = new System.Drawing.Size(70, 70);
             this.checklist_btn.TabIndex = 2;
             // 
             // notif_btn
@@ -95,9 +95,9 @@
             this.notif_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("notif_btn.BackgroundImage")));
             this.notif_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.notif_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.notif_btn.Location = new System.Drawing.Point(79, 16);
+            this.notif_btn.Location = new System.Drawing.Point(77, 16);
             this.notif_btn.Name = "notif_btn";
-            this.notif_btn.Size = new System.Drawing.Size(58, 68);
+            this.notif_btn.Size = new System.Drawing.Size(70, 70);
             this.notif_btn.TabIndex = 0;
             // 
             // logout_btn
