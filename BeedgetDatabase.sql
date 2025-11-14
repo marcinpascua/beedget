@@ -19,25 +19,25 @@ DELETE FROM Users
 WHERE UserID = 0
 
 --REGISTER
-INSERT INTO Users(Username, Password, Email, RoleID)
+INSERT INTO Users(Username, Password, RoleID)
 VALUES
-('Marcinpascua', 'marcin1101', 'marcinpascua@gmail.com', 2),
-('BenedictAvenido', 'benedict0426', 'benedictavenido@gmail.com', 1);
+('Marcinpascua', 'marcin1101', 2),
+('BenedictAvenido', 'benedict0426', 1);
 
 SELECT * FROM Users
 INNER JOIN Roles ON Users.RoleID = Roles.RoleID
 
 --ADD BUDGET(SAVINGS)
 INSERT INTO Budget(Title, TargetAmount, CurrentAmount, DateAdded, TargetDate,
-isAchieved, UserID, BudgetTypeID)
+isAchieved, UserID, BudgetTypeID, Category)
 VALUES
-('Nike Shoes', 7000, 3000, GETDATE(), '2026-01-30', 0, 2, 1)
+('Nike Shoes', 7000, 3000, GETDATE(), '2026-01-30', 0, 2, 1, 'shoes')
 
 --ADD BUDGET(EXPENSE)
 INSERT INTO Budget(Title, TargetAmount, CurrentAmount, DateAdded, TargetDate,
-isAchieved, UserID, BudgetTypeID)
+isAchieved, UserID, BudgetTypeID, Category)
 VALUES
-('Grocery', NULL, 1000, GETDATE(), NULL, 0, 2, 2)
+('Grocery', NULL, 1000, GETDATE(), NULL, 0, 2, 2, 'household')
 
 --DELETE BUDGET
 DELETE FROM Budget
