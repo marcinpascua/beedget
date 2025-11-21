@@ -90,6 +90,7 @@
             this.Name = "OptionDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Selection";
+            this.Load += new System.EventHandler(this.OptionDialog_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
