@@ -21,7 +21,6 @@ namespace Beedget
         {
             InitializeComponent();
             this.currentUser = currentUser;
-            dialog = new OptionDialog(currentUser);
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -37,7 +36,7 @@ namespace Beedget
      
         private void add_button_Click(object sender, EventArgs e)
         {
-            
+            dialog = new OptionDialog(currentUser);
             dialog.Show();
         }
 
