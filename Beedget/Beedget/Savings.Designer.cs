@@ -78,6 +78,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(467, 576);
             this.panel3.TabIndex = 9;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label5
             // 
@@ -236,10 +237,10 @@
             this.category.ItemHeight = 37;
             this.category.Items.AddRange(new object[] {
             "Clothing",
-            "Emergency Fund",
-            "Education Fund",
+            "Emergency",
+            "Education",
             "Travel",
-            "Health Fund"});
+            "Health"});
             this.category.Location = new System.Drawing.Point(246, 275);
             this.category.Name = "category";
             this.category.Size = new System.Drawing.Size(194, 45);

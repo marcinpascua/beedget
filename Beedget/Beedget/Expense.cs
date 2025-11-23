@@ -34,7 +34,7 @@ namespace Beedget
 
         private void save_btn_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=DESKTOP-59MK36R\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
+            string connectionString = "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
             string title = tb_title.Text;
             string currentAmount = tb_currentAmount.Text;
             var categoryname = category.Text;
@@ -60,17 +60,17 @@ namespace Beedget
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "INSERT INTO Budget(Title, CurrentAmount, Category, Dateadded, isAchieved, BudgetTypeID, UserID ) VALUES(@Title, @CurrentAmount, @Category, @Dateadded, @isAchieved, @BudgetTypeID, @UserID)";
+                string query = "INSERT INTO Budget(Title, CurrentAmount, Dateadded, isAchieved, BudgetTypeID, UserID, Category ) VALUES(@Title, @CurrentAmount,  @Dateadded, @isAchieved, @BudgetTypeID, @UserID, @Category)";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@Title", tb_title.Text);
                     cmd.Parameters.AddWithValue("@CurrentAmount", tb_currentAmount.Text);
-                    cmd.Parameters.AddWithValue("@Category", category.Text);
                     cmd.Parameters.AddWithValue("@Dateadded", DateTime.Now);
                     cmd.Parameters.AddWithValue("@isAchieved", false);
                     cmd.Parameters.AddWithValue("@BudgetTypeID", 2);
                     cmd.Parameters.AddWithValue("@UserID", currentUser.UserID);
+                    cmd.Parameters.AddWithValue("@Category", category.Text);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Expense saved successfully!");
                 }

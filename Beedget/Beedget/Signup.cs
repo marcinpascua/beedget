@@ -43,7 +43,7 @@ namespace Beedget
             {
                 Username = username,
                 Password = password,
-                RoleID = 2
+                RoleID = 1
             };
 
             // Add to database

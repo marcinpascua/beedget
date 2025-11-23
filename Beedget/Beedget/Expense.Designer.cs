@@ -168,10 +168,10 @@
             this.category.ItemHeight = 37;
             this.category.Items.AddRange(new object[] {
             "Clothing",
-            "Emergency Fund",
-            "Education Fund",
+            "Emergency",
+            "Education",
             "Travel",
-            "Health Fund",
+            "Health",
             "Others"});
             this.category.Location = new System.Drawing.Point(246, 275);
             this.category.Name = "category";

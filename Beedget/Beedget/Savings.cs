@@ -29,7 +29,7 @@ namespace Beedget
 
         private void save_btn_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=DESKTOP-59MK36R\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
+            string connectionString = "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
             string title = tb_title.Text;
             string targetAmount = tb_targetAmount.Text;
             string currentAmount = tb_currentAmount.Text;
@@ -62,19 +62,19 @@ namespace Beedget
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "INSERT INTO Budget(Title, TargetAmount, CurrentAmount, Category, Dateadded, TargetDate, isAchieved, BudgetTypeID, UserID ) VALUES(@Title, @TargetAmount, @CurrentAmount, @Category, @Dateadded, @TargetDate, @isAchieved, @BudgetTypeID, @UserID)";
+                string query = "INSERT INTO Budget(Title, TargetAmount, CurrentAmount, Dateadded, TargetDate, isAchieved, UserID, BudgetTypeID, Category ) VALUES(@Title, @TargetAmount, @CurrentAmount, @Dateadded, @TargetDate, @isAchieved, @UserID,  @BudgetTypeID,  @Category)";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@Title", tb_title.Text);
                     cmd.Parameters.AddWithValue("@CurrentAmount", tb_currentAmount.Text);
                     cmd.Parameters.AddWithValue("@TargetAmount", tb_targetAmount.Text);
-                    cmd.Parameters.AddWithValue("@Category", category.Text);
                     cmd.Parameters.AddWithValue("@Dateadded", DateTime.Now);
                     cmd.Parameters.AddWithValue("@TargetDate", dateTimePicker1.Value);
                     cmd.Parameters.AddWithValue("@isAchieved", false);
-                    cmd.Parameters.AddWithValue("@BudgetTypeID", 1);
                     cmd.Parameters.AddWithValue("@UserID", currentUser.UserID);
+                    cmd.Parameters.AddWithValue("@BudgetTypeID", 1);
+                    cmd.Parameters.AddWithValue("@Category", category.Text);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Savings goal saved successfully!");
                 }
@@ -88,6 +88,11 @@ namespace Beedget
             {
                 tb_title.Text = "";
             }
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
