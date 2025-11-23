@@ -77,6 +77,7 @@ namespace Beedget
                     cmd.Parameters.AddWithValue("@Category", category.Text);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Savings goal saved successfully!");
+
                 }
             }
             this.Close();
@@ -91,6 +92,11 @@ namespace Beedget
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void save_btn_Paint(object sender, PaintEventArgs e)
         {
 
         }

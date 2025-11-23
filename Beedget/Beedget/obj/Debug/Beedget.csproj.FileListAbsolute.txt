@@ -48,3 +48,4 @@ C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.cspro
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.csproj.Up2Date
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.exe
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.pdb
+C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.SavingsPreviewControl.resources

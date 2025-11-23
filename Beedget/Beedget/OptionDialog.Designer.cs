@@ -81,8 +81,7 @@
             // 
             // OptionDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(476, 255);
             this.Controls.Add(this.panel1);

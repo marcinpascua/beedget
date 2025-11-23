@@ -30,7 +30,9 @@ namespace Beedget
 
         private void logout_btn_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            LogIn logIn = new LogIn();
+            logIn.Show();
         }
 
      

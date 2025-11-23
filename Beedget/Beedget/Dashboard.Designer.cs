@@ -36,6 +36,7 @@
             this.notif_btn = new System.Windows.Forms.Panel();
             this.logout_btn = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logout_btn)).BeginInit();
@@ -61,9 +62,9 @@
             this.panel1.Controls.Add(this.add_button);
             this.panel1.Controls.Add(this.checklist_btn);
             this.panel1.Controls.Add(this.notif_btn);
-            this.panel1.Location = new System.Drawing.Point(38, 690);
+            this.panel1.Location = new System.Drawing.Point(28, 702);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(472, 100);
+            this.panel1.Size = new System.Drawing.Size(491, 100);
             this.panel1.TabIndex = 2;
             // 
             // add_button
@@ -72,7 +73,7 @@
             this.add_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("add_button.BackgroundImage")));
             this.add_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.add_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.add_button.Location = new System.Drawing.Point(202, 16);
+            this.add_button.Location = new System.Drawing.Point(213, 16);
             this.add_button.Name = "add_button";
             this.add_button.Size = new System.Drawing.Size(70, 70);
             this.add_button.TabIndex = 1;
@@ -84,7 +85,7 @@
             this.checklist_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checklist_btn.BackgroundImage")));
             this.checklist_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.checklist_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checklist_btn.Location = new System.Drawing.Point(329, 16);
+            this.checklist_btn.Location = new System.Drawing.Point(344, 16);
             this.checklist_btn.Name = "checklist_btn";
             this.checklist_btn.Size = new System.Drawing.Size(70, 70);
             this.checklist_btn.TabIndex = 2;
@@ -105,7 +106,7 @@
             this.logout_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logout_btn.BackgroundImage")));
             this.logout_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.logout_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logout_btn.Location = new System.Drawing.Point(448, 29);
+            this.logout_btn.Location = new System.Drawing.Point(460, 23);
             this.logout_btn.Name = "logout_btn";
             this.logout_btn.Size = new System.Drawing.Size(48, 44);
             this.logout_btn.TabIndex = 4;
@@ -121,14 +122,22 @@
             this.panel2.Size = new System.Drawing.Size(542, 79);
             this.panel2.TabIndex = 5;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(38, 86);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(506, 594);
+            this.flowLayoutPanel1.TabIndex = 6;
+            // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(546, 814);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
@@ -155,5 +164,6 @@
         private System.Windows.Forms.PictureBox logout_btn;
         private System.Windows.Forms.Panel add_button;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

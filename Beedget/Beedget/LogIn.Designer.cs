@@ -61,15 +61,16 @@
             // 
             this.tb_username.BackColor = System.Drawing.Color.White;
             this.tb_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_username.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_username.Font = new System.Drawing.Font("Yu Gothic UI", 16F);
             this.tb_username.ForeColor = System.Drawing.Color.Black;
-            this.tb_username.Location = new System.Drawing.Point(66, 20);
+            this.tb_username.Location = new System.Drawing.Point(66, 23);
             this.tb_username.Margin = new System.Windows.Forms.Padding(5);
             this.tb_username.Name = "tb_username";
-            this.tb_username.Size = new System.Drawing.Size(316, 31);
+            this.tb_username.Size = new System.Drawing.Size(316, 36);
             this.tb_username.TabIndex = 2;
             this.tb_username.Text = "username";
             this.tb_username.Click += new System.EventHandler(this.tb_username_TextChanged);
+            this.tb_username.TextChanged += new System.EventHandler(this.tb_username_TextChanged_1);
             // 
             // pictureBox1
             // 
@@ -94,7 +95,7 @@
             this.panel1.Controls.Add(this.username_label);
             this.panel1.Location = new System.Drawing.Point(64, 352);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(412, 295);
+            this.panel1.Size = new System.Drawing.Size(412, 306);
             this.panel1.TabIndex = 7;
             // 
             // login_btn
@@ -114,19 +115,19 @@
             // 
             this.panel2.Controls.Add(this.signup_link);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(0, 249);
+            this.panel2.Location = new System.Drawing.Point(20, 248);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(409, 46);
+            this.panel2.Size = new System.Drawing.Size(372, 54);
             this.panel2.TabIndex = 10;
             // 
             // signup_link
             // 
             this.signup_link.AutoSize = true;
             this.signup_link.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.signup_link.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signup_link.Location = new System.Drawing.Point(270, 5);
+            this.signup_link.Font = new System.Drawing.Font("Yu Gothic UI", 14F, System.Drawing.FontStyle.Bold);
+            this.signup_link.Location = new System.Drawing.Point(270, 4);
             this.signup_link.Name = "signup_link";
-            this.signup_link.Size = new System.Drawing.Size(81, 22);
+            this.signup_link.Size = new System.Drawing.Size(99, 32);
             this.signup_link.TabIndex = 8;
             this.signup_link.Text = "Sign Up";
             this.signup_link.Click += new System.EventHandler(this.signup_link_Click);
@@ -134,10 +135,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(53, 5);
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
+            this.label1.Location = new System.Drawing.Point(3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 22);
+            this.label1.Size = new System.Drawing.Size(266, 32);
             this.label1.TabIndex = 9;
             this.label1.Text = "Don\'t have an account?";
             // 
@@ -145,13 +146,13 @@
             // 
             this.tb_password.BackColor = System.Drawing.Color.White;
             this.tb_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_password.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_password.Font = new System.Drawing.Font("Yu Gothic UI", 16F);
             this.tb_password.ForeColor = System.Drawing.Color.Black;
             this.tb_password.HideSelection = false;
-            this.tb_password.Location = new System.Drawing.Point(66, 104);
+            this.tb_password.Location = new System.Drawing.Point(66, 103);
             this.tb_password.Margin = new System.Windows.Forms.Padding(5);
             this.tb_password.Name = "tb_password";
-            this.tb_password.Size = new System.Drawing.Size(316, 31);
+            this.tb_password.Size = new System.Drawing.Size(316, 36);
             this.tb_password.TabIndex = 11;
             this.tb_password.Text = "password";
             this.tb_password.Click += new System.EventHandler(this.tb_password_TextChanged);
@@ -180,8 +181,7 @@
             // 
             // LogIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(86)))));
             this.ClientSize = new System.Drawing.Size(546, 814);
             this.Controls.Add(this.panel1);
@@ -189,7 +189,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Beedget | Log in";
+            this.Text = "Log in";
             this.Load += new System.EventHandler(this.LogIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);

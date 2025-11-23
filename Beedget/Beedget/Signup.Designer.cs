@@ -67,10 +67,10 @@
             // 
             this.back_btn.AutoSize = true;
             this.back_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.back_btn.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold);
-            this.back_btn.Location = new System.Drawing.Point(14, 326);
+            this.back_btn.Font = new System.Drawing.Font("Yu Gothic UI", 16F, System.Drawing.FontStyle.Bold);
+            this.back_btn.Location = new System.Drawing.Point(23, 326);
             this.back_btn.Name = "back_btn";
-            this.back_btn.Size = new System.Drawing.Size(74, 28);
+            this.back_btn.Size = new System.Drawing.Size(100, 37);
             this.back_btn.TabIndex = 14;
             this.back_btn.Text = "< back";
             this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
@@ -79,12 +79,12 @@
             // 
             this.tb_confirmpass.BackColor = System.Drawing.Color.White;
             this.tb_confirmpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_confirmpass.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_confirmpass.Font = new System.Drawing.Font("Yu Gothic UI", 16F);
             this.tb_confirmpass.ForeColor = System.Drawing.Color.Black;
             this.tb_confirmpass.Location = new System.Drawing.Point(66, 181);
             this.tb_confirmpass.Margin = new System.Windows.Forms.Padding(5);
             this.tb_confirmpass.Name = "tb_confirmpass";
-            this.tb_confirmpass.Size = new System.Drawing.Size(316, 31);
+            this.tb_confirmpass.Size = new System.Drawing.Size(316, 36);
             this.tb_confirmpass.TabIndex = 13;
             this.tb_confirmpass.Text = "confirm password";
             this.tb_confirmpass.Click += new System.EventHandler(this.tb_confirmpass_TextChanged);
@@ -104,12 +104,12 @@
             // 
             this.tb_password.BackColor = System.Drawing.Color.White;
             this.tb_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_password.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_password.Font = new System.Drawing.Font("Yu Gothic UI", 16F);
             this.tb_password.ForeColor = System.Drawing.Color.Black;
-            this.tb_password.Location = new System.Drawing.Point(66, 99);
+            this.tb_password.Location = new System.Drawing.Point(66, 102);
             this.tb_password.Margin = new System.Windows.Forms.Padding(5);
             this.tb_password.Name = "tb_password";
-            this.tb_password.Size = new System.Drawing.Size(316, 31);
+            this.tb_password.Size = new System.Drawing.Size(316, 36);
             this.tb_password.TabIndex = 11;
             this.tb_password.Text = "password";
             this.tb_password.Click += new System.EventHandler(this.tb_password_TextChanged);
@@ -129,12 +129,12 @@
             // 
             this.tb_username.BackColor = System.Drawing.Color.White;
             this.tb_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_username.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_username.Font = new System.Drawing.Font("Yu Gothic UI", 16F);
             this.tb_username.ForeColor = System.Drawing.Color.Black;
-            this.tb_username.Location = new System.Drawing.Point(66, 20);
+            this.tb_username.Location = new System.Drawing.Point(66, 22);
             this.tb_username.Margin = new System.Windows.Forms.Padding(5);
             this.tb_username.Name = "tb_username";
-            this.tb_username.Size = new System.Drawing.Size(316, 31);
+            this.tb_username.Size = new System.Drawing.Size(316, 36);
             this.tb_username.TabIndex = 2;
             this.tb_username.Text = "username";
             this.tb_username.Click += new System.EventHandler(this.tb_username_TextChanged);
@@ -173,8 +173,7 @@
             // 
             // Signup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
