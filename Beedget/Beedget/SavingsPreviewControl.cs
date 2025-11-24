@@ -17,7 +17,8 @@ namespace Beedget
         string current_Amount = null;
         string target_Amount = null;
         string added_Date = null;
-        string target_Date = null;
+        string target_Date = null
+            ;
         public SavingsPreviewControl(string title, string category, string current_Amount, string target_Amount, string added_Date, string target_Date)
         {
             InitializeComponent();
@@ -27,6 +28,17 @@ namespace Beedget
             this.target_Amount = target_Amount;
             this.added_Date = added_Date;
             this.target_Date = target_Date;
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            title_label.Text = title;
+            category_label.Text = category;
+            currAmount.Text = "Php " + current_Amount;
+            targetAmount.Text = "Php " +  target_Amount;
+            addedDate.Text = added_Date;
+            targetDate.Text = target_Date;
         }
 
         private void title_label_Click(object sender, EventArgs e)

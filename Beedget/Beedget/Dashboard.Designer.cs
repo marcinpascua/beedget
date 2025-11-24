@@ -36,7 +36,7 @@
             this.notif_btn = new System.Windows.Forms.Panel();
             this.logout_btn = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.previewPanel = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logout_btn)).BeginInit();
@@ -122,13 +122,13 @@
             this.panel2.Size = new System.Drawing.Size(542, 79);
             this.panel2.TabIndex = 5;
             // 
-            // flowLayoutPanel1
+            // previewPanel
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(38, 86);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(506, 594);
-            this.flowLayoutPanel1.TabIndex = 6;
+            this.previewPanel.AutoScroll = true;
+            this.previewPanel.Location = new System.Drawing.Point(38, 86);
+            this.previewPanel.Name = "previewPanel";
+            this.previewPanel.Size = new System.Drawing.Size(506, 594);
+            this.previewPanel.TabIndex = 6;
             // 
             // Dashboard
             // 
@@ -137,7 +137,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(546, 814);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.previewPanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
@@ -164,6 +164,6 @@
         private System.Windows.Forms.PictureBox logout_btn;
         private System.Windows.Forms.Panel add_button;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel previewPanel;
     }
 }

@@ -137,12 +137,11 @@
             this.currAmount.BackColor = System.Drawing.Color.Transparent;
             this.currAmount.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currAmount.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.currAmount.Location = new System.Drawing.Point(325, 90);
+            this.currAmount.Location = new System.Drawing.Point(321, 90);
             this.currAmount.Name = "currAmount";
             this.currAmount.Size = new System.Drawing.Size(140, 31);
             this.currAmount.TabIndex = 22;
             this.currAmount.Text = "Php 1000.00";
-            this.currAmount.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // targetAmount
             // 
@@ -155,7 +154,6 @@
             this.targetAmount.Size = new System.Drawing.Size(144, 31);
             this.targetAmount.TabIndex = 23;
             this.targetAmount.Text = "Php 2000.00";
-            this.targetAmount.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // targetDate
             // 
@@ -168,7 +166,6 @@
             this.targetDate.Size = new System.Drawing.Size(162, 23);
             this.targetDate.TabIndex = 24;
             this.targetDate.Text = "Target Date: 12/01/25";
-            this.targetDate.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // panel2
             // 

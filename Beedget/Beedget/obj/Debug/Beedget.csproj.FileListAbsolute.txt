@@ -35,7 +35,6 @@ C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\bin\Debug\Beedget.pdb
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\bin\Debug\EntityFramework.dll
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\bin\Debug\EntityFramework.xml
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.csproj.AssemblyReference.cache
-C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.exe.config
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.Dashboard.resources
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.Expense.resources
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.Savings.resources
@@ -49,3 +48,4 @@ C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.cspro
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.exe
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.pdb
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.SavingsPreviewControl.resources
+C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.exe.config
