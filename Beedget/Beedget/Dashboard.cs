@@ -54,6 +54,7 @@ namespace Beedget
                         var target_Amount = row["TargetAmount"].ToString();
                         var addedDate = row["DateAdded"].ToString();
                         var targetDate = row["TargetDate"].ToString();
+                        var budgetID = row["BudgetID"].ToString();
 
 
                         SavingsPreviewControl preview = new SavingsPreviewControl(
@@ -62,7 +63,9 @@ namespace Beedget
                              current_Amount,
                              target_Amount,
                              addedDate,
-                             targetDate
+                             targetDate,
+                             budgetID
+                             
         );
                         previewPanel.Controls.Add(preview);
                         
