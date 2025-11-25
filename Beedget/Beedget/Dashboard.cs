@@ -33,6 +33,7 @@ namespace Beedget
 
         private void LoadData()
         {
+            previewPanel.Controls.Clear();
             string connectionString = "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -68,6 +69,7 @@ namespace Beedget
                              
         );
                         previewPanel.Controls.Add(preview);
+
                         
                     }
                 }
@@ -86,8 +88,12 @@ namespace Beedget
         {
             dialog = new OptionDialog(currentUser);
             dialog.Show();
+            LoadData();
         }
 
-      
+        private void previewPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

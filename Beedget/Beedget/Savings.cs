@@ -77,7 +77,7 @@ namespace Beedget
                     cmd.Parameters.AddWithValue("@Category", category.Text);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Savings goal saved successfully!");
-
+                    
                 }
             }
             this.Close();

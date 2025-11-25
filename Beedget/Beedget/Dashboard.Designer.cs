@@ -129,6 +129,7 @@
             this.previewPanel.Name = "previewPanel";
             this.previewPanel.Size = new System.Drawing.Size(506, 594);
             this.previewPanel.TabIndex = 6;
+            this.previewPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.previewPanel_Paint);
             // 
             // Dashboard
             // 
