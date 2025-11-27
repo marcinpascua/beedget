@@ -15,12 +15,23 @@ namespace Beedget
     public partial class Savings : Form
     {
         private BeedgetEntities db = new BeedgetEntities();
-        private Users currentUser = null;
+
+        Users currentUser = null;
+        Dashboard parent;
+ 
+        public Savings(Dashboard parent, Users currentUser)
+        {
+            InitializeComponent();
+            this.parent = parent;
+            this.currentUser = currentUser;
+        }
+
         public Savings(Users currentUser)
         {
             InitializeComponent();
             this.currentUser = currentUser;
         }
+
 
         private void Savings_Load(object sender, EventArgs e)
         {
@@ -80,6 +91,11 @@ namespace Beedget
                     
                 }
             }
+            if (parent != null)
+            {
+                parent.RefreshSavings();
+            }
+
             this.Close();
         }
 
@@ -90,6 +106,8 @@ namespace Beedget
                 tb_title.Text = "";
             }
         }
+
+
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {

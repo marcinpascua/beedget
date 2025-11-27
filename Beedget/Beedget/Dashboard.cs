@@ -11,12 +11,10 @@ using System.Windows.Forms;
 
 namespace Beedget
 {
-    public partial class Dashboard: Form
+    public partial class Dashboard : Form
     {
         private BeedgetEntities db = new BeedgetEntities();
-
         private Users currentUser = null;
-        OptionDialog dialog = null;
 
         public Dashboard(Users currentUser)
         {
@@ -27,8 +25,7 @@ namespace Beedget
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-   
-
+           
         }
 
         private void LoadData()
@@ -39,38 +36,29 @@ namespace Beedget
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT * FROM Budget WHERE UserID =" + currentUser.UserID + " AND BudgetTypeID = 1";
+                string query = "SELECT * FROM Budget WHERE UserID = @UserID AND BudgetTypeID = 1";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
+                    cmd.Parameters.AddWithValue("@UserID", currentUser.UserID);
+
                     SqlDataAdapter savings_da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     savings_da.Fill(dt);
 
                     foreach (DataRow row in dt.Rows)
                     {
-                        var title = row["Title"].ToString();
-                        var category = row["Category"].ToString();
-                        var current_Amount = row["CurrentAmount"].ToString();
-                        var target_Amount = row["TargetAmount"].ToString();
-                        var addedDate = row["DateAdded"].ToString();
-                        var targetDate = row["TargetDate"].ToString();
-                        var budgetID = row["BudgetID"].ToString();
-
-
                         SavingsPreviewControl preview = new SavingsPreviewControl(
-                             title,
-                             category,
-                             current_Amount,
-                             target_Amount,
-                             addedDate,
-                             targetDate,
-                             budgetID
-                             
-        );
-                        previewPanel.Controls.Add(preview);
+                            row["Title"].ToString(),
+                            row["Category"].ToString(),
+                            row["CurrentAmount"].ToString(),
+                            row["TargetAmount"].ToString(),
+                            row["DateAdded"].ToString(),
+                            row["TargetDate"].ToString(),
+                            row["BudgetID"].ToString()
+                        );
 
-                        
+                        previewPanel.Controls.Add(preview);
                     }
                 }
             }
@@ -83,17 +71,20 @@ namespace Beedget
             logIn.Show();
         }
 
-     
         private void add_button_Click(object sender, EventArgs e)
         {
-            dialog = new OptionDialog(currentUser);
-            dialog.Show();
+            var add = new Savings(this, currentUser);
+            add.ShowDialog();
+        }
+
+        public void RefreshSavings()
+        {
             LoadData();
         }
 
         private void previewPanel_Paint(object sender, PaintEventArgs e)
         {
-
+          
         }
     }
 }
