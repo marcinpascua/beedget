@@ -13,11 +13,13 @@ namespace Beedget
     public partial class OptionDialog : Form
     {
         private BeedgetEntities db = new BeedgetEntities();
+        Dashboard parent;
         private Users currentUser = null;
 
-        public OptionDialog(Users currentUser)
+        public OptionDialog(Dashboard parent, Users currentUser)
         {
             InitializeComponent();
+            this.parent = parent;
             this.currentUser = currentUser;
         }
 
@@ -28,31 +30,24 @@ namespace Beedget
 
         private void expense_btn_Click(object sender, EventArgs e)
         {
-            Expense expenseForm = new Expense(currentUser);
+            Expense expenseForm = new Expense(parent, currentUser);
             this.Hide();
             expenseForm.Show();
         }
     
         private void savings_btn_Click(object sender, EventArgs e)
         {
-            Savings savingsForm = new Savings(currentUser);
+            Savings savingsForm = new Savings(parent, currentUser);
             this.Hide();
             savingsForm.Show();
         }
 
-        private void savings_btn_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void expense_btn_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+      
         private void OptionDialog_Load(object sender, EventArgs e)
         {
 
         }
+
+      
     }
 }

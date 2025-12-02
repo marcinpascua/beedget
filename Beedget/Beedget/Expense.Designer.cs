@@ -104,7 +104,6 @@
             this.save_btn.Size = new System.Drawing.Size(162, 56);
             this.save_btn.TabIndex = 4;
             this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
-            this.save_btn.Paint += new System.Windows.Forms.PaintEventHandler(this.save_btn_Paint);
             // 
             // label2
             // 

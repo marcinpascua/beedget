@@ -71,6 +71,18 @@
     <Compile Include="Expense.Designer.cs">
       <DependentUpon>Expense.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExpensePreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpensePreview.Designer.cs">
+      <DependentUpon>ExpensePreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpensePreviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExpensePreviewControl.Designer.cs">
+      <DependentUpon>ExpensePreviewControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Savings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +121,12 @@
     <Compile Include="Roles.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="SavingsPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SavingsPreview.Designer.cs">
+      <DependentUpon>SavingsPreview.cs</DependentUpon>
+    </Compile>
     <Compile Include="SavingsPreviewControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -133,6 +151,12 @@
     <EmbeddedResource Include="Expense.resx">
       <DependentUpon>Expense.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExpensePreview.resx">
+      <DependentUpon>ExpensePreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpensePreviewControl.resx">
+      <DependentUpon>ExpensePreviewControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Savings.resx">
       <DependentUpon>Savings.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +175,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SavingsPreview.resx">
+      <DependentUpon>SavingsPreview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SavingsPreviewControl.resx">
       <DependentUpon>SavingsPreviewControl.cs</DependentUpon>
     </EmbeddedResource>

@@ -56,7 +56,6 @@
             this.expense_btn.Size = new System.Drawing.Size(190, 79);
             this.expense_btn.TabIndex = 2;
             this.expense_btn.Click += new System.EventHandler(this.expense_btn_Click);
-            this.expense_btn.Paint += new System.Windows.Forms.PaintEventHandler(this.expense_btn_Paint);
             // 
             // savings_btn
             // 
@@ -68,7 +67,6 @@
             this.savings_btn.Size = new System.Drawing.Size(190, 79);
             this.savings_btn.TabIndex = 1;
             this.savings_btn.Click += new System.EventHandler(this.savings_btn_Click);
-            this.savings_btn.Paint += new System.Windows.Forms.PaintEventHandler(this.savings_btn_Paint);
             // 
             // panel2
             // 

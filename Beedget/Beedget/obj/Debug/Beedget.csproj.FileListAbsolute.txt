@@ -49,3 +49,6 @@ C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.exe
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.pdb
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.SavingsPreviewControl.resources
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.exe.config
+C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.SavingsPreview.resources
+C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.ExpensePreview.resources
+C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.ExpensePreviewControl.resources

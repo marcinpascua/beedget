@@ -11,30 +11,26 @@ using System.Windows.Forms;
 
 namespace Beedget
 {
-    public partial class SavingsPreviewControl : UserControl
+    public partial class ExpensePreviewControl : UserControl
     {
         string title = null;
         string category = null;
         string current_Amount = null;
-        string target_Amount = null;
         string added_Date = null;
-        string target_Date = null;
         string budgetID = null;
 
-        public SavingsPreviewControl()
+        public ExpensePreviewControl()
         {
             InitializeComponent();
         }
 
-        public SavingsPreviewControl(string title, string category, string current_Amount, string target_Amount, string added_Date, string target_Date, string budgetID)
+        public ExpensePreviewControl(string title, string category, string current_Amount, string added_Date, string budgetID)
         {
             InitializeComponent();
             this.title = title;
             this.category = category;
             this.current_Amount = current_Amount;
-            this.target_Amount = target_Amount;
             this.added_Date = added_Date;
-            this.target_Date = target_Date;
             this.budgetID = budgetID;
             LoadData();
         }
@@ -44,11 +40,8 @@ namespace Beedget
             title_label.Text = title;
             category_label.Text = category;
             currAmount.Text = "Php " + current_Amount;
-            targetAmount.Text = "Php " +  target_Amount;
             addedDate.Text = added_Date;
-            targetDate.Text = target_Date;
         }
-
 
         private void delete_btn_Click(object sender, EventArgs e)
         {
@@ -69,11 +62,11 @@ namespace Beedget
                     conn.Open();
 
                     string deleteUserQuery = "DELETE FROM Budget WHERE budgetID = @budgetID";
-                    SqlCommand delUserCmd = new SqlCommand(deleteUserQuery, conn); 
-                        delUserCmd.Parameters.AddWithValue("@budgetID", budgetID);
-                        delUserCmd.ExecuteNonQuery();
-                    
-                    
+                    SqlCommand delUserCmd = new SqlCommand(deleteUserQuery, conn);
+                    delUserCmd.Parameters.AddWithValue("@budgetID", budgetID);
+                    delUserCmd.ExecuteNonQuery();
+
+
                 }
                 if (this.Parent != null)
                 {
@@ -83,57 +76,8 @@ namespace Beedget
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void title_label_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void category_label_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void current_lbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void target_lbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void addedDate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void currAmount_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void targetAmount_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void targetDate_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void edit_btn_Click(object sender, EventArgs e)
         {
 
         }

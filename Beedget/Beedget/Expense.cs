@@ -14,20 +14,17 @@ namespace Beedget
     public partial class Expense : Form
     {
         private BeedgetEntities db = new BeedgetEntities();
-        private Users currentUser = null;
-        public Expense(Users currentUser)
+        Dashboard parent;
+        Users currentUser = null;
+
+        public Expense( Dashboard parent, Users currentUser)
         {
             InitializeComponent();
+            this.parent = parent;
             this.currentUser = currentUser;
         }
 
         private void Expense_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void save_btn_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -75,6 +72,11 @@ namespace Beedget
                     MessageBox.Show("Expense saved successfully!");
                 }
             }
+            //if (parent != null)
+            //{
+            //    parent.RefreshSavings();
+            //}
+
             this.Close();
         }
 

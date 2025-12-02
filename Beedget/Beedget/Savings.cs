@@ -16,19 +16,13 @@ namespace Beedget
     {
         private BeedgetEntities db = new BeedgetEntities();
 
-        Users currentUser = null;
         Dashboard parent;
- 
+        Users currentUser = null;
+
         public Savings(Dashboard parent, Users currentUser)
         {
             InitializeComponent();
             this.parent = parent;
-            this.currentUser = currentUser;
-        }
-
-        public Savings(Users currentUser)
-        {
-            InitializeComponent();
             this.currentUser = currentUser;
         }
 
@@ -91,10 +85,10 @@ namespace Beedget
                     
                 }
             }
-            if (parent != null)
-            {
-                parent.RefreshSavings();
-            }
+            //if (parent != null)
+            //{
+            //    parent.RefreshSavings();
+            //}
 
             this.Close();
         }
@@ -105,13 +99,6 @@ namespace Beedget
             {
                 tb_title.Text = "";
             }
-        }
-
-
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void save_btn_Paint(object sender, PaintEventArgs e)

@@ -30,18 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Savings));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.tb_title = new System.Windows.Forms.TextBox();
-            this.category = new System.Windows.Forms.ComboBox();
-            this.addedDate = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.save_btn = new System.Windows.Forms.FlowLayoutPanel();
-            this.tb_targetAmount = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tb_currentAmount = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.tb_currentAmount = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tb_targetAmount = new System.Windows.Forms.TextBox();
+            this.save_btn = new System.Windows.Forms.FlowLayoutPanel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.addedDate = new System.Windows.Forms.DateTimePicker();
+            this.category = new System.Windows.Forms.ComboBox();
+            this.tb_title = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,22 +64,133 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(479, 451);
             this.panel3.TabIndex = 9;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // tb_title
+            // label5
             // 
-            this.tb_title.BackColor = System.Drawing.Color.LemonChiffon;
-            this.tb_title.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_title.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 20F, System.Drawing.FontStyle.Bold);
-            this.tb_title.ForeColor = System.Drawing.Color.Black;
-            this.tb_title.Location = new System.Drawing.Point(76, 34);
-            this.tb_title.Margin = new System.Windows.Forms.Padding(5);
-            this.tb_title.Name = "tb_title";
-            this.tb_title.Size = new System.Drawing.Size(316, 45);
-            this.tb_title.TabIndex = 4;
-            this.tb_title.Text = "Title";
-            this.tb_title.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tb_title.Click += new System.EventHandler(this.tb_title_Click);
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(21, 307);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(181, 31);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Current Amount";
+            // 
+            // tb_currentAmount
+            // 
+            this.tb_currentAmount.BackColor = System.Drawing.Color.White;
+            this.tb_currentAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_currentAmount.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 16F, System.Drawing.FontStyle.Bold);
+            this.tb_currentAmount.ForeColor = System.Drawing.Color.Black;
+            this.tb_currentAmount.Location = new System.Drawing.Point(256, 307);
+            this.tb_currentAmount.Margin = new System.Windows.Forms.Padding(5);
+            this.tb_currentAmount.Name = "tb_currentAmount";
+            this.tb_currentAmount.Size = new System.Drawing.Size(194, 43);
+            this.tb_currentAmount.TabIndex = 15;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(250, 101);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(109, 31);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Category";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(21, 101);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(169, 31);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Target Amount";
+            // 
+            // tb_targetAmount
+            // 
+            this.tb_targetAmount.BackColor = System.Drawing.Color.White;
+            this.tb_targetAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_targetAmount.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 16F, System.Drawing.FontStyle.Bold);
+            this.tb_targetAmount.ForeColor = System.Drawing.Color.Black;
+            this.tb_targetAmount.Location = new System.Drawing.Point(27, 137);
+            this.tb_targetAmount.Margin = new System.Windows.Forms.Padding(5);
+            this.tb_targetAmount.Name = "tb_targetAmount";
+            this.tb_targetAmount.Size = new System.Drawing.Size(194, 43);
+            this.tb_targetAmount.TabIndex = 3;
+            // 
+            // save_btn
+            // 
+            this.save_btn.BackColor = System.Drawing.Color.Transparent;
+            this.save_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("save_btn.BackgroundImage")));
+            this.save_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.save_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.save_btn.Location = new System.Drawing.Point(155, 368);
+            this.save_btn.Name = "save_btn";
+            this.save_btn.Size = new System.Drawing.Size(162, 56);
+            this.save_btn.TabIndex = 4;
+            this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
+            this.save_btn.Paint += new System.Windows.Forms.PaintEventHandler(this.save_btn_Paint);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.White;
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.White;
+            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.Black;
+            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.Black;
+            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.Black;
+            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Yu Gothic UI", 16F);
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(256, 234);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(194, 43);
+            this.dateTimePicker1.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(250, 200);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(135, 31);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Target Date";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(21, 200);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(138, 31);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Added Date";
+            // 
+            // addedDate
+            // 
+            this.addedDate.CalendarForeColor = System.Drawing.Color.White;
+            this.addedDate.CalendarMonthBackground = System.Drawing.Color.White;
+            this.addedDate.CalendarTitleBackColor = System.Drawing.Color.Black;
+            this.addedDate.CalendarTitleForeColor = System.Drawing.Color.Black;
+            this.addedDate.CalendarTrailingForeColor = System.Drawing.Color.Black;
+            this.addedDate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addedDate.Font = new System.Drawing.Font("Yu Gothic UI", 16F);
+            this.addedDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.addedDate.Location = new System.Drawing.Point(27, 234);
+            this.addedDate.Name = "addedDate";
+            this.addedDate.Size = new System.Drawing.Size(194, 43);
+            this.addedDate.TabIndex = 5;
             // 
             // category
             // 
@@ -100,132 +211,20 @@
             this.category.Size = new System.Drawing.Size(194, 45);
             this.category.TabIndex = 0;
             // 
-            // addedDate
+            // tb_title
             // 
-            this.addedDate.CalendarForeColor = System.Drawing.Color.White;
-            this.addedDate.CalendarMonthBackground = System.Drawing.Color.White;
-            this.addedDate.CalendarTitleBackColor = System.Drawing.Color.Black;
-            this.addedDate.CalendarTitleForeColor = System.Drawing.Color.Black;
-            this.addedDate.CalendarTrailingForeColor = System.Drawing.Color.Black;
-            this.addedDate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addedDate.Font = new System.Drawing.Font("Yu Gothic UI", 16F);
-            this.addedDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.addedDate.Location = new System.Drawing.Point(27, 234);
-            this.addedDate.Name = "addedDate";
-            this.addedDate.Size = new System.Drawing.Size(194, 43);
-            this.addedDate.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(21, 200);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 31);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Added Date";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(250, 200);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 31);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Target Date";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.White;
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.White;
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.Black;
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.Black;
-            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.Black;
-            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Yu Gothic UI", 16F);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(256, 234);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(194, 43);
-            this.dateTimePicker1.TabIndex = 11;
-            // 
-            // save_btn
-            // 
-            this.save_btn.BackColor = System.Drawing.Color.Transparent;
-            this.save_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("save_btn.BackgroundImage")));
-            this.save_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.save_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.save_btn.Location = new System.Drawing.Point(155, 368);
-            this.save_btn.Name = "save_btn";
-            this.save_btn.Size = new System.Drawing.Size(162, 56);
-            this.save_btn.TabIndex = 4;
-            this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
-            this.save_btn.Paint += new System.Windows.Forms.PaintEventHandler(this.save_btn_Paint);
-            // 
-            // tb_targetAmount
-            // 
-            this.tb_targetAmount.BackColor = System.Drawing.Color.White;
-            this.tb_targetAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_targetAmount.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.tb_targetAmount.ForeColor = System.Drawing.Color.Black;
-            this.tb_targetAmount.Location = new System.Drawing.Point(27, 137);
-            this.tb_targetAmount.Margin = new System.Windows.Forms.Padding(5);
-            this.tb_targetAmount.Name = "tb_targetAmount";
-            this.tb_targetAmount.Size = new System.Drawing.Size(194, 43);
-            this.tb_targetAmount.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(21, 101);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 31);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Target Amount";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(250, 101);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 31);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Category";
-            // 
-            // tb_currentAmount
-            // 
-            this.tb_currentAmount.BackColor = System.Drawing.Color.White;
-            this.tb_currentAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_currentAmount.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.tb_currentAmount.ForeColor = System.Drawing.Color.Black;
-            this.tb_currentAmount.Location = new System.Drawing.Point(256, 307);
-            this.tb_currentAmount.Margin = new System.Windows.Forms.Padding(5);
-            this.tb_currentAmount.Name = "tb_currentAmount";
-            this.tb_currentAmount.Size = new System.Drawing.Size(194, 43);
-            this.tb_currentAmount.TabIndex = 15;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(21, 307);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(181, 31);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Current Amount";
+            this.tb_title.BackColor = System.Drawing.Color.LemonChiffon;
+            this.tb_title.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_title.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 20F, System.Drawing.FontStyle.Bold);
+            this.tb_title.ForeColor = System.Drawing.Color.Black;
+            this.tb_title.Location = new System.Drawing.Point(76, 34);
+            this.tb_title.Margin = new System.Windows.Forms.Padding(5);
+            this.tb_title.Name = "tb_title";
+            this.tb_title.Size = new System.Drawing.Size(316, 45);
+            this.tb_title.TabIndex = 4;
+            this.tb_title.Text = "Title";
+            this.tb_title.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_title.Click += new System.EventHandler(this.tb_title_Click);
             // 
             // Savings
             // 
