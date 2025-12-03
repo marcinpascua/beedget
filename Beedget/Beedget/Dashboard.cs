@@ -26,7 +26,6 @@ namespace Beedget
         {
         }
 
-
         private void logout_btn_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -34,16 +33,10 @@ namespace Beedget
             logIn.Show();
         }
     
-
         private void selection_btn_Click(object sender, EventArgs e)
         {
             var add = new OptionDialog(this, currentUser);
             add.Show();
-        }
-
-        private void home_btn_Click(object sender, EventArgs e)
-        {
-           
         }
 
         private void savings_Click(object sender, EventArgs e)
@@ -52,14 +45,16 @@ namespace Beedget
             preview.ShowDialog();
         }
 
-       
-
         private void expense_Click(object sender, EventArgs e)
         {
             ExpensePreview preview = new ExpensePreview(currentUser);
             preview.ShowDialog();
         }
 
-      
+        private void checklist_btn_Click(object sender, EventArgs e)
+        {
+            Checklist preview = new Checklist();
+            preview.ShowDialog();
+        }
     }
 }

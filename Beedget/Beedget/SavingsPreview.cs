@@ -44,24 +44,16 @@ namespace Beedget
                             row["TargetAmount"].ToString(),
                             row["DateAdded"].ToString(),
                             row["TargetDate"].ToString(),
-                            row["BudgetID"].ToString()
+                            Convert.ToInt32(row["BudgetID"])
                         );
-
                         preview.Dock = DockStyle.Top; 
-                        previewPanel.Controls.Add( preview );
+                        previewPanel.Controls.Add( preview);
+
                     }
                 }
             }
         }
 
-        private void savingsPreviewControl1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SavingsPreview_Load(object sender, EventArgs e)
-        {
-
-        }
+   
     }
 }

@@ -33,9 +33,9 @@
             this.delete_btn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.currAmount = new System.Windows.Forms.Label();
-            this.current_lbl = new System.Windows.Forms.Label();
             this.addedDate = new System.Windows.Forms.Label();
+            this.current_lbl = new System.Windows.Forms.Label();
+            this.currAmount = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -76,6 +76,7 @@
             this.delete_btn.TabIndex = 17;
             this.delete_btn.Text = "Delete";
             this.delete_btn.UseVisualStyleBackColor = false;
+            this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
             // 
             // panel1
             // 
@@ -101,19 +102,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(466, 192);
             this.panel2.TabIndex = 22;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // currAmount
+            // addedDate
             // 
-            this.currAmount.AutoSize = true;
-            this.currAmount.BackColor = System.Drawing.Color.Transparent;
-            this.currAmount.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 18F, System.Drawing.FontStyle.Bold);
-            this.currAmount.ForeColor = System.Drawing.Color.Black;
-            this.currAmount.Location = new System.Drawing.Point(280, 94);
-            this.currAmount.Name = "currAmount";
-            this.currAmount.Size = new System.Drawing.Size(183, 41);
-            this.currAmount.TabIndex = 23;
-            this.currAmount.Text = "Php 1000.00";
+            this.addedDate.AutoSize = true;
+            this.addedDate.BackColor = System.Drawing.Color.Transparent;
+            this.addedDate.Font = new System.Drawing.Font("Yu Gothic UI Light", 14F);
+            this.addedDate.ForeColor = System.Drawing.Color.Black;
+            this.addedDate.Location = new System.Drawing.Point(14, 149);
+            this.addedDate.Name = "addedDate";
+            this.addedDate.Size = new System.Drawing.Size(227, 32);
+            this.addedDate.TabIndex = 25;
+            this.addedDate.Text = "Added Date: 11/01/25";
             // 
             // current_lbl
             // 
@@ -127,17 +127,17 @@
             this.current_lbl.TabIndex = 24;
             this.current_lbl.Text = "Amount";
             // 
-            // addedDate
+            // currAmount
             // 
-            this.addedDate.AutoSize = true;
-            this.addedDate.BackColor = System.Drawing.Color.Transparent;
-            this.addedDate.Font = new System.Drawing.Font("Yu Gothic UI Light", 14F);
-            this.addedDate.ForeColor = System.Drawing.Color.Black;
-            this.addedDate.Location = new System.Drawing.Point(236, 150);
-            this.addedDate.Name = "addedDate";
-            this.addedDate.Size = new System.Drawing.Size(227, 32);
-            this.addedDate.TabIndex = 25;
-            this.addedDate.Text = "Added Date: 11/01/25";
+            this.currAmount.AutoSize = true;
+            this.currAmount.BackColor = System.Drawing.Color.Transparent;
+            this.currAmount.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 18F, System.Drawing.FontStyle.Bold);
+            this.currAmount.ForeColor = System.Drawing.Color.Black;
+            this.currAmount.Location = new System.Drawing.Point(280, 94);
+            this.currAmount.Name = "currAmount";
+            this.currAmount.Size = new System.Drawing.Size(183, 41);
+            this.currAmount.TabIndex = 23;
+            this.currAmount.Text = "Php 1000.00";
             // 
             // ExpensePreviewControl
             // 

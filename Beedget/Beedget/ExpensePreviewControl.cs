@@ -17,21 +17,23 @@ namespace Beedget
         string category = null;
         string current_Amount = null;
         string added_Date = null;
-        string budgetID = null;
+        int budgetID = 0;
 
-        public ExpensePreviewControl()
+        public ExpensePreviewControl( 
+            string title,
+            string category,
+            string current_Amount,
+            string added_Date,
+            int budgetID)
         {
             InitializeComponent();
-        }
 
-        public ExpensePreviewControl(string title, string category, string current_Amount, string added_Date, string budgetID)
-        {
-            InitializeComponent();
             this.title = title;
             this.category = category;
             this.current_Amount = current_Amount;
             this.added_Date = added_Date;
             this.budgetID = budgetID;
+
             LoadData();
         }
 
@@ -50,36 +52,47 @@ namespace Beedget
                 "Confirm Delete",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning
-);
+            );
 
             if (result == DialogResult.Yes)
             {
-
-                string connectionString = "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
-
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                try
                 {
-                    conn.Open();
+                    string connectionString =
+                        "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
 
-                    string deleteUserQuery = "DELETE FROM Budget WHERE budgetID = @budgetID";
-                    SqlCommand delUserCmd = new SqlCommand(deleteUserQuery, conn);
-                    delUserCmd.Parameters.AddWithValue("@budgetID", budgetID);
-                    delUserCmd.ExecuteNonQuery();
+                    using (SqlConnection conn = new SqlConnection(connectionString))
+                    {
+                        conn.Open();
 
+                        string deleteQuery = "DELETE FROM Budget WHERE budgetID = @budgetID";
 
+                        using (SqlCommand cmd = new SqlCommand(deleteQuery, conn))
+                        {
+                            cmd.Parameters.Add("@budgetID", SqlDbType.Int).Value = budgetID;
+
+                            int rows = cmd.ExecuteNonQuery();
+
+                            if (rows > 0)
+                            {
+                                this.Parent.Controls.Remove(this);
+                                this.Dispose();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Item could not be deleted.");
+                            }
+                        }
+                    }
                 }
-                if (this.Parent != null)
+                catch (Exception ex)
                 {
-                    this.Parent.Controls.Remove(this);
-                    this.Dispose();
+                    MessageBox.Show("ERROR: " + ex.Message);
                 }
             }
         }
 
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+   
     }
 }

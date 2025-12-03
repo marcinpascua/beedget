@@ -48,7 +48,7 @@ namespace Beedget
                             row["Category"].ToString(),
                             row["CurrentAmount"].ToString(),
                             row["DateAdded"].ToString(),
-                            row["BudgetID"].ToString()
+                            Convert.ToInt32(row["BudgetID"])
                         );
 
                         preview.Dock = DockStyle.Top;

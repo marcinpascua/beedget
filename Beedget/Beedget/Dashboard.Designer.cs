@@ -34,12 +34,10 @@
             this.selection_btn = new System.Windows.Forms.Panel();
             this.checklist_btn = new System.Windows.Forms.Panel();
             this.logout_btn = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.savings = new System.Windows.Forms.Button();
             this.expense = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -48,9 +46,9 @@
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.ErrorImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(187, 6);
+            this.pictureBox2.Location = new System.Drawing.Point(179, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(167, 70);
+            this.pictureBox2.Size = new System.Drawing.Size(192, 85);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
@@ -88,6 +86,7 @@
             this.checklist_btn.Name = "checklist_btn";
             this.checklist_btn.Size = new System.Drawing.Size(70, 70);
             this.checklist_btn.TabIndex = 2;
+            this.checklist_btn.Click += new System.EventHandler(this.checklist_btn_Click);
             // 
             // logout_btn
             // 
@@ -101,19 +100,13 @@
             this.logout_btn.TabIndex = 0;
             this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(2, 1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(542, 79);
-            this.panel2.TabIndex = 5;
-            // 
             // savings
             // 
             this.savings.BackColor = System.Drawing.Color.LemonChiffon;
+            this.savings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.savings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.savings.Font = new System.Drawing.Font("Yu Gothic UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.savings.ForeColor = System.Drawing.Color.Olive;
             this.savings.Location = new System.Drawing.Point(28, 215);
             this.savings.Name = "savings";
             this.savings.Size = new System.Drawing.Size(491, 160);
@@ -125,13 +118,16 @@
             // expense
             // 
             this.expense.BackColor = System.Drawing.Color.DarkKhaki;
+            this.expense.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.expense.Cursor = System.Windows.Forms.Cursors.Hand;
             this.expense.Font = new System.Drawing.Font("Yu Gothic UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expense.ForeColor = System.Drawing.Color.LemonChiffon;
             this.expense.Location = new System.Drawing.Point(28, 400);
             this.expense.Name = "expense";
             this.expense.Size = new System.Drawing.Size(491, 160);
             this.expense.TabIndex = 8;
             this.expense.Text = "Expense";
+            this.expense.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.expense.UseVisualStyleBackColor = false;
             this.expense.Click += new System.EventHandler(this.expense_Click);
             // 
@@ -142,9 +138,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(546, 814);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.expense);
             this.Controls.Add(this.savings);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -154,7 +150,6 @@
             this.Load += new System.EventHandler(this.Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -167,7 +162,6 @@
         private System.Windows.Forms.Panel checklist_btn;
         private System.Windows.Forms.Panel add_btn;
         private System.Windows.Forms.Panel selection_btn;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button savings;
         private System.Windows.Forms.Button expense;
     }

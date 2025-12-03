@@ -1,6 +1,6 @@
 ﻿namespace Beedget
 {
-    partial class ExpensePreview
+    partial class Checklist
     {
         /// <summary>
         /// Required designer variable.
@@ -28,60 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExpensePreview));
-            this.previewPanel = new System.Windows.Forms.FlowLayoutPanel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Checklist));
             this.label1 = new System.Windows.Forms.Label();
-            //this.expensePreviewControl1 = new Beedget.ExpensePreviewControl();
-            this.previewPanel.SuspendLayout();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
-            // 
-            // previewPanel
-            // 
-            this.previewPanel.AutoScroll = true;
-            this.previewPanel.BackColor = System.Drawing.Color.FloralWhite;
-            //this.previewPanel.Controls.Add(this.expensePreviewControl1);
-            this.previewPanel.Location = new System.Drawing.Point(12, 64);
-            this.previewPanel.Name = "previewPanel";
-            this.previewPanel.Size = new System.Drawing.Size(493, 497);
-            this.previewPanel.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(65)))), ((int)(((byte)(42)))));
-            this.label1.Location = new System.Drawing.Point(208, 9);
+            this.label1.Location = new System.Drawing.Point(196, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 50);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Expense";
+            this.label1.Size = new System.Drawing.Size(219, 50);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Checklist ✓";
             // 
-            // expensePreviewControl1
+            // flowLayoutPanel1
             // 
-            //this.expensePreviewControl1.BackColor = System.Drawing.Color.Gainsboro;
-            //this.expensePreviewControl1.Location = new System.Drawing.Point(3, 3);
-            //this.expensePreviewControl1.Name = "expensePreviewControl1";
-            //this.expensePreviewControl1.Size = new System.Drawing.Size(472, 198);
-            //this.expensePreviewControl1.TabIndex = 0;
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Beige;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 76);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(496, 485);
+            this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // ExpensePreview
+            // Checklist
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(520, 573);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.previewPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ExpensePreview";
+            this.Name = "Checklist";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Expense";
-            this.Load += new System.EventHandler(this.ExpensePreview_Load);
-            this.previewPanel.ResumeLayout(false);
+            this.Text = "Checklist";
+            this.Load += new System.EventHandler(this.Checklist_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,8 +74,7 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel previewPanel;
-        private ExpensePreviewControl expensePreviewControl1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

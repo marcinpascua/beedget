@@ -59,6 +59,12 @@
     <Compile Include="BudgetType.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Checklist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checklist.Designer.cs">
+      <DependentUpon>Checklist.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     <Compile Include="Users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Checklist.resx">
+      <DependentUpon>Checklist.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>

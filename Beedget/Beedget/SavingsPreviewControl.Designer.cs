@@ -54,7 +54,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(466, 75);
             this.panel1.TabIndex = 20;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // title_label
             // 
@@ -67,20 +66,18 @@
             this.title_label.Size = new System.Drawing.Size(87, 46);
             this.title_label.TabIndex = 15;
             this.title_label.Text = "Title";
-            this.title_label.Click += new System.EventHandler(this.title_label_Click);
             // 
             // category_label
             // 
             this.category_label.AutoSize = true;
             this.category_label.BackColor = System.Drawing.Color.Transparent;
-            this.category_label.Font = new System.Drawing.Font("Yu Gothic UI Light", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.category_label.Font = new System.Drawing.Font("Yu Gothic UI Light", 11F, System.Drawing.FontStyle.Italic);
             this.category_label.ForeColor = System.Drawing.Color.Azure;
-            this.category_label.Location = new System.Drawing.Point(15, 53);
+            this.category_label.Location = new System.Drawing.Point(15, 47);
             this.category_label.Name = "category_label";
-            this.category_label.Size = new System.Drawing.Size(65, 20);
+            this.category_label.Size = new System.Drawing.Size(86, 25);
             this.category_label.TabIndex = 14;
             this.category_label.Text = "Category";
-            this.category_label.Click += new System.EventHandler(this.category_label_Click);
             // 
             // delete_btn
             // 
@@ -107,7 +104,6 @@
             this.current_lbl.Size = new System.Drawing.Size(90, 31);
             this.current_lbl.TabIndex = 18;
             this.current_lbl.Text = "Current";
-            this.current_lbl.Click += new System.EventHandler(this.current_lbl_Click);
             // 
             // target_lbl
             // 
@@ -120,7 +116,6 @@
             this.target_lbl.Size = new System.Drawing.Size(78, 31);
             this.target_lbl.TabIndex = 19;
             this.target_lbl.Text = "Target";
-            this.target_lbl.Click += new System.EventHandler(this.target_lbl_Click);
             // 
             // addedDate
             // 
@@ -133,7 +128,6 @@
             this.addedDate.Size = new System.Drawing.Size(164, 23);
             this.addedDate.TabIndex = 16;
             this.addedDate.Text = "Added Date: 11/01/25";
-            this.addedDate.Click += new System.EventHandler(this.addedDate_Click);
             // 
             // currAmount
             // 
@@ -146,7 +140,6 @@
             this.currAmount.Size = new System.Drawing.Size(140, 31);
             this.currAmount.TabIndex = 22;
             this.currAmount.Text = "Php 1000.00";
-            this.currAmount.Click += new System.EventHandler(this.currAmount_Click);
             // 
             // targetAmount
             // 
@@ -159,7 +152,6 @@
             this.targetAmount.Size = new System.Drawing.Size(144, 31);
             this.targetAmount.TabIndex = 23;
             this.targetAmount.Text = "Php 2000.00";
-            this.targetAmount.Click += new System.EventHandler(this.targetAmount_Click);
             // 
             // targetDate
             // 
@@ -172,7 +164,6 @@
             this.targetDate.Size = new System.Drawing.Size(162, 23);
             this.targetDate.TabIndex = 24;
             this.targetDate.Text = "Target Date: 12/01/25";
-            this.targetDate.Click += new System.EventHandler(this.targetDate_Click);
             // 
             // panel2
             // 
@@ -189,7 +180,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(466, 196);
             this.panel2.TabIndex = 23;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // edit_btn
             // 
@@ -203,7 +193,6 @@
             this.edit_btn.TabIndex = 25;
             this.edit_btn.Text = "✎";
             this.edit_btn.UseVisualStyleBackColor = false;
-            this.edit_btn.Click += new System.EventHandler(this.edit_btn_Click);
             // 
             // SavingsPreviewControl
             // 
