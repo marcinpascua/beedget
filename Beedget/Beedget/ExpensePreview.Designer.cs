@@ -36,7 +36,7 @@
             // previewPanel
             // 
             this.previewPanel.AutoScroll = true;
-            this.previewPanel.BackColor = System.Drawing.Color.FloralWhite;
+            this.previewPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.previewPanel.Location = new System.Drawing.Point(12, 64);
             this.previewPanel.Name = "previewPanel";
             this.previewPanel.Size = new System.Drawing.Size(496, 497);
@@ -61,7 +61,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(520, 573);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.previewPanel);

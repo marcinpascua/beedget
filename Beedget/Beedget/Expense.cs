@@ -13,7 +13,6 @@ namespace Beedget
 {
     public partial class Expense : Form
     {
-        private BeedgetEntities db = new BeedgetEntities();
         Dashboard parent;
         Users currentUser = null;
 

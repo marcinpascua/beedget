@@ -100,7 +100,6 @@ namespace Beedget
         //EDIT SAVINGS CURRENT AMOUNT BUTTON
         private void edit_btn_Click(object sender, EventArgs e)
         {
-
             string newAmount = Interaction.InputBox(
             "Enter new current amount:",
             "Edit Savings",
@@ -108,9 +107,18 @@ namespace Beedget
             );
 
             if (string.IsNullOrWhiteSpace(newAmount))
-                return; 
+            {
+                return;
+            }
 
             UpdateCurrAmount(newAmount);
+
+            decimal curr = decimal.Parse(newAmount);
+            decimal target = decimal.Parse(target_Amount);
+            if (curr >= target)
+            {
+                checkedSavings();
+            }
         }
 
         //UPDATES THE NEW CURRENT AMOUNT
@@ -144,6 +152,30 @@ namespace Beedget
                     }
                 }
             }
+        }
+
+        //CHECKED SAVINGS
+        private void checkedSavings()
+        {
+            string connectionString =
+            "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string query = "UPDATE Budget SET isAchieved = 1 WHERE budgetID = @budgetID";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@budgetID", budgetID);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            MessageBox.Show("🎉Congratulations! You achieved your savings goal!🎉");
+            this.Parent.Controls.Remove(this);
+            this.Dispose();
+
         }
     }
 }

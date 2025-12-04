@@ -1,3 +1,5 @@
+--------------------USERS--------------------
+
 --ROLES
 INSERT INTO Roles(RoleName)
 VALUES
@@ -26,6 +28,10 @@ VALUES
 
 SELECT * FROM Users
 INNER JOIN Roles ON Users.RoleID = Roles.RoleID
+
+
+
+--------------------BUDGET--------------------
 
 --ADD BUDGET(SAVINGS)
 INSERT INTO Budget(Title, TargetAmount, CurrentAmount, DateAdded, TargetDate,

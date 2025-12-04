@@ -14,8 +14,6 @@ namespace Beedget
 {
     public partial class Savings : Form
     {
-        private BeedgetEntities db = new BeedgetEntities();
-
         Dashboard parent;
         Users currentUser = null;
 

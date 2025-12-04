@@ -58,7 +58,7 @@ namespace Beedget
         //CHECKLIST OF ACHIEVED SAVINGS
         private void checklist_btn_Click(object sender, EventArgs e)
         {
-            Checklist preview = new Checklist();
+            Checklist preview = new Checklist(currentUser);
             preview.ShowDialog();
         }
     }

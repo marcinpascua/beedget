@@ -13,7 +13,6 @@ namespace Beedget
 {
     public partial class ExpensePreview : Form
     {
-        private BeedgetEntities db = new BeedgetEntities();
         private Users currentUser = null;
 
         public ExpensePreview(Users currentUser)

@@ -7,7 +7,6 @@ namespace Beedget
 {
     public partial class SavingsPreview : Form
     {
-        private BeedgetEntities db = new BeedgetEntities();
         private Users currentUser = null;
 
         public SavingsPreview(Users currentUser)
@@ -25,7 +24,7 @@ namespace Beedget
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT * FROM Budget WHERE UserID = @UserID AND BudgetTypeID = 1";
+                string query = "SELECT * FROM Budget WHERE UserID = @UserID AND BudgetTypeID = 1 AND isAchieved = 0";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -54,6 +53,9 @@ namespace Beedget
             }
         }
 
-   
+        private void SavingsPreview_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

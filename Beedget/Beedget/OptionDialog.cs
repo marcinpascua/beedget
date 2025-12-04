@@ -12,7 +12,6 @@ namespace Beedget
 {
     public partial class OptionDialog : Form
     {
-        private BeedgetEntities db = new BeedgetEntities();
         Dashboard parent;
         private Users currentUser = null;
 
