@@ -193,6 +193,7 @@
             this.edit_btn.TabIndex = 25;
             this.edit_btn.Text = "✎";
             this.edit_btn.UseVisualStyleBackColor = false;
+            this.edit_btn.Click += new System.EventHandler(this.edit_btn_Click);
             // 
             // SavingsPreviewControl
             // 

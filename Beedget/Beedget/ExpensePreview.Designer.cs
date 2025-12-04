@@ -31,18 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExpensePreview));
             this.previewPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            //this.expensePreviewControl1 = new Beedget.ExpensePreviewControl();
-            this.previewPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // previewPanel
             // 
             this.previewPanel.AutoScroll = true;
             this.previewPanel.BackColor = System.Drawing.Color.FloralWhite;
-            //this.previewPanel.Controls.Add(this.expensePreviewControl1);
             this.previewPanel.Location = new System.Drawing.Point(12, 64);
             this.previewPanel.Name = "previewPanel";
-            this.previewPanel.Size = new System.Drawing.Size(493, 497);
+            this.previewPanel.Size = new System.Drawing.Size(496, 497);
             this.previewPanel.TabIndex = 0;
             // 
             // label1
@@ -60,14 +57,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Expense";
             // 
-            // expensePreviewControl1
-            // 
-            //this.expensePreviewControl1.BackColor = System.Drawing.Color.Gainsboro;
-            //this.expensePreviewControl1.Location = new System.Drawing.Point(3, 3);
-            //this.expensePreviewControl1.Name = "expensePreviewControl1";
-            //this.expensePreviewControl1.Size = new System.Drawing.Size(472, 198);
-            //this.expensePreviewControl1.TabIndex = 0;
-            // 
             // ExpensePreview
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -81,7 +70,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Expense";
             this.Load += new System.EventHandler(this.ExpensePreview_Load);
-            this.previewPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

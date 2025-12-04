@@ -2,6 +2,8 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
+
 
 namespace Beedget
 {
@@ -47,6 +49,7 @@ namespace Beedget
             targetDate.Text = target_Date;
         }
 
+        //DELETE SAVINGS BUTTON
         private void delete_btn_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(
@@ -90,6 +93,55 @@ namespace Beedget
                 catch (Exception ex)
                 {
                     MessageBox.Show("ERROR: " + ex.Message);
+                }
+            }
+        }
+
+        //EDIT SAVINGS CURRENT AMOUNT BUTTON
+        private void edit_btn_Click(object sender, EventArgs e)
+        {
+
+            string newAmount = Interaction.InputBox(
+            "Enter new current amount:",
+            "Edit Savings",
+            current_Amount
+            );
+
+            if (string.IsNullOrWhiteSpace(newAmount))
+                return; 
+
+            UpdateCurrAmount(newAmount);
+        }
+
+        //UPDATES THE NEW CURRENT AMOUNT
+        private void UpdateCurrAmount(string newAmount)
+        {
+            string connectionString = "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string query = "UPDATE Budget SET currentAmount = @amount WHERE budgetID = @budgetID";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@amount", newAmount);
+                    cmd.Parameters.AddWithValue("@budgetID", budgetID);
+
+                    int rows = cmd.ExecuteNonQuery();
+
+                    if (rows > 0)
+                    {
+                        current_Amount = newAmount;
+                        currAmount.Text = "Php " + newAmount;
+
+                        MessageBox.Show("Amount updated!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No changes were made.");
+                    }
                 }
             }
         }

@@ -28,6 +28,7 @@ namespace Beedget
             this.Hide();
         }
 
+        //EXPENSE BUTTON 
         private void expense_btn_Click(object sender, EventArgs e)
         {
             Expense expenseForm = new Expense(parent, currentUser);
@@ -35,6 +36,7 @@ namespace Beedget
             expenseForm.Show();
         }
     
+        //SAVINGS BUTTON
         private void savings_btn_Click(object sender, EventArgs e)
         {
             Savings savingsForm = new Savings(parent, currentUser);

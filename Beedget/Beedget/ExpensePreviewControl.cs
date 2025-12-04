@@ -45,6 +45,7 @@ namespace Beedget
             addedDate.Text = added_Date;
         }
 
+        //DELETE EXPENSE BUTTON
         private void delete_btn_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(
@@ -92,7 +93,9 @@ namespace Beedget
             }
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
 
-   
+        }
     }
 }

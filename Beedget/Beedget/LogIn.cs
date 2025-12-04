@@ -30,6 +30,7 @@ namespace Beedget
 
         }
 
+        //SIGN UP BUTTON
         private void signup_link_Click(object sender, EventArgs e)
         {
             Signup signupForm = new Signup();
@@ -37,6 +38,7 @@ namespace Beedget
             this.Hide();
         }
 
+        //LOG IN BUTTON
         private void login_btn_Click(object sender, EventArgs e)
         {
             String username = tb_username.Text;
@@ -55,6 +57,7 @@ namespace Beedget
             }
         }
 
+        //USERNAME TEXTBOX
         private void tb_username_TextChanged(object sender, EventArgs e)
         {
 
@@ -64,6 +67,7 @@ namespace Beedget
             }
         }
 
+        //PASSWORD TEXTBOX
         private void tb_password_TextChanged(object sender, EventArgs e)
         {
             if (tb_password.Text == "password")
@@ -72,11 +76,6 @@ namespace Beedget
                 tb_password.ForeColor = Color.Black;
                 tb_password.PasswordChar = '•';
             }
-        }
-
-        private void tb_username_TextChanged_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

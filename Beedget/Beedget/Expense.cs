@@ -29,6 +29,7 @@ namespace Beedget
 
         }
 
+        //SAVE BUTTON FOR EXPENSE
         private void save_btn_Click(object sender, EventArgs e)
         {
             string connectionString = "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
@@ -72,14 +73,10 @@ namespace Beedget
                     MessageBox.Show("Expense saved successfully!");
                 }
             }
-            //if (parent != null)
-            //{
-            //    parent.RefreshSavings();
-            //}
-
             this.Close();
         }
 
+        //EDITS TITLE OF EXPENSE
         private void tb_title_Click(object sender, EventArgs e)
         {
             if (tb_title.Text == "Title")

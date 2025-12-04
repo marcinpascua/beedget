@@ -31,14 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SavingsPreview));
             this.previewPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.previewPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // previewPanel
             // 
             this.previewPanel.AutoScroll = true;
             this.previewPanel.BackColor = System.Drawing.Color.FloralWhite;
-            //this.previewPanel.Controls.Add(this.savingsPreviewControl1);
             this.previewPanel.Location = new System.Drawing.Point(12, 64);
             this.previewPanel.Name = "previewPanel";
             this.previewPanel.Size = new System.Drawing.Size(496, 497);
@@ -56,14 +54,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Savings";
             // 
-            // savingsPreviewControl1
-            // 
-            //this.savingsPreviewControl1.Location = new System.Drawing.Point(3, 3);
-            //this.savingsPreviewControl1.Name = "savingsPreviewControl1";
-            //this.savingsPreviewControl1.Size = new System.Drawing.Size(472, 204);
-            //this.savingsPreviewControl1.TabIndex = 0;
-            //this.savingsPreviewControl1.Load += new System.EventHandler(this.savingsPreviewControl1_Load_1);
-            //// 
             // SavingsPreview
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -76,8 +66,6 @@
             this.Name = "SavingsPreview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Savings";
-            //this.Load += new System.EventHandler(this.SavingsPreview_Load);
-            this.previewPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

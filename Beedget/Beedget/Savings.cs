@@ -85,14 +85,10 @@ namespace Beedget
                     
                 }
             }
-            //if (parent != null)
-            //{
-            //    parent.RefreshSavings();
-            //}
-
             this.Close();
         }
 
+        //EDITS TITLE OF SAVINGS
         private void tb_title_Click(object sender, EventArgs e)
         {
             if (tb_title.Text == "Title")

@@ -20,6 +20,7 @@ namespace Beedget
             InitializeComponent();
         }
 
+        //SIGN UP BUTTON
         private void signup_btn_Click(object sender, EventArgs e)
         {
             String username = tb_username.Text;
@@ -46,18 +47,17 @@ namespace Beedget
                 RoleID = 1
             };
 
-            // Add to database
             db.Users.Add(newUser);
             db.SaveChanges();
             MessageBox.Show("Account created successfully!", "Signup Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            // Reopen the login form
             LogIn login = new LogIn();
             login.Show();
             this.Hide();
 
         }
 
+        //USERNAME TEXTBOX
         private void tb_username_TextChanged(object sender, EventArgs e)
         {
             if (tb_username.Text == "username")
@@ -66,6 +66,7 @@ namespace Beedget
             }
         }
 
+        //PASSWORD TEXTBOX
         private void tb_password_TextChanged(object sender, EventArgs e)
         {
             if (tb_password.Text == "password")
@@ -76,6 +77,7 @@ namespace Beedget
             }
         }
 
+        //CONFIRM PASSWORD TEXTBOX
         private void tb_confirmpass_TextChanged(object sender, EventArgs e)
         {
 
@@ -92,6 +94,7 @@ namespace Beedget
 
         }
 
+        //GOES BACK TO LOG IN PAGE
         private void back_btn_Click(object sender, EventArgs e)
         {
             LogIn login = new LogIn();

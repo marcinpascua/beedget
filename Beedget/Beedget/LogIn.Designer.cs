@@ -70,7 +70,7 @@
             this.tb_username.TabIndex = 2;
             this.tb_username.Text = "username";
             this.tb_username.Click += new System.EventHandler(this.tb_username_TextChanged);
-            this.tb_username.TextChanged += new System.EventHandler(this.tb_username_TextChanged_1);
+            //this.tb_username.TextChanged += new System.EventHandler(this.tb_username_TextChanged_1);
             // 
             // pictureBox1
             // 
