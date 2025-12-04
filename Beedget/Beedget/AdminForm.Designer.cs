@@ -30,18 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.logout_btn = new System.Windows.Forms.Button();
-            this.users_btn = new System.Windows.Forms.Button();
-            this.dashboard_btn = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.previewPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.dashboard_btn = new System.Windows.Forms.Button();
+            this.users_btn = new System.Windows.Forms.Button();
+            this.logout_btn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.previewPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,43 +58,37 @@
             this.panel1.Size = new System.Drawing.Size(298, 765);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox1
+            // panel2
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(63, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(165, 63);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Location = new System.Drawing.Point(22, 167);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(250, 209);
+            this.panel2.TabIndex = 0;
             // 
-            // logout_btn
+            // label1
             // 
-            this.logout_btn.BackColor = System.Drawing.Color.Olive;
-            this.logout_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logout_btn.Font = new System.Drawing.Font("Yu Gothic UI", 14F, System.Drawing.FontStyle.Bold);
-            this.logout_btn.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.logout_btn.Location = new System.Drawing.Point(22, 682);
-            this.logout_btn.Name = "logout_btn";
-            this.logout_btn.Size = new System.Drawing.Size(250, 70);
-            this.logout_btn.TabIndex = 1;
-            this.logout_btn.Text = "Log out";
-            this.logout_btn.UseVisualStyleBackColor = false;
-            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 16F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Olive;
+            this.label1.Location = new System.Drawing.Point(15, 154);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(218, 37);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Welcome Admin";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // users_btn
+            // pictureBox2
             // 
-            this.users_btn.BackColor = System.Drawing.Color.White;
-            this.users_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.users_btn.Font = new System.Drawing.Font("Yu Gothic UI", 14F, System.Drawing.FontStyle.Bold);
-            this.users_btn.ForeColor = System.Drawing.Color.Gray;
-            this.users_btn.Location = new System.Drawing.Point(22, 500);
-            this.users_btn.Name = "users_btn";
-            this.users_btn.Size = new System.Drawing.Size(250, 70);
-            this.users_btn.TabIndex = 2;
-            this.users_btn.Text = "Users";
-            this.users_btn.UseVisualStyleBackColor = false;
-            this.users_btn.Click += new System.EventHandler(this.users_btn_Click);
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(17, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(216, 148);
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
             // 
             // dashboard_btn
             // 
@@ -110,45 +104,50 @@
             this.dashboard_btn.UseVisualStyleBackColor = false;
             this.dashboard_btn.Click += new System.EventHandler(this.dashboard_btn_Click);
             // 
-            // pictureBox2
+            // users_btn
             // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(17, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(216, 148);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.users_btn.BackColor = System.Drawing.Color.White;
+            this.users_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.users_btn.Font = new System.Drawing.Font("Yu Gothic UI", 14F, System.Drawing.FontStyle.Bold);
+            this.users_btn.ForeColor = System.Drawing.Color.Gray;
+            this.users_btn.Location = new System.Drawing.Point(22, 500);
+            this.users_btn.Name = "users_btn";
+            this.users_btn.Size = new System.Drawing.Size(250, 70);
+            this.users_btn.TabIndex = 2;
+            this.users_btn.Text = "Users";
+            this.users_btn.UseVisualStyleBackColor = false;
+            this.users_btn.Click += new System.EventHandler(this.users_btn_Click);
+            // 
+            // logout_btn
+            // 
+            this.logout_btn.BackColor = System.Drawing.Color.Olive;
+            this.logout_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logout_btn.Font = new System.Drawing.Font("Yu Gothic UI", 14F, System.Drawing.FontStyle.Bold);
+            this.logout_btn.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.logout_btn.Location = new System.Drawing.Point(22, 682);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(250, 70);
+            this.logout_btn.TabIndex = 1;
+            this.logout_btn.Text = "Log out";
+            this.logout_btn.UseVisualStyleBackColor = false;
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(63, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(165, 63);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // previewPanel
             // 
-            this.previewPanel.Location = new System.Drawing.Point(327, 31);
+            this.previewPanel.Location = new System.Drawing.Point(389, 40);
             this.previewPanel.Name = "previewPanel";
-            this.previewPanel.Size = new System.Drawing.Size(950, 523);
+            this.previewPanel.Size = new System.Drawing.Size(839, 452);
             this.previewPanel.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(22, 167);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 209);
-            this.panel2.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 16F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.Olive;
-            this.label1.Location = new System.Drawing.Point(15, 154);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 37);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Welcome Admin";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AdminForm
             // 
@@ -163,10 +162,9 @@
             this.Text = "Beedget | Admin";
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

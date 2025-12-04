@@ -50,6 +50,10 @@ namespace Beedget
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
+                    dashboard_data.DataSource = dt;
+
+                    dashboard_data.Dock = DockStyle.Fill;
+                    dashboard_data.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 }
             }
         }
