@@ -45,12 +45,23 @@ namespace Beedget
             String password = tb_password.Text;
 
             var user = db.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
-            if (user != null)
+
+            //USER SIDE (1)
+            if (user.RoleID == 1)
             {
                 Dashboard dashboardForm = new Dashboard(user);
                 dashboardForm.Show();
                 this.Hide();
             }
+
+            //ADMIN SIDE (2)
+            if (user.RoleID == 2)
+            {
+                AdminForm adminForm = new AdminForm(user);
+                adminForm.Show();
+                this.Hide();
+            }
+
             else
             {
                 MessageBox.Show("Invalid username or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);

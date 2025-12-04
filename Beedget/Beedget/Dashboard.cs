@@ -13,7 +13,7 @@ namespace Beedget
 {
     public partial class Dashboard : Form
     {
-        private BeedgetEntities db = new BeedgetEntities();
+        //private BeedgetEntities db = new BeedgetEntities();
         Users currentUser = null;
 
         public Dashboard(Users currentUser)
