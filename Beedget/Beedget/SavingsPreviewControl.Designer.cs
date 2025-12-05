@@ -152,6 +152,7 @@
             this.targetAmount.Size = new System.Drawing.Size(144, 31);
             this.targetAmount.TabIndex = 23;
             this.targetAmount.Text = "Php 2000.00";
+            this.targetAmount.Click += new System.EventHandler(this.targetAmount_Click);
             // 
             // targetDate
             // 

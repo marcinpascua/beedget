@@ -27,7 +27,7 @@ VALUES
 ('BenedictAvenido', 'benedict0426', 1);
 
 SELECT * FROM Users
-INNER JOIN Roles ON Users.RoleID = Roles.RoleID
+FULL JOIN Roles ON Users.RoleID = Roles.RoleID
 
 
 

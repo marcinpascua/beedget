@@ -144,9 +144,10 @@
             // 
             // previewPanel
             // 
-            this.previewPanel.Location = new System.Drawing.Point(392, 87);
+            this.previewPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.previewPanel.Location = new System.Drawing.Point(394, 74);
             this.previewPanel.Name = "previewPanel";
-            this.previewPanel.Size = new System.Drawing.Size(839, 379);
+            this.previewPanel.Size = new System.Drawing.Size(839, 597);
             this.previewPanel.TabIndex = 1;
             // 
             // AdminForm

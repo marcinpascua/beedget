@@ -27,6 +27,13 @@ namespace Beedget
             String password = tb_password.Text;
             String confirmPassword = tb_confirmpass.Text;
 
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirmPassword))
+            {
+                MessageBox.Show("Please enter both username and password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (password != confirmPassword)
             {
                 MessageBox.Show("Incorrect password. Please try again.", "Signup Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);

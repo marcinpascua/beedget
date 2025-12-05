@@ -177,5 +177,10 @@ namespace Beedget
             this.Dispose();
 
         }
+
+        private void targetAmount_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

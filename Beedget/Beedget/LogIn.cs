@@ -41,32 +41,40 @@ namespace Beedget
         //LOG IN BUTTON
         private void login_btn_Click(object sender, EventArgs e)
         {
-            String username = tb_username.Text;
-            String password = tb_password.Text;
+            string username = tb_username.Text.Trim();
+            string password = tb_password.Text.Trim();
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Please enter both username and password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             var user = db.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
 
-            //USER SIDE (1)
-            if (user.RoleID == 1)
+            if (user != null)
             {
-                Dashboard dashboardForm = new Dashboard(user);
-                dashboardForm.Show();
-                this.Hide();
+                // USER SIDE (1)
+                if (user.RoleID == 1)
+                {
+                    Dashboard dashboardForm = new Dashboard(user);
+                    dashboardForm.Show();
+                    this.Hide();
+                }
+                // ADMIN SIDE (2)
+                else if (user.RoleID == 2)
+                {
+                    AdminForm adminForm = new AdminForm(user);
+                    adminForm.Show();
+                    this.Hide();
+                }
             }
-
-            //ADMIN SIDE (2)
-            if (user.RoleID == 2)
-            {
-                AdminForm adminForm = new AdminForm(user);
-                adminForm.Show();
-                this.Hide();
-            }
-
             else
             {
                 MessageBox.Show("Invalid username or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         //USERNAME TEXTBOX
         private void tb_username_TextChanged(object sender, EventArgs e)
@@ -87,6 +95,11 @@ namespace Beedget
                 tb_password.ForeColor = Color.Black;
                 tb_password.PasswordChar = '•';
             }
+        }
+
+        private void tb_username_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
