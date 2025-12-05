@@ -55,7 +55,6 @@ C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.Expen
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.Checklist.resources
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.AdminForm.resources
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.AdminDashboardControl.resources
-C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.AdminUsersControl.resources
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\bin\Debug\Azure.Core.dll
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\bin\Debug\Azure.Identity.dll
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
@@ -140,3 +139,4 @@ C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\bin\Debug\ru\Microsoft.
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\bin\Debug\tr\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.AdminAccountsControl.resources

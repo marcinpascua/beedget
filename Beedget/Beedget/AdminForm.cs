@@ -43,15 +43,17 @@ namespace Beedget
 
         private void dashboard_btn_Click(object sender, EventArgs e)
         {
-            AdminDashboardControl preview = new AdminDashboardControl();
-            preview.Dock = DockStyle.Top;
+            previewPanel.Controls.Clear();
+            AdminDashboardControl preview = new AdminDashboardControl(currentUser);
+            preview.Dock = DockStyle.Fill;
             previewPanel.Controls.Add(preview);
         }
 
-        private void users_btn_Click(object sender, EventArgs e)
+        private void accounts_btn_Click(object sender, EventArgs e)
         {
-            AdminUsersControl preview = new AdminUsersControl(currentUser);
-            preview.Dock = DockStyle.Top;
+            previewPanel.Controls.Clear();
+            AdminAccountsControl preview = new AdminAccountsControl(currentUser);
+            preview.Dock = DockStyle.Fill;
             previewPanel.Controls.Add(preview);
         }
     }

@@ -171,6 +171,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminAccountsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminAccountsControl.Designer.cs">
+      <DependentUpon>AdminAccountsControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminDashboardControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -182,12 +188,6 @@
     </Compile>
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminUsersControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AdminUsersControl.Designer.cs">
-      <DependentUpon>AdminUsersControl.cs</DependentUpon>
     </Compile>
     <Compile Include="BeedgetDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -292,14 +292,14 @@
     <Compile Include="Users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminAccountsControl.resx">
+      <DependentUpon>AdminAccountsControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboardControl.resx">
       <DependentUpon>AdminDashboardControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminUsersControl.resx">
-      <DependentUpon>AdminUsersControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Checklist.resx">
       <DependentUpon>Checklist.cs</DependentUpon>

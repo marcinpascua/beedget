@@ -34,7 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dashboard_btn = new System.Windows.Forms.Button();
-            this.users_btn = new System.Windows.Forms.Button();
+            this.accounts_btn = new System.Windows.Forms.Button();
             this.logout_btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.previewPanel = new System.Windows.Forms.Panel();
@@ -50,7 +50,7 @@
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.dashboard_btn);
-            this.panel1.Controls.Add(this.users_btn);
+            this.panel1.Controls.Add(this.accounts_btn);
             this.panel1.Controls.Add(this.logout_btn);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(1, -2);
@@ -104,19 +104,19 @@
             this.dashboard_btn.UseVisualStyleBackColor = false;
             this.dashboard_btn.Click += new System.EventHandler(this.dashboard_btn_Click);
             // 
-            // users_btn
+            // accounts_btn
             // 
-            this.users_btn.BackColor = System.Drawing.Color.White;
-            this.users_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.users_btn.Font = new System.Drawing.Font("Yu Gothic UI", 14F, System.Drawing.FontStyle.Bold);
-            this.users_btn.ForeColor = System.Drawing.Color.Gray;
-            this.users_btn.Location = new System.Drawing.Point(22, 500);
-            this.users_btn.Name = "users_btn";
-            this.users_btn.Size = new System.Drawing.Size(250, 70);
-            this.users_btn.TabIndex = 2;
-            this.users_btn.Text = "Users";
-            this.users_btn.UseVisualStyleBackColor = false;
-            this.users_btn.Click += new System.EventHandler(this.users_btn_Click);
+            this.accounts_btn.BackColor = System.Drawing.Color.White;
+            this.accounts_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.accounts_btn.Font = new System.Drawing.Font("Yu Gothic UI", 14F, System.Drawing.FontStyle.Bold);
+            this.accounts_btn.ForeColor = System.Drawing.Color.Gray;
+            this.accounts_btn.Location = new System.Drawing.Point(22, 500);
+            this.accounts_btn.Name = "accounts_btn";
+            this.accounts_btn.Size = new System.Drawing.Size(250, 70);
+            this.accounts_btn.TabIndex = 2;
+            this.accounts_btn.Text = "Accounts";
+            this.accounts_btn.UseVisualStyleBackColor = false;
+            this.accounts_btn.Click += new System.EventHandler(this.accounts_btn_Click);
             // 
             // logout_btn
             // 
@@ -144,9 +144,9 @@
             // 
             // previewPanel
             // 
-            this.previewPanel.Location = new System.Drawing.Point(389, 40);
+            this.previewPanel.Location = new System.Drawing.Point(392, 87);
             this.previewPanel.Name = "previewPanel";
-            this.previewPanel.Size = new System.Drawing.Size(839, 452);
+            this.previewPanel.Size = new System.Drawing.Size(839, 379);
             this.previewPanel.TabIndex = 1;
             // 
             // AdminForm
@@ -175,7 +175,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button logout_btn;
-        private System.Windows.Forms.Button users_btn;
+        private System.Windows.Forms.Button accounts_btn;
         private System.Windows.Forms.Button dashboard_btn;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel previewPanel;

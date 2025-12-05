@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace Beedget
 {
-    public partial class AdminUsersControl : UserControl
+    public partial class AdminAccountsControl : UserControl
     {
         Users currentUser = null;
         int UserID;
 
-        public AdminUsersControl(Users user)
+        public AdminAccountsControl(Users user)
         {
             InitializeComponent();
             this.currentUser = user;
@@ -25,11 +25,6 @@ namespace Beedget
         }
 
         private void dashboard_data_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void AdminUsersControl_Load(object sender, EventArgs e)
         {
 
         }
