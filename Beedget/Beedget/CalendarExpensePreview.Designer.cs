@@ -1,6 +1,6 @@
 ﻿namespace Beedget
 {
-    partial class Checklist
+    partial class CalendarExpensePreview
     {
         /// <summary>
         /// Required designer variable.
@@ -28,46 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Checklist));
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalendarExpensePreview));
             this.previewPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(65)))), ((int)(((byte)(42)))));
-            this.label1.Location = new System.Drawing.Point(195, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 50);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Checklist ✓";
             // 
             // previewPanel
             // 
             this.previewPanel.AutoScroll = true;
-            this.previewPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.previewPanel.Location = new System.Drawing.Point(12, 83);
+            this.previewPanel.Location = new System.Drawing.Point(12, 87);
             this.previewPanel.Name = "previewPanel";
-            this.previewPanel.Size = new System.Drawing.Size(496, 478);
-            this.previewPanel.TabIndex = 1;
+            this.previewPanel.Size = new System.Drawing.Size(496, 474);
+            this.previewPanel.TabIndex = 0;
             // 
-            // Checklist
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(65)))), ((int)(((byte)(42)))));
+            this.label1.Location = new System.Drawing.Point(179, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 50);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Expense";
+            // 
+            // CalendarExpensePreview
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(520, 573);
-            this.Controls.Add(this.previewPanel);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.previewPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.Name = "Checklist";
+            this.Name = "CalendarExpensePreview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Checklist";
-            this.Load += new System.EventHandler(this.Checklist_Load);
+            this.Text = "CalendarExpensePreview";
+            this.Load += new System.EventHandler(this.CalendarExpensePreview_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -75,7 +75,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel previewPanel;
+        private System.Windows.Forms.Label label1;
     }
 }

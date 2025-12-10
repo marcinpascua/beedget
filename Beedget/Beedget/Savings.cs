@@ -62,6 +62,16 @@ namespace Beedget
                 return;
             }
 
+            decimal currentAmt = Convert.ToDecimal(tb_currentAmount.Text);
+            decimal targetAmt = Convert.ToDecimal(tb_targetAmount.Text);
+
+            if (currentAmt >= targetAmt)
+            {
+                MessageBox.Show("Current amount meets or exceeds the target! This budget is already achieved.");
+                return;
+            }
+
+
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();

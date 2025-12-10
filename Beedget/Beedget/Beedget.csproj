@@ -200,6 +200,12 @@
     <Compile Include="BudgetType.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="CalendarExpensePreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalendarExpensePreview.Designer.cs">
+      <DependentUpon>CalendarExpensePreview.cs</DependentUpon>
+    </Compile>
     <Compile Include="Checklist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +235,24 @@
     </Compile>
     <Compile Include="ExpensePreviewControl.Designer.cs">
       <DependentUpon>ExpensePreviewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="History.Designer.cs">
+      <DependentUpon>History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotifExpenseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NotifExpenseControl.Designer.cs">
+      <DependentUpon>NotifExpenseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotifSavingsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NotifSavingsControl.Designer.cs">
+      <DependentUpon>NotifSavingsControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Savings.cs">
       <SubType>Form</SubType>
@@ -301,6 +325,9 @@
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CalendarExpensePreview.resx">
+      <DependentUpon>CalendarExpensePreview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Checklist.resx">
       <DependentUpon>Checklist.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,6 +342,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExpensePreviewControl.resx">
       <DependentUpon>ExpensePreviewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="History.resx">
+      <DependentUpon>History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotifExpenseControl.resx">
+      <DependentUpon>NotifExpenseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotifSavingsControl.resx">
+      <DependentUpon>NotifSavingsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Savings.resx">
       <DependentUpon>Savings.cs</DependentUpon>

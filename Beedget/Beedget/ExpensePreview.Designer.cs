@@ -31,15 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExpensePreview));
             this.previewPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblTotalWeek = new System.Windows.Forms.Label();
+            this.lblTotalMonth = new System.Windows.Forms.Label();
+            this.lblTotalToday = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // previewPanel
             // 
             this.previewPanel.AutoScroll = true;
             this.previewPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.previewPanel.Location = new System.Drawing.Point(12, 64);
+            this.previewPanel.Location = new System.Drawing.Point(12, 149);
             this.previewPanel.Name = "previewPanel";
-            this.previewPanel.Size = new System.Drawing.Size(496, 497);
+            this.previewPanel.Size = new System.Drawing.Size(496, 412);
             this.previewPanel.TabIndex = 0;
             // 
             // label1
@@ -57,12 +60,45 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Expense";
             // 
+            // lblTotalWeek
+            // 
+            this.lblTotalWeek.AutoSize = true;
+            this.lblTotalWeek.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTotalWeek.Location = new System.Drawing.Point(12, 91);
+            this.lblTotalWeek.Name = "lblTotalWeek";
+            this.lblTotalWeek.Size = new System.Drawing.Size(178, 23);
+            this.lblTotalWeek.TabIndex = 5;
+            this.lblTotalWeek.Text = "Total Weekly Expense:";
+            // 
+            // lblTotalMonth
+            // 
+            this.lblTotalMonth.AutoSize = true;
+            this.lblTotalMonth.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTotalMonth.Location = new System.Drawing.Point(12, 114);
+            this.lblTotalMonth.Name = "lblTotalMonth";
+            this.lblTotalMonth.Size = new System.Drawing.Size(188, 23);
+            this.lblTotalMonth.TabIndex = 7;
+            this.lblTotalMonth.Text = "Total Monthly Expense:";
+            // 
+            // lblTotalToday
+            // 
+            this.lblTotalToday.AutoSize = true;
+            this.lblTotalToday.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTotalToday.Location = new System.Drawing.Point(12, 68);
+            this.lblTotalToday.Name = "lblTotalToday";
+            this.lblTotalToday.Size = new System.Drawing.Size(179, 23);
+            this.lblTotalToday.TabIndex = 6;
+            this.lblTotalToday.Text = "Today\'s Total Expense:";
+            // 
             // ExpensePreview
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(520, 573);
+            this.Controls.Add(this.lblTotalWeek);
+            this.Controls.Add(this.lblTotalMonth);
+            this.Controls.Add(this.lblTotalToday);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.previewPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -80,5 +116,8 @@
         private System.Windows.Forms.FlowLayoutPanel previewPanel;
         private ExpensePreviewControl expensePreviewControl1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTotalWeek;
+        private System.Windows.Forms.Label lblTotalMonth;
+        private System.Windows.Forms.Label lblTotalToday;
     }
 }

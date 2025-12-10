@@ -24,6 +24,7 @@ namespace Beedget
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            HighlightExpenseDates();
         }
 
         //LOG OUT BUTTON
@@ -61,5 +62,64 @@ namespace Beedget
             Checklist preview = new Checklist(currentUser);
             preview.ShowDialog();
         }
+
+        private void calendarExpenses_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            DateTime selectedDate = e.Start;
+
+            CalendarExpensePreview preview = new CalendarExpensePreview(currentUser, selectedDate);
+            preview.Show();
+        }
+
+        //HIGHLIGHTS DATES WITH EXPENSES IN THE CALENDAR
+        private void HighlightExpenseDates()
+        {
+            string connectionString = "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = @"SELECT DISTINCT CONVERT(date, DateAdded) AS DateAdded
+                         FROM Budget
+                         WHERE UserID = @UserID
+                         AND BudgetTypeID = 2"; 
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserID", currentUser.UserID);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    calendarExpenses.RemoveAllBoldedDates();
+
+                    while (reader.Read())
+                    {
+                        DateTime d = reader.GetDateTime(0);
+                        calendarExpenses.AddBoldedDate(d);
+                    }
+
+                    calendarExpenses.UpdateBoldedDates();
+                }
+            }
+        }
+
+        //HISTORY BUTTON
+        private void history_btn_Click(object sender, EventArgs e)
+        {
+            History preview = new History(currentUser);
+            preview.ShowDialog();
+        }
+
+        private void calendarExpenses_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
+
+        private void logout_btn_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
     }
 }
