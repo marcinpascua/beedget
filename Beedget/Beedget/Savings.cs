@@ -24,7 +24,6 @@ namespace Beedget
             this.currentUser = currentUser;
         }
 
-
         private void Savings_Load(object sender, EventArgs e)
         {
            
@@ -90,7 +89,13 @@ namespace Beedget
                     cmd.Parameters.AddWithValue("@Category", category.Text);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Savings goal saved successfully!");
-                    
+                    if (parent != null)
+                    {
+                        parent.RefreshCounts();
+                    }
+
+
+
                 }
             }
             this.Close();

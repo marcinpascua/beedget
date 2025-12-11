@@ -8,23 +8,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace Beedget
 {
     public partial class ExpensePreviewControl : UserControl
     {
+        Dashboard parent;
         string title = null;
         string category = null;
         string current_Amount = null;
         string added_Date = null;
         int budgetID = 0;
+        
 
-        public ExpensePreviewControl( 
+        public ExpensePreviewControl(
+            Dashboard parent,
             string title,
             string category,
             string current_Amount,
             string added_Date,
-            int budgetID)
+            int budgetID
+            )
         {
             InitializeComponent();
 
@@ -35,6 +40,7 @@ namespace Beedget
             this.budgetID = budgetID;
 
             LoadData();
+            this.parent = parent;
         }
 
         private void LoadData()
@@ -78,6 +84,8 @@ namespace Beedget
                             {
                                 this.Parent.Controls.Remove(this);
                                 this.Dispose();
+                                parent.RefreshCounts();
+
                             }
                             else
                             {

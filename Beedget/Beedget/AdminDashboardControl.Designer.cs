@@ -68,6 +68,7 @@
             this.userNum.Text = "7";
             this.userNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.userNum.TextChanged += new System.EventHandler(this.userNum_TextChanged);
+            this.userNum.Click += new System.EventHandler(this.userNum_Click);
             // 
             // label1
             // 

@@ -31,15 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SavingsPreview));
             this.previewPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.search_tb = new System.Windows.Forms.TextBox();
+            this.lblTotalMonth = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // previewPanel
             // 
             this.previewPanel.AutoScroll = true;
             this.previewPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.previewPanel.Location = new System.Drawing.Point(12, 64);
+            this.previewPanel.Location = new System.Drawing.Point(12, 148);
             this.previewPanel.Name = "previewPanel";
-            this.previewPanel.Size = new System.Drawing.Size(496, 497);
+            this.previewPanel.Size = new System.Drawing.Size(496, 411);
             this.previewPanel.TabIndex = 2;
             // 
             // label1
@@ -54,12 +56,37 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Savings";
             // 
+            // search_tb
+            // 
+            this.search_tb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.search_tb.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search_tb.ForeColor = System.Drawing.Color.Olive;
+            this.search_tb.Location = new System.Drawing.Point(103, 98);
+            this.search_tb.Name = "search_tb";
+            this.search_tb.Size = new System.Drawing.Size(379, 30);
+            this.search_tb.TabIndex = 12;
+            this.search_tb.Text = " ";
+            this.search_tb.TextChanged += new System.EventHandler(this.search_tb_TextChanged);
+            // 
+            // lblTotalMonth
+            // 
+            this.lblTotalMonth.AutoSize = true;
+            this.lblTotalMonth.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTotalMonth.ForeColor = System.Drawing.Color.Olive;
+            this.lblTotalMonth.Location = new System.Drawing.Point(12, 100);
+            this.lblTotalMonth.Name = "lblTotalMonth";
+            this.lblTotalMonth.Size = new System.Drawing.Size(85, 23);
+            this.lblTotalMonth.TabIndex = 13;
+            this.lblTotalMonth.Text = "Search  ⌕";
+            // 
             // SavingsPreview
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(520, 573);
+            this.Controls.Add(this.lblTotalMonth);
+            this.Controls.Add(this.search_tb);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.previewPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -76,5 +103,7 @@
         private System.Windows.Forms.FlowLayoutPanel previewPanel;
         private SavingsPreviewControl savingsPreviewControl1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox search_tb;
+        private System.Windows.Forms.Label lblTotalMonth;
     }
 }

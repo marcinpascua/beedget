@@ -8,15 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace Beedget
 {
     public partial class Checklist : Form
     {
+        Dashboard parent;
         Users currentUser = null;
-        public Checklist(Users currentUser)
+        public Checklist(Dashboard parent, Users currentUser)
         {
             InitializeComponent();
+            this.parent = parent;
             this.currentUser = currentUser;
             LoadData();
         }
@@ -26,9 +29,8 @@ namespace Beedget
 
         }
 
-        private void LoadData()
+        private void LoadData(string searchTerm = "")
         {
-
             string connectionString = "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -44,9 +46,24 @@ namespace Beedget
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
+                    searchTerm = searchTerm.ToLower();
+
+                    if (!string.IsNullOrEmpty(searchTerm))
+                    {
+                        var filteredRows = dt.AsEnumerable()
+                            .Where(row =>
+                                row["Title"].ToString().ToLower().Contains(searchTerm) ||
+                                row["Category"].ToString().ToLower().Contains(searchTerm)
+                            );
+
+                        dt = filteredRows.Any() ? filteredRows.CopyToDataTable() : dt.Clone();
+                    }
+
+
                     foreach (DataRow row in dt.Rows)
                     {
                         SavingsPreviewControl preview = new SavingsPreviewControl(
+                            parent,
                             row["Title"].ToString(),
                             row["Category"].ToString(),
                             row["CurrentAmount"].ToString(),
@@ -55,12 +72,21 @@ namespace Beedget
                             row["TargetDate"].ToString(),
                             Convert.ToInt32(row["BudgetID"])
                         );
+
                         preview.Dock = DockStyle.Top;
                         previewPanel.Controls.Add(preview);
-
                     }
+                    
+
                 }
             }
+        }
+
+        private void search_tb_TextChanged(object sender, EventArgs e)
+        {
+            string searchTerm = search_tb.Text.Trim().ToLower();
+            previewPanel.Controls.Clear();
+            LoadData(searchTerm);
         }
     }
 }

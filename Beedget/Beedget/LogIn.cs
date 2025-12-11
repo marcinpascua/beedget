@@ -97,9 +97,6 @@ namespace Beedget
             }
         }
 
-        private void tb_username_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

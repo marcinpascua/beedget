@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Checklist));
             this.label1 = new System.Windows.Forms.Label();
             this.previewPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblTotalMonth = new System.Windows.Forms.Label();
+            this.search_tb = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -49,10 +51,33 @@
             // 
             this.previewPanel.AutoScroll = true;
             this.previewPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.previewPanel.Location = new System.Drawing.Point(12, 83);
+            this.previewPanel.Location = new System.Drawing.Point(12, 113);
             this.previewPanel.Name = "previewPanel";
-            this.previewPanel.Size = new System.Drawing.Size(496, 478);
+            this.previewPanel.Size = new System.Drawing.Size(496, 448);
             this.previewPanel.TabIndex = 1;
+            // 
+            // lblTotalMonth
+            // 
+            this.lblTotalMonth.AutoSize = true;
+            this.lblTotalMonth.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTotalMonth.ForeColor = System.Drawing.Color.Olive;
+            this.lblTotalMonth.Location = new System.Drawing.Point(15, 79);
+            this.lblTotalMonth.Name = "lblTotalMonth";
+            this.lblTotalMonth.Size = new System.Drawing.Size(85, 23);
+            this.lblTotalMonth.TabIndex = 15;
+            this.lblTotalMonth.Text = "Search  ⌕";
+            // 
+            // search_tb
+            // 
+            this.search_tb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.search_tb.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search_tb.ForeColor = System.Drawing.Color.Olive;
+            this.search_tb.Location = new System.Drawing.Point(106, 77);
+            this.search_tb.Name = "search_tb";
+            this.search_tb.Size = new System.Drawing.Size(379, 30);
+            this.search_tb.TabIndex = 14;
+            this.search_tb.Text = " ";
+            this.search_tb.TextChanged += new System.EventHandler(this.search_tb_TextChanged);
             // 
             // Checklist
             // 
@@ -60,6 +85,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(520, 573);
+            this.Controls.Add(this.lblTotalMonth);
+            this.Controls.Add(this.search_tb);
             this.Controls.Add(this.previewPanel);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -77,5 +104,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel previewPanel;
+        private System.Windows.Forms.Label lblTotalMonth;
+        private System.Windows.Forms.TextBox search_tb;
     }
 }

@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 
 namespace Beedget
@@ -16,8 +17,10 @@ namespace Beedget
         string added_Date = null;
         string target_Date = null;
         int budgetID = 0;
+        Dashboard parent;
 
         public SavingsPreviewControl(
+            Dashboard parent,
             string title,
             string category,
             string current_Amount,
@@ -27,7 +30,7 @@ namespace Beedget
             int budgetID)
         {
             InitializeComponent();
-
+            this.parent = parent;
             this.title = title;
             this.category = category;
             this.current_Amount = current_Amount;
@@ -82,6 +85,12 @@ namespace Beedget
                             {
                                 this.Parent.Controls.Remove(this);
                                 this.Dispose();
+
+                                if (parent != null)
+                                {
+                                    parent.RefreshCounts();
+                                }
+                                    
                             }
                             else
                             {

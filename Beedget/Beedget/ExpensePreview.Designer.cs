@@ -34,15 +34,17 @@
             this.lblTotalWeek = new System.Windows.Forms.Label();
             this.lblTotalMonth = new System.Windows.Forms.Label();
             this.lblTotalToday = new System.Windows.Forms.Label();
+            this.search_tb = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // previewPanel
             // 
             this.previewPanel.AutoScroll = true;
             this.previewPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.previewPanel.Location = new System.Drawing.Point(12, 149);
+            this.previewPanel.Location = new System.Drawing.Point(12, 178);
             this.previewPanel.Name = "previewPanel";
-            this.previewPanel.Size = new System.Drawing.Size(496, 412);
+            this.previewPanel.Size = new System.Drawing.Size(496, 383);
             this.previewPanel.TabIndex = 0;
             // 
             // label1
@@ -64,7 +66,8 @@
             // 
             this.lblTotalWeek.AutoSize = true;
             this.lblTotalWeek.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTotalWeek.Location = new System.Drawing.Point(12, 91);
+            this.lblTotalWeek.ForeColor = System.Drawing.Color.Olive;
+            this.lblTotalWeek.Location = new System.Drawing.Point(13, 114);
             this.lblTotalWeek.Name = "lblTotalWeek";
             this.lblTotalWeek.Size = new System.Drawing.Size(178, 23);
             this.lblTotalWeek.TabIndex = 5;
@@ -74,7 +77,8 @@
             // 
             this.lblTotalMonth.AutoSize = true;
             this.lblTotalMonth.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTotalMonth.Location = new System.Drawing.Point(12, 114);
+            this.lblTotalMonth.ForeColor = System.Drawing.Color.Olive;
+            this.lblTotalMonth.Location = new System.Drawing.Point(12, 91);
             this.lblTotalMonth.Name = "lblTotalMonth";
             this.lblTotalMonth.Size = new System.Drawing.Size(188, 23);
             this.lblTotalMonth.TabIndex = 7;
@@ -84,11 +88,34 @@
             // 
             this.lblTotalToday.AutoSize = true;
             this.lblTotalToday.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTotalToday.ForeColor = System.Drawing.Color.Olive;
             this.lblTotalToday.Location = new System.Drawing.Point(12, 68);
             this.lblTotalToday.Name = "lblTotalToday";
             this.lblTotalToday.Size = new System.Drawing.Size(179, 23);
             this.lblTotalToday.TabIndex = 6;
             this.lblTotalToday.Text = "Today\'s Total Expense:";
+            // 
+            // search_tb
+            // 
+            this.search_tb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.search_tb.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search_tb.ForeColor = System.Drawing.Color.Olive;
+            this.search_tb.Location = new System.Drawing.Point(109, 140);
+            this.search_tb.Name = "search_tb";
+            this.search_tb.Size = new System.Drawing.Size(375, 30);
+            this.search_tb.TabIndex = 8;
+            this.search_tb.TextChanged += new System.EventHandler(this.search_tb_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Olive;
+            this.label2.Location = new System.Drawing.Point(13, 144);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 23);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Search  ⌕";
             // 
             // ExpensePreview
             // 
@@ -96,6 +123,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(520, 573);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.search_tb);
             this.Controls.Add(this.lblTotalWeek);
             this.Controls.Add(this.lblTotalMonth);
             this.Controls.Add(this.lblTotalToday);
@@ -119,5 +148,7 @@
         private System.Windows.Forms.Label lblTotalWeek;
         private System.Windows.Forms.Label lblTotalMonth;
         private System.Windows.Forms.Label lblTotalToday;
+        private System.Windows.Forms.TextBox search_tb;
+        private System.Windows.Forms.Label label2;
     }
 }

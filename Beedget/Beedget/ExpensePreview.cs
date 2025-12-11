@@ -14,17 +14,18 @@ namespace Beedget
     public partial class ExpensePreview : Form
     {
         private Users currentUser = null;
-
-        public ExpensePreview(Users currentUser)
+        Dashboard parent;
+        public ExpensePreview(Dashboard parent, Users currentUser)
         {
             InitializeComponent();
+            this.parent = parent;
             this.currentUser = currentUser;
 
             LoadData();
             LoadExpenseSummaries();
         }
 
-        private void LoadData()
+        private void LoadData(string searchTerm = "")
         {
             string connectionString = "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
 
@@ -41,9 +42,24 @@ namespace Beedget
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
+                    searchTerm = searchTerm.ToLower();
+
+                    if (!string.IsNullOrEmpty(searchTerm))
+                    {
+                        var filteredRows = dt.AsEnumerable()
+                            .Where(row =>
+                                row["Title"].ToString().ToLower().Contains(searchTerm) ||
+                                row["Category"].ToString().ToLower().Contains(searchTerm)
+                            );
+
+                        dt = filteredRows.Any() ? filteredRows.CopyToDataTable() : dt.Clone();
+                    }
+
+
                     foreach (DataRow row in dt.Rows)
                     {
                         ExpensePreviewControl preview = new ExpensePreviewControl(
+                            parent,
                             row["Title"].ToString(),
                             row["Category"].ToString(),
                             row["CurrentAmount"].ToString(),
@@ -57,6 +73,7 @@ namespace Beedget
                 }
             }
         }
+
 
         //EXPENSE SUMMARY
         private void LoadExpenseSummaries()
@@ -119,6 +136,13 @@ namespace Beedget
         private void ExpensePreview_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void search_tb_TextChanged(object sender, EventArgs e)
+        {
+            string searchTerm = search_tb.Text.Trim().ToLower();
+            previewPanel.Controls.Clear();
+            LoadData(searchTerm);
         }
     }
 }

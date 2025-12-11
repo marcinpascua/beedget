@@ -70,6 +70,11 @@ namespace Beedget
                     cmd.Parameters.AddWithValue("@Category", category.Text);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Expense saved successfully!");
+                    if (parent != null)
+                    {
+                        parent.RefreshCounts();
+                    }
+
                 }
             }
             this.Close();
