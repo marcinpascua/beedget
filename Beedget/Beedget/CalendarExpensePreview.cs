@@ -58,10 +58,10 @@ namespace Beedget
 
                     foreach (DataRow row in dt.Rows)
                     {
-                        var preview = new ExpensePreviewControl(
+                        ExpensePreviewControl preview = new ExpensePreviewControl(
                             null,               
                             parent,             
-                            this,               
+                            this,              
                             row["Title"].ToString(),
                             row["Category"].ToString(),
                             row["CurrentAmount"].ToString(),
@@ -69,10 +69,14 @@ namespace Beedget
                             Convert.ToInt32(row["BudgetID"])
                         );
 
+
+                        preview.Dock = DockStyle.Top;
                         previewPanel.Controls.Add(preview);
                     }
+
                 }
             }
+            
         }
 
         private void CalendarExpensePreview_Load(object sender, EventArgs e)

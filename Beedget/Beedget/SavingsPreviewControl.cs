@@ -50,7 +50,24 @@ namespace Beedget
             targetAmount.Text = "Php " + target_Amount;
             addedDate.Text = added_Date;
             targetDate.Text = target_Date;
+            GetRemainingBalance();
+            remainingBal.Text = "Php " + GetRemainingBalance().ToString("N2");
         }
+
+        // REMAINING BALANCE
+        private decimal GetRemainingBalance()
+        {
+            decimal current = 0;
+            decimal target = 0;
+
+            decimal.TryParse(currAmount.Text.Replace("Php ", "").Trim(), out current);
+            decimal.TryParse(targetAmount.Text.Replace("Php ", "").Trim(), out target);
+
+            decimal remainingBalance = target - current;
+
+            return remainingBalance;
+        }
+
 
         //DELETE SAVINGS BUTTON
         private void delete_btn_Click(object sender, EventArgs e)
@@ -90,7 +107,7 @@ namespace Beedget
                                 {
                                     parent.RefreshCounts();
                                 }
-                                    
+
                             }
                             else
                             {

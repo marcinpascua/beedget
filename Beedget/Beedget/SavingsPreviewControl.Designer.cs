@@ -40,6 +40,8 @@
             this.targetDate = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.edit_btn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.remainingBal = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -99,7 +101,7 @@
             this.current_lbl.BackColor = System.Drawing.Color.Transparent;
             this.current_lbl.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.current_lbl.ForeColor = System.Drawing.Color.Black;
-            this.current_lbl.Location = new System.Drawing.Point(13, 90);
+            this.current_lbl.Location = new System.Drawing.Point(12, 77);
             this.current_lbl.Name = "current_lbl";
             this.current_lbl.Size = new System.Drawing.Size(90, 31);
             this.current_lbl.TabIndex = 18;
@@ -111,7 +113,7 @@
             this.target_lbl.BackColor = System.Drawing.Color.Transparent;
             this.target_lbl.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.target_lbl.ForeColor = System.Drawing.Color.Black;
-            this.target_lbl.Location = new System.Drawing.Point(13, 121);
+            this.target_lbl.Location = new System.Drawing.Point(12, 108);
             this.target_lbl.Name = "target_lbl";
             this.target_lbl.Size = new System.Drawing.Size(78, 31);
             this.target_lbl.TabIndex = 19;
@@ -123,7 +125,7 @@
             this.addedDate.BackColor = System.Drawing.Color.Transparent;
             this.addedDate.Font = new System.Drawing.Font("Yu Gothic UI Light", 10.2F);
             this.addedDate.ForeColor = System.Drawing.Color.Black;
-            this.addedDate.Location = new System.Drawing.Point(15, 161);
+            this.addedDate.Location = new System.Drawing.Point(15, 171);
             this.addedDate.Name = "addedDate";
             this.addedDate.Size = new System.Drawing.Size(164, 23);
             this.addedDate.TabIndex = 16;
@@ -135,7 +137,7 @@
             this.currAmount.BackColor = System.Drawing.Color.Transparent;
             this.currAmount.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currAmount.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.currAmount.Location = new System.Drawing.Point(321, 90);
+            this.currAmount.Location = new System.Drawing.Point(321, 77);
             this.currAmount.Name = "currAmount";
             this.currAmount.Size = new System.Drawing.Size(140, 31);
             this.currAmount.TabIndex = 22;
@@ -147,7 +149,7 @@
             this.targetAmount.BackColor = System.Drawing.Color.Transparent;
             this.targetAmount.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.targetAmount.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.targetAmount.Location = new System.Drawing.Point(321, 121);
+            this.targetAmount.Location = new System.Drawing.Point(321, 108);
             this.targetAmount.Name = "targetAmount";
             this.targetAmount.Size = new System.Drawing.Size(144, 31);
             this.targetAmount.TabIndex = 23;
@@ -160,7 +162,7 @@
             this.targetDate.BackColor = System.Drawing.Color.Transparent;
             this.targetDate.Font = new System.Drawing.Font("Yu Gothic UI Light", 10.2F);
             this.targetDate.ForeColor = System.Drawing.Color.Black;
-            this.targetDate.Location = new System.Drawing.Point(303, 161);
+            this.targetDate.Location = new System.Drawing.Point(303, 171);
             this.targetDate.Name = "targetDate";
             this.targetDate.Size = new System.Drawing.Size(162, 23);
             this.targetDate.TabIndex = 24;
@@ -170,6 +172,8 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.LemonChiffon;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.remainingBal);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.edit_btn);
             this.panel2.Controls.Add(this.targetDate);
             this.panel2.Controls.Add(this.targetAmount);
@@ -188,13 +192,37 @@
             this.edit_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.edit_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edit_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(65)))), ((int)(((byte)(42)))));
-            this.edit_btn.Location = new System.Drawing.Point(279, 92);
+            this.edit_btn.Location = new System.Drawing.Point(279, 79);
             this.edit_btn.Name = "edit_btn";
             this.edit_btn.Size = new System.Drawing.Size(36, 29);
             this.edit_btn.TabIndex = 25;
             this.edit_btn.Text = "✎";
             this.edit_btn.UseVisualStyleBackColor = false;
             this.edit_btn.Click += new System.EventHandler(this.edit_btn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(13, 139);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(166, 31);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Remaining Bal:";
+            // 
+            // remainingBal
+            // 
+            this.remainingBal.AutoSize = true;
+            this.remainingBal.BackColor = System.Drawing.Color.Transparent;
+            this.remainingBal.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remainingBal.ForeColor = System.Drawing.Color.PaleVioletRed;
+            this.remainingBal.Location = new System.Drawing.Point(321, 139);
+            this.remainingBal.Name = "remainingBal";
+            this.remainingBal.Size = new System.Drawing.Size(144, 31);
+            this.remainingBal.TabIndex = 27;
+            this.remainingBal.Text = "Php 2000.00";
             // 
             // SavingsPreviewControl
             // 
@@ -226,5 +254,7 @@
         private System.Windows.Forms.Label targetDate;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button edit_btn;
+        private System.Windows.Forms.Label remainingBal;
+        private System.Windows.Forms.Label label1;
     }
 }

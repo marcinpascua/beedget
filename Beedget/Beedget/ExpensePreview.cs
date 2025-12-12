@@ -58,9 +58,9 @@ namespace Beedget
                     foreach (DataRow row in dt.Rows)
                     {
                         ExpensePreviewControl preview = new ExpensePreviewControl(
-                            this,                   
-                            parent,                 
-                            null,                   
+                            this,
+                            parent,
+                            null,
                             row["Title"].ToString(),
                             row["Category"].ToString(),
                             row["CurrentAmount"].ToString(),

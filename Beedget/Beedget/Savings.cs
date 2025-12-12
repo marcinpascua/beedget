@@ -26,7 +26,7 @@ namespace Beedget
 
         private void Savings_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void save_btn_Click(object sender, EventArgs e)
@@ -38,7 +38,8 @@ namespace Beedget
             var categoryname = category.Text;
             var targetDate = dateTimePicker1.Value;
 
-            if (title == "Title" || title == "") { 
+            if (title == "Title" || title == "")
+            {
                 MessageBox.Show("Please enter a valid title for your savings goal.");
                 return;
             }
@@ -49,7 +50,7 @@ namespace Beedget
                 return;
             }
 
-            if(categoryname == "")
+            if (categoryname == "")
             {
                 MessageBox.Show("Please select a category for your savings goal.");
                 return;

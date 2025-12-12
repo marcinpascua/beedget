@@ -76,7 +76,7 @@ namespace Beedget
                         preview.Dock = DockStyle.Top;
                         previewPanel.Controls.Add(preview);
                     }
-                    
+
 
                 }
             }

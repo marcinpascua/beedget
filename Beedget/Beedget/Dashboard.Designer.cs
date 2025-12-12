@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.history_btn = new System.Windows.Forms.Panel();
             this.selection_btn = new System.Windows.Forms.Panel();
             this.checklist_btn = new System.Windows.Forms.Panel();
             this.logout_btn = new System.Windows.Forms.Panel();
@@ -41,21 +40,21 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.userNumPreview = new System.Windows.Forms.Panel();
-            this.savingsNum = new System.Windows.Forms.Label();
-            this.savingsNumLbl = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.expenseNum = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.userNumPreview = new System.Windows.Forms.Panel();
+            this.savingsNum = new System.Windows.Forms.Label();
+            this.savingsNumLbl = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.userNumPreview.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.userNumPreview.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -74,25 +73,13 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Controls.Add(this.history_btn);
             this.panel1.Controls.Add(this.selection_btn);
             this.panel1.Controls.Add(this.checklist_btn);
+            this.panel1.Controls.Add(this.logout_btn);
             this.panel1.Location = new System.Drawing.Point(28, 702);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(491, 100);
             this.panel1.TabIndex = 2;
-            // 
-            // history_btn
-            // 
-            this.history_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.history_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("history_btn.BackgroundImage")));
-            this.history_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.history_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.history_btn.Location = new System.Drawing.Point(353, 16);
-            this.history_btn.Name = "history_btn";
-            this.history_btn.Size = new System.Drawing.Size(70, 70);
-            this.history_btn.TabIndex = 1;
-            this.history_btn.Click += new System.EventHandler(this.history_btn_Click);
             // 
             // selection_btn
             // 
@@ -124,9 +111,9 @@
             this.logout_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logout_btn.BackgroundImage")));
             this.logout_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.logout_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logout_btn.Location = new System.Drawing.Point(461, 34);
+            this.logout_btn.Location = new System.Drawing.Point(351, 16);
             this.logout_btn.Name = "logout_btn";
-            this.logout_btn.Size = new System.Drawing.Size(45, 47);
+            this.logout_btn.Size = new System.Drawing.Size(70, 70);
             this.logout_btn.TabIndex = 0;
             this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
             this.logout_btn.Paint += new System.Windows.Forms.PaintEventHandler(this.logout_btn_Paint);
@@ -145,7 +132,7 @@
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel2.Location = new System.Drawing.Point(28, 441);
+            this.panel2.Location = new System.Drawing.Point(28, 437);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(230, 196);
             this.panel2.TabIndex = 11;
@@ -157,7 +144,7 @@
             this.Expense.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Expense.BackgroundImage")));
             this.Expense.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Expense.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Expense.Location = new System.Drawing.Point(289, 441);
+            this.Expense.Location = new System.Drawing.Point(289, 437);
             this.Expense.Name = "Expense";
             this.Expense.Size = new System.Drawing.Size(230, 196);
             this.Expense.TabIndex = 12;
@@ -198,55 +185,8 @@
             this.panel5.Controls.Add(this.calendarExpenses);
             this.panel5.Location = new System.Drawing.Point(28, 146);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(491, 231);
+            this.panel5.Size = new System.Drawing.Size(491, 225);
             this.panel5.TabIndex = 15;
-            // 
-            // userNumPreview
-            // 
-            this.userNumPreview.AutoSize = true;
-            this.userNumPreview.BackColor = System.Drawing.Color.Olive;
-            this.userNumPreview.Controls.Add(this.savingsNum);
-            this.userNumPreview.Controls.Add(this.savingsNumLbl);
-            this.userNumPreview.Controls.Add(this.pictureBox1);
-            this.userNumPreview.Cursor = System.Windows.Forms.Cursors.Default;
-            this.userNumPreview.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.userNumPreview.Location = new System.Drawing.Point(381, 9);
-            this.userNumPreview.Name = "userNumPreview";
-            this.userNumPreview.Size = new System.Drawing.Size(101, 97);
-            this.userNumPreview.TabIndex = 16;
-            // 
-            // savingsNum
-            // 
-            this.savingsNum.AutoSize = true;
-            this.savingsNum.Font = new System.Drawing.Font("Yu Gothic UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savingsNum.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.savingsNum.Location = new System.Drawing.Point(26, 33);
-            this.savingsNum.Name = "savingsNum";
-            this.savingsNum.Size = new System.Drawing.Size(52, 62);
-            this.savingsNum.TabIndex = 2;
-            this.savingsNum.Text = "7";
-            this.savingsNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // savingsNumLbl
-            // 
-            this.savingsNumLbl.AutoSize = true;
-            this.savingsNumLbl.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Bold);
-            this.savingsNumLbl.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.savingsNumLbl.Location = new System.Drawing.Point(3, 3);
-            this.savingsNumLbl.Name = "savingsNumLbl";
-            this.savingsNumLbl.Size = new System.Drawing.Size(61, 20);
-            this.savingsNumLbl.TabIndex = 1;
-            this.savingsNumLbl.Text = "Savings";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(59, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 27);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel6
             // 
@@ -295,6 +235,53 @@
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
+            // userNumPreview
+            // 
+            this.userNumPreview.AutoSize = true;
+            this.userNumPreview.BackColor = System.Drawing.Color.Olive;
+            this.userNumPreview.Controls.Add(this.savingsNum);
+            this.userNumPreview.Controls.Add(this.savingsNumLbl);
+            this.userNumPreview.Controls.Add(this.pictureBox1);
+            this.userNumPreview.Cursor = System.Windows.Forms.Cursors.Default;
+            this.userNumPreview.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.userNumPreview.Location = new System.Drawing.Point(381, 9);
+            this.userNumPreview.Name = "userNumPreview";
+            this.userNumPreview.Size = new System.Drawing.Size(101, 97);
+            this.userNumPreview.TabIndex = 16;
+            // 
+            // savingsNum
+            // 
+            this.savingsNum.AutoSize = true;
+            this.savingsNum.Font = new System.Drawing.Font("Yu Gothic UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.savingsNum.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.savingsNum.Location = new System.Drawing.Point(26, 33);
+            this.savingsNum.Name = "savingsNum";
+            this.savingsNum.Size = new System.Drawing.Size(52, 62);
+            this.savingsNum.TabIndex = 2;
+            this.savingsNum.Text = "7";
+            this.savingsNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // savingsNumLbl
+            // 
+            this.savingsNumLbl.AutoSize = true;
+            this.savingsNumLbl.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Bold);
+            this.savingsNumLbl.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.savingsNumLbl.Location = new System.Drawing.Point(3, 3);
+            this.savingsNumLbl.Name = "savingsNumLbl";
+            this.savingsNumLbl.Size = new System.Drawing.Size(61, 20);
+            this.savingsNumLbl.TabIndex = 1;
+            this.savingsNumLbl.Text = "Savings";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(59, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 27);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Dashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -304,7 +291,6 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.Expense);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.logout_btn);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
@@ -318,12 +304,12 @@
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.userNumPreview.ResumeLayout(false);
-            this.userNumPreview.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.userNumPreview.ResumeLayout(false);
+            this.userNumPreview.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,7 +324,6 @@
         private System.Windows.Forms.Panel add_btn;
         private System.Windows.Forms.Panel selection_btn;
         private System.Windows.Forms.MonthCalendar calendarExpenses;
-        private System.Windows.Forms.Panel history_btn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel Expense;
         private System.Windows.Forms.Panel panel3;

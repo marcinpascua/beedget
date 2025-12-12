@@ -19,7 +19,7 @@ namespace Beedget
         {
             InitializeComponent();
             this.currentUser = currentUser;
-           
+
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace Beedget
             LogIn logIn = new LogIn();
             logIn.Show();
         }
-    
+
         //SELECTION OF BUDGET BUTTON
         private void selection_btn_Click(object sender, EventArgs e)
         {
@@ -84,7 +84,7 @@ namespace Beedget
                 string query = @"SELECT DISTINCT CONVERT(date, DateAdded) AS DateAdded
                          FROM Budget
                          WHERE UserID = @UserID
-                         AND BudgetTypeID = 2"; 
+                         AND BudgetTypeID = 2";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -103,13 +103,6 @@ namespace Beedget
                     calendarExpenses.UpdateBoldedDates();
                 }
             }
-        }
-
-        //HISTORY BUTTON
-        private void history_btn_Click(object sender, EventArgs e)
-        {
-            History preview = new History(currentUser);
-            preview.ShowDialog();
         }
 
         //SAVINGS NUM

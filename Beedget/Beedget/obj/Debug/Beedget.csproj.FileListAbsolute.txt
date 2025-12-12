@@ -141,6 +141,3 @@ C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\bin\Debug\zh-Hans\Micro
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.AdminAccountsControl.resources
 C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.CalendarExpensePreview.resources
-C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.History.resources
-C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.NotifExpenseControl.resources
-C:\Users\Marcin Pascua\Documents\beedget\Beedget\Beedget\obj\Debug\Beedget.NotifSavingsControl.resources
