@@ -13,7 +13,6 @@ namespace Beedget
 {
     public partial class CalendarExpensePreview : Form
     {
-
         private Users currentUser;
         private DateTime selectedDate;
         Dashboard parent;
@@ -28,37 +27,41 @@ namespace Beedget
             InitializeComponent();
             this.currentUser = currentUser;
             this.selectedDate = selectedDate;
+            this.parent = parent;
 
             LoadExpensesForDate();
-            this.parent = parent;
         }
 
-        private void LoadExpensesForDate()
+        public void LoadExpensesForDate()
         {
-            string connectionString = "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
+            previewPanel.Controls.Clear();
+
+            string connectionString =
+                "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
 
                 string query = @"SELECT * FROM Budget 
-                         WHERE UserID = @UserID 
-                         AND BudgetTypeID = 2 
-                         AND CONVERT(date, DateAdded) = @SelectedDate";
+                             WHERE UserID = @UserID 
+                             AND BudgetTypeID = 2 
+                             AND CONVERT(date, DateAdded) = @SelectedDate";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@UserID", currentUser.UserID);
                     cmd.Parameters.AddWithValue("@SelectedDate", selectedDate.Date);
 
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
-                    da.Fill(dt);
+                    new SqlDataAdapter(cmd).Fill(dt);
 
                     foreach (DataRow row in dt.Rows)
                     {
-                        var previewControl = new ExpensePreviewControl(
-                            this.parent,
+                        var preview = new ExpensePreviewControl(
+                            null,               
+                            parent,             
+                            this,               
                             row["Title"].ToString(),
                             row["Category"].ToString(),
                             row["CurrentAmount"].ToString(),
@@ -66,13 +69,11 @@ namespace Beedget
                             Convert.ToInt32(row["BudgetID"])
                         );
 
-                        previewControl.Dock = DockStyle.Top;
-                        previewPanel.Controls.Add(previewControl);
+                        previewPanel.Controls.Add(preview);
                     }
                 }
             }
         }
-
 
         private void CalendarExpensePreview_Load(object sender, EventArgs e)
         {

@@ -14,24 +14,32 @@ namespace Beedget
 {
     public partial class ExpensePreviewControl : UserControl
     {
+        private ExpensePreview expenseForm;
+        private CalendarExpensePreview calendarForm;
         Dashboard parent;
-        string title = null;
-        string category = null;
-        string current_Amount = null;
-        string added_Date = null;
-        int budgetID = 0;
-        
+
+        string title;
+        string category;
+        string current_Amount;
+        string added_Date;
+        int budgetID;
 
         public ExpensePreviewControl(
+            ExpensePreview expenseForm,
             Dashboard parent,
+            CalendarExpensePreview calendarForm,
             string title,
             string category,
             string current_Amount,
             string added_Date,
             int budgetID
-            )
+        )
         {
             InitializeComponent();
+
+            this.expenseForm = expenseForm;
+            this.parent = parent;
+            this.calendarForm = calendarForm;
 
             this.title = title;
             this.category = category;
@@ -40,7 +48,6 @@ namespace Beedget
             this.budgetID = budgetID;
 
             LoadData();
-            this.parent = parent;
         }
 
         private void LoadData()
@@ -51,55 +58,56 @@ namespace Beedget
             addedDate.Text = added_Date;
         }
 
-        //DELETE EXPENSE BUTTON
+        //DELETE BUTTON
         private void delete_btn_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(
-                "Are you sure you want to delete this item?",
-                "Confirm Delete",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning
-            );
+            if (MessageBox.Show("Are you sure you want to delete this item?",
+                "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+                != DialogResult.Yes)
+                return;
 
-            if (result == DialogResult.Yes)
+            try
             {
-                try
+                string connString =
+                    "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
+
+                using (SqlConnection conn = new SqlConnection(connString))
                 {
-                    string connectionString =
-                        "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
+                    conn.Open();
+                    string deleteQuery = "DELETE FROM Budget WHERE budgetID = @budgetID";
 
-                    using (SqlConnection conn = new SqlConnection(connectionString))
+                    using (SqlCommand cmd = new SqlCommand(deleteQuery, conn))
                     {
-                        conn.Open();
+                        cmd.Parameters.Add("@budgetID", SqlDbType.Int).Value = budgetID;
 
-                        string deleteQuery = "DELETE FROM Budget WHERE budgetID = @budgetID";
+                        int rows = cmd.ExecuteNonQuery();
 
-                        using (SqlCommand cmd = new SqlCommand(deleteQuery, conn))
+                        if (rows > 0)
                         {
-                            cmd.Parameters.Add("@budgetID", SqlDbType.Int).Value = budgetID;
+                            this.Parent.Controls.Remove(this);
+                            this.Dispose();
 
-                            int rows = cmd.ExecuteNonQuery();
+                            parent.RefreshCounts();
 
-                            if (rows > 0)
-                            {
-                                this.Parent.Controls.Remove(this);
-                                this.Dispose();
-                                parent.RefreshCounts();
+                            if (expenseForm != null)
+                                expenseForm.RefreshExpenses();
 
-                            }
-                            else
-                            {
-                                MessageBox.Show("Item could not be deleted.");
-                            }
+                            if (calendarForm != null)
+                                calendarForm.LoadExpensesForDate();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Item could not be deleted.");
                         }
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("ERROR: " + ex.Message);
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
             }
         }
+
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {

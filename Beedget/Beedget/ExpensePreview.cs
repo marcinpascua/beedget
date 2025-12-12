@@ -25,7 +25,7 @@ namespace Beedget
             LoadExpenseSummaries();
         }
 
-        private void LoadData(string searchTerm = "")
+        public void LoadData(string searchTerm = "")
         {
             string connectionString = "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
 
@@ -55,18 +55,18 @@ namespace Beedget
                         dt = filteredRows.Any() ? filteredRows.CopyToDataTable() : dt.Clone();
                     }
 
-
                     foreach (DataRow row in dt.Rows)
                     {
                         ExpensePreviewControl preview = new ExpensePreviewControl(
-                            parent,
+                            this,                   
+                            parent,                 
+                            null,                   
                             row["Title"].ToString(),
                             row["Category"].ToString(),
                             row["CurrentAmount"].ToString(),
                             row["DateAdded"].ToString(),
                             Convert.ToInt32(row["BudgetID"])
                         );
-
                         preview.Dock = DockStyle.Top;
                         previewPanel.Controls.Add(preview);
                     }
@@ -76,7 +76,7 @@ namespace Beedget
 
 
         //EXPENSE SUMMARY
-        private void LoadExpenseSummaries()
+        public void LoadExpenseSummaries()
         {
             decimal totalToday = 0;
             decimal totalWeek = 0;
@@ -131,11 +131,11 @@ namespace Beedget
             lblTotalMonth.Text = $"Total Monthly Expense: ₱{totalMonth:N2}";
         }
 
-
-
-        private void ExpensePreview_Load(object sender, EventArgs e)
+        public void RefreshExpenses()
         {
-
+            previewPanel.Controls.Clear();
+            LoadData();
+            LoadExpenseSummaries();
         }
 
         private void search_tb_TextChanged(object sender, EventArgs e)
@@ -144,5 +144,10 @@ namespace Beedget
             previewPanel.Controls.Clear();
             LoadData(searchTerm);
         }
+        private void ExpensePreview_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

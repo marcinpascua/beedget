@@ -12,11 +12,32 @@ namespace Beedget
 {
     public partial class NotifExpenseControl : UserControl
     {
-        public NotifExpenseControl(string title, DateTime date)
+        public NotifExpenseControl(string title, DateTime date, string action = "Added", string details = "")
         {
             InitializeComponent();
-            expenseMessage.Text = $"You added \"{title}\" expense on {date:g}";
 
+            string actionText;
+
+            switch (action)
+            {
+                case "Added":
+                    actionText = "You added";
+                    break;
+                case "Deleted":
+                    actionText = "You deleted";
+                    break;
+                case "Updated":
+                    actionText = "You updated";
+                    break;
+                default:
+                    actionText = "Activity";
+                    break;
+            }
+
+            if (string.IsNullOrEmpty(details))
+                expenseMessage.Text = $"{actionText} \"{title}\" expense on {date:g}";
+            else
+                expenseMessage.Text = $"{actionText} \"{title}\" expense on {date:g}. {details}";
         }
 
         private void NotifExpenseControl_Load(object sender, EventArgs e)
