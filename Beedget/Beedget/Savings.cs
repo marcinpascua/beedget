@@ -40,25 +40,13 @@ namespace Beedget
 
             if (title == "Title" || title == "")
             {
-                MessageBox.Show("Please enter a valid title for your savings goal.");
+                MessageBox.Show("Please input all required fields. Thank you!");
                 return;
             }
 
-            if (targetAmount == "")
+            if (targetAmount == "" || categoryname == "" || currentAmount == "")
             {
-                MessageBox.Show("Kindly enter a target amount.");
-                return;
-            }
-
-            if (categoryname == "")
-            {
-                MessageBox.Show("Please select a category for your savings goal.");
-                return;
-            }
-
-            if (currentAmount == "")
-            {
-                MessageBox.Show("Kindly enter a current amount.");
+                MessageBox.Show("Please input all required fields. Thank you!");
                 return;
             }
 

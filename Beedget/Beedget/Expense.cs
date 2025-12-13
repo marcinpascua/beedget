@@ -38,21 +38,16 @@ namespace Beedget
 
             if (title == "Title" || title == "")
             {
-                MessageBox.Show("Please enter a valid title for your expense.");
+                MessageBox.Show("Please input all required fields. Thank you!");
                 return;
             }
 
-            if (categoryname == "")
+            if (categoryname == "" || currentAmount == "")
             {
-                MessageBox.Show("Please select a category for your expense.");
+                MessageBox.Show("Please input all required fields. Thank you!");
                 return;
             }
 
-            if (currentAmount == "")
-            {
-                MessageBox.Show("Kindly enter a current amount.");
-                return;
-            }
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {

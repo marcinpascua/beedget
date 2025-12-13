@@ -46,7 +46,7 @@ namespace Beedget
 
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Please enter both username and password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter all required fields. Thank you!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
