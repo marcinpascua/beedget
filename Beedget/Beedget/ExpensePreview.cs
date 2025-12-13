@@ -91,10 +91,10 @@ namespace Beedget
                 //DAILY
                 using (SqlCommand cmd = new SqlCommand(
                     @"SELECT ISNULL(SUM(CurrentAmount),0)
-              FROM Budget
-              WHERE BudgetTypeID = 2 
-              AND UserID = @UserID
-              AND CAST(DateAdded AS DATE) = CAST(GETDATE() AS DATE)", conn))
+                    FROM Budget
+                    WHERE BudgetTypeID = 2 
+                    AND UserID = @UserID
+                    AND CAST(DateAdded AS DATE) = CAST(GETDATE() AS DATE)", conn))
                 {
                     cmd.Parameters.AddWithValue("@UserID", currentUser.UserID);
                     totalToday = Convert.ToDecimal(cmd.ExecuteScalar());
@@ -103,11 +103,11 @@ namespace Beedget
                 //WEEK
                 using (SqlCommand cmd = new SqlCommand(
                     @"SELECT ISNULL(SUM(CurrentAmount),0)
-              FROM Budget
-              WHERE BudgetTypeID = 2
-              AND UserID = @UserID
-              AND DATEPART(WEEK, DateAdded) = DATEPART(WEEK, GETDATE())
-              AND DATEPART(YEAR, DateAdded) = DATEPART(YEAR, GETDATE())", conn))
+                    FROM Budget
+                    WHERE BudgetTypeID = 2
+                    AND UserID = @UserID
+                    AND DATEPART(WEEK, DateAdded) = DATEPART(WEEK, GETDATE())
+                    AND DATEPART(YEAR, DateAdded) = DATEPART(YEAR, GETDATE())", conn))
                 {
                     cmd.Parameters.AddWithValue("@UserID", currentUser.UserID);
                     totalWeek = Convert.ToDecimal(cmd.ExecuteScalar());
@@ -116,11 +116,11 @@ namespace Beedget
                 //MONTH
                 using (SqlCommand cmd = new SqlCommand(
                     @"SELECT ISNULL(SUM(CurrentAmount),0)
-              FROM Budget
-              WHERE BudgetTypeID = 2
-              AND UserID = @UserID
-              AND MONTH(DateAdded) = MONTH(GETDATE())
-              AND YEAR(DateAdded) = YEAR(GETDATE())", conn))
+                    FROM Budget
+                    WHERE BudgetTypeID = 2
+                    AND UserID = @UserID
+                    AND MONTH(DateAdded) = MONTH(GETDATE())
+                    AND YEAR(DateAdded) = YEAR(GETDATE())", conn))
                 {
                     cmd.Parameters.AddWithValue("@UserID", currentUser.UserID);
                     totalMonth = Convert.ToDecimal(cmd.ExecuteScalar());
@@ -149,5 +149,9 @@ namespace Beedget
 
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -51,7 +51,7 @@ namespace Beedget
             addedDate.Text = added_Date;
             targetDate.Text = target_Date;
             GetRemainingBalance();
-            remainingBal.Text = "Php " + GetRemainingBalance().ToString("N2");
+            remainingBal.Text = "Php " + GetRemainingBalance().ToString("F2");
         }
 
         // REMAINING BALANCE

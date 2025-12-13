@@ -116,6 +116,7 @@
             this.label2.Size = new System.Drawing.Size(85, 23);
             this.label2.TabIndex = 14;
             this.label2.Text = "Search  ⌕";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // ExpensePreview
             // 

@@ -30,9 +30,11 @@ namespace Beedget
             this.parent = parent;
 
             LoadExpensesForDate();
+            LoadTotalDailyExpense();
+
         }
 
-        public void LoadExpensesForDate()
+        public void LoadExpensesForDate(string searchTerm = "")
         {
             previewPanel.Controls.Clear();
 
@@ -56,6 +58,19 @@ namespace Beedget
                     DataTable dt = new DataTable();
                     new SqlDataAdapter(cmd).Fill(dt);
 
+                    searchTerm = searchTerm.ToLower();
+
+                    if (!string.IsNullOrEmpty(searchTerm))
+                    {
+                        var filteredRows = dt.AsEnumerable()
+                            .Where(row =>
+                                row["Title"].ToString().ToLower().Contains(searchTerm) ||
+                                row["Category"].ToString().ToLower().Contains(searchTerm)
+                            );
+
+                        dt = filteredRows.Any() ? filteredRows.CopyToDataTable() : dt.Clone();
+                    }
+
                     foreach (DataRow row in dt.Rows)
                     {
                         ExpensePreviewControl preview = new ExpensePreviewControl(
@@ -76,14 +91,44 @@ namespace Beedget
 
                 }
             }
-            
+        }
+
+        //TOTAL DAILY EXPENSE
+        public void LoadTotalDailyExpense()
+        {
+            decimal totalToday = 0;
+
+            string connectionString = "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                //DAILY
+                using (SqlCommand cmd = new SqlCommand(
+                    @"SELECT ISNULL(SUM(CurrentAmount),0)
+                    FROM Budget
+                    WHERE BudgetTypeID = 2 
+                    AND UserID = @UserID
+                    AND CAST(DateAdded AS DATE) = CAST(GETDATE() AS DATE)", conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserID", currentUser.UserID);
+                    totalToday = Convert.ToDecimal(cmd.ExecuteScalar());
+                }
+                lblTotalToday.Text = $"Today's Total Expenses: ₱{totalToday:N2}";
+            }
+        }
+
+        private void search_tb_TextChanged(object sender, EventArgs e)
+        {
+            string searchTerm = search_tb.Text.Trim().ToLower();
+            previewPanel.Controls.Clear();
+            LoadExpensesForDate(searchTerm);
         }
 
         private void CalendarExpensePreview_Load(object sender, EventArgs e)
         {
 
         }
-
-      
     }
 }

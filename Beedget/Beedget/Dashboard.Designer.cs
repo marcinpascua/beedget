@@ -120,9 +120,12 @@
             // 
             // calendarExpenses
             // 
+            this.calendarExpenses.ForeColor = System.Drawing.Color.Olive;
             this.calendarExpenses.Location = new System.Drawing.Point(9, 9);
             this.calendarExpenses.Name = "calendarExpenses";
             this.calendarExpenses.TabIndex = 9;
+            this.calendarExpenses.TitleBackColor = System.Drawing.Color.Olive;
+            this.calendarExpenses.TrailingForeColor = System.Drawing.Color.LightGoldenrodYellow;
             this.calendarExpenses.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calendarExpenses_DateChanged);
             this.calendarExpenses.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.calendarExpenses_DateSelected);
             // 
