@@ -48,6 +48,8 @@
             this.savingsNum = new System.Windows.Forms.Label();
             this.savingsNumLbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -195,6 +197,7 @@
             // 
             this.panel6.AutoSize = true;
             this.panel6.BackColor = System.Drawing.Color.Olive;
+            this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.expenseNum);
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.pictureBox3);
@@ -208,6 +211,7 @@
             // expenseNum
             // 
             this.expenseNum.AutoSize = true;
+            this.expenseNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.expenseNum.Font = new System.Drawing.Font("Yu Gothic UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.expenseNum.ForeColor = System.Drawing.Color.LemonChiffon;
             this.expenseNum.Location = new System.Drawing.Point(27, 33);
@@ -222,7 +226,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.label2.Location = new System.Drawing.Point(3, 3);
+            this.label2.Location = new System.Drawing.Point(3, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 1;
@@ -230,6 +234,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.Location = new System.Drawing.Point(59, 3);
@@ -242,6 +247,7 @@
             // 
             this.userNumPreview.AutoSize = true;
             this.userNumPreview.BackColor = System.Drawing.Color.Olive;
+            this.userNumPreview.Controls.Add(this.label1);
             this.userNumPreview.Controls.Add(this.savingsNum);
             this.userNumPreview.Controls.Add(this.savingsNumLbl);
             this.userNumPreview.Controls.Add(this.pictureBox1);
@@ -255,6 +261,7 @@
             // savingsNum
             // 
             this.savingsNum.AutoSize = true;
+            this.savingsNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.savingsNum.Font = new System.Drawing.Font("Yu Gothic UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.savingsNum.ForeColor = System.Drawing.Color.LemonChiffon;
             this.savingsNum.Location = new System.Drawing.Point(26, 33);
@@ -267,9 +274,10 @@
             // savingsNumLbl
             // 
             this.savingsNumLbl.AutoSize = true;
+            this.savingsNumLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.savingsNumLbl.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Bold);
             this.savingsNumLbl.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.savingsNumLbl.Location = new System.Drawing.Point(3, 3);
+            this.savingsNumLbl.Location = new System.Drawing.Point(3, 13);
             this.savingsNumLbl.Name = "savingsNumLbl";
             this.savingsNumLbl.Size = new System.Drawing.Size(61, 20);
             this.savingsNumLbl.TabIndex = 1;
@@ -277,6 +285,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(59, 3);
@@ -284,6 +293,30 @@
             this.pictureBox1.Size = new System.Drawing.Size(38, 27);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 15);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "No. of";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 15);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "No. of";
             // 
             // Dashboard
             // 
@@ -340,5 +373,7 @@
         private System.Windows.Forms.Label expenseNum;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
     }
 }

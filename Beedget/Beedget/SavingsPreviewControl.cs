@@ -208,5 +208,10 @@ namespace Beedget
         {
 
         }
+
+        private void current_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -81,6 +81,7 @@ namespace Beedget
             decimal totalToday = 0;
             decimal totalWeek = 0;
             decimal totalMonth = 0;
+            decimal totalAnnual = 0;
 
             string connectionString = "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
 
@@ -125,10 +126,24 @@ namespace Beedget
                     cmd.Parameters.AddWithValue("@UserID", currentUser.UserID);
                     totalMonth = Convert.ToDecimal(cmd.ExecuteScalar());
                 }
+
+                // ANNUAL
+                using (SqlCommand cmd = new SqlCommand(
+                    @"SELECT ISNULL(SUM(CurrentAmount), 0)
+                    FROM Budget
+                    WHERE BudgetTypeID = 2
+                    AND UserID = @UserID
+                    AND YEAR(DateAdded) = YEAR(GETDATE())", conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserID", currentUser.UserID);
+                    totalAnnual = Convert.ToDecimal(cmd.ExecuteScalar());
+                }
+
             }
             lblTotalToday.Text = $"Today's Expense: ₱{totalToday:N2}";
             lblTotalWeek.Text = $"Total Weekly Expense: ₱{totalWeek:N2}";
             lblTotalMonth.Text = $"Total Monthly Expense: ₱{totalMonth:N2}";
+            lblTotalAnnual.Text = $"Total Annual Expense: ₱{totalAnnual:N2}";
         }
 
         public void RefreshExpenses()

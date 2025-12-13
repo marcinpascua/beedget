@@ -34,6 +34,7 @@ namespace Beedget
              
         }
 
+        //LOG OUT BUTTON
         private void logout_btn_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -41,6 +42,7 @@ namespace Beedget
             login.Show();
         }
 
+        //DASHBOARD BUTTON
         private void dashboard_btn_Click(object sender, EventArgs e)
         {
             previewPanel.Controls.Clear();
@@ -49,6 +51,7 @@ namespace Beedget
             previewPanel.Controls.Add(preview);
         }
 
+        //ACCOUNTS BUTTON
         private void accounts_btn_Click(object sender, EventArgs e)
         {
             previewPanel.Controls.Clear();

@@ -68,8 +68,7 @@ namespace Beedget
 
             try
             {
-                string connString =
-                    "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
+                string connString = "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
 
                 using (SqlConnection conn = new SqlConnection(connString))
                 {

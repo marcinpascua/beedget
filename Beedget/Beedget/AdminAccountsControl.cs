@@ -52,11 +52,6 @@ namespace Beedget
             }
         }
 
-        private void AdminAccountsControl_Load(object sender, EventArgs e)
-        {
-
-        }
-
         //CREATE
         private void create_btn_Click(object sender, EventArgs e)
         {
@@ -209,6 +204,11 @@ namespace Beedget
 
             LoadData();
             userID_tb.Clear();
+        }
+
+        private void AdminAccountsControl_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void roleComboBox_SelectedIndexChanged(object sender, EventArgs e)

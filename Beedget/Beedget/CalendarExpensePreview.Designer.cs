@@ -66,9 +66,9 @@
             this.lblTotalToday.ForeColor = System.Drawing.Color.Olive;
             this.lblTotalToday.Location = new System.Drawing.Point(15, 84);
             this.lblTotalToday.Name = "lblTotalToday";
-            this.lblTotalToday.Size = new System.Drawing.Size(179, 23);
+            this.lblTotalToday.Size = new System.Drawing.Size(125, 23);
             this.lblTotalToday.TabIndex = 7;
-            this.lblTotalToday.Text = "Today\'s Total Expense:";
+            this.lblTotalToday.Text = "Total Expenses:";
             // 
             // label2
             // 

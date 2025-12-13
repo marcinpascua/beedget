@@ -38,8 +38,7 @@ namespace Beedget
         {
             previewPanel.Controls.Clear();
 
-            string connectionString =
-                "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
+            string connectionString = "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -93,10 +92,10 @@ namespace Beedget
             }
         }
 
-        //TOTAL DAILY EXPENSE
+        // TOTAL DAILY EXPENSE (for selected date)
         public void LoadTotalDailyExpense()
         {
-            decimal totalToday = 0;
+            decimal totalDaily = 0;
 
             string connectionString = "Data Source=LAPTOP-4BA2RILC\\SQLEXPRESS;Initial Catalog=BeedgetDB;Integrated Security=True;";
 
@@ -104,20 +103,23 @@ namespace Beedget
             {
                 conn.Open();
 
-                //DAILY
                 using (SqlCommand cmd = new SqlCommand(
-                    @"SELECT ISNULL(SUM(CurrentAmount),0)
+                    @"SELECT ISNULL(SUM(CurrentAmount), 0)
                     FROM Budget
-                    WHERE BudgetTypeID = 2 
+                    WHERE BudgetTypeID = 2
                     AND UserID = @UserID
-                    AND CAST(DateAdded AS DATE) = CAST(GETDATE() AS DATE)", conn))
+                    AND CONVERT(date, DateAdded) = @SelectedDate", conn))
                 {
                     cmd.Parameters.AddWithValue("@UserID", currentUser.UserID);
-                    totalToday = Convert.ToDecimal(cmd.ExecuteScalar());
+                    cmd.Parameters.AddWithValue("@SelectedDate", selectedDate.Date);
+
+                    totalDaily = Convert.ToDecimal(cmd.ExecuteScalar());
                 }
-                lblTotalToday.Text = $"Today's Total Expenses: ₱{totalToday:N2}";
             }
+
+            lblTotalToday.Text = $"Total Expenses on {selectedDate:MMMM dd, yyyy}: ₱{totalDaily:N2}";
         }
+
 
         private void search_tb_TextChanged(object sender, EventArgs e)
         {

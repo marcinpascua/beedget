@@ -38,13 +38,13 @@ namespace Beedget
 
             if (title == "Title" || title == "")
             {
-                MessageBox.Show("Please enter a valid title for your savings goal.");
+                MessageBox.Show("Please enter a valid title for your expense.");
                 return;
             }
 
             if (categoryname == "")
             {
-                MessageBox.Show("Please select a category for your savings goal.");
+                MessageBox.Show("Please select a category for your expense.");
                 return;
             }
 

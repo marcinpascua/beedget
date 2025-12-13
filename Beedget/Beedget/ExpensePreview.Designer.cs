@@ -36,6 +36,7 @@
             this.lblTotalToday = new System.Windows.Forms.Label();
             this.search_tb = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblTotalAnnual = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // previewPanel
@@ -67,7 +68,7 @@
             this.lblTotalWeek.AutoSize = true;
             this.lblTotalWeek.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.lblTotalWeek.ForeColor = System.Drawing.Color.Olive;
-            this.lblTotalWeek.Location = new System.Drawing.Point(13, 114);
+            this.lblTotalWeek.Location = new System.Drawing.Point(12, 102);
             this.lblTotalWeek.Name = "lblTotalWeek";
             this.lblTotalWeek.Size = new System.Drawing.Size(178, 23);
             this.lblTotalWeek.TabIndex = 5;
@@ -78,7 +79,7 @@
             this.lblTotalMonth.AutoSize = true;
             this.lblTotalMonth.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.lblTotalMonth.ForeColor = System.Drawing.Color.Olive;
-            this.lblTotalMonth.Location = new System.Drawing.Point(12, 91);
+            this.lblTotalMonth.Location = new System.Drawing.Point(284, 79);
             this.lblTotalMonth.Name = "lblTotalMonth";
             this.lblTotalMonth.Size = new System.Drawing.Size(188, 23);
             this.lblTotalMonth.TabIndex = 7;
@@ -89,7 +90,7 @@
             this.lblTotalToday.AutoSize = true;
             this.lblTotalToday.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.lblTotalToday.ForeColor = System.Drawing.Color.Olive;
-            this.lblTotalToday.Location = new System.Drawing.Point(12, 68);
+            this.lblTotalToday.Location = new System.Drawing.Point(12, 79);
             this.lblTotalToday.Name = "lblTotalToday";
             this.lblTotalToday.Size = new System.Drawing.Size(179, 23);
             this.lblTotalToday.TabIndex = 6;
@@ -118,12 +119,24 @@
             this.label2.Text = "Search  ⌕";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // lblTotalAnnual
+            // 
+            this.lblTotalAnnual.AutoSize = true;
+            this.lblTotalAnnual.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTotalAnnual.ForeColor = System.Drawing.Color.Olive;
+            this.lblTotalAnnual.Location = new System.Drawing.Point(284, 102);
+            this.lblTotalAnnual.Name = "lblTotalAnnual";
+            this.lblTotalAnnual.Size = new System.Drawing.Size(177, 23);
+            this.lblTotalAnnual.TabIndex = 15;
+            this.lblTotalAnnual.Text = "Total Annual Expense:";
+            // 
             // ExpensePreview
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(520, 573);
+            this.Controls.Add(this.lblTotalAnnual);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.search_tb);
             this.Controls.Add(this.lblTotalWeek);
@@ -151,5 +164,6 @@
         private System.Windows.Forms.Label lblTotalToday;
         private System.Windows.Forms.TextBox search_tb;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTotalAnnual;
     }
 }
