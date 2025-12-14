@@ -140,10 +140,10 @@ namespace Beedget
                 }
 
             }
-            lblTotalToday.Text = $"Today's Expense: ₱{totalToday:N2}";
-            lblTotalWeek.Text = $"Total Weekly Expense: ₱{totalWeek:N2}";
-            lblTotalMonth.Text = $"Total Monthly Expense: ₱{totalMonth:N2}";
-            lblTotalAnnual.Text = $"Total Annual Expense: ₱{totalAnnual:N2}";
+            lblTotalToday.Text = "Today's Expense: ₱" + totalToday.ToString("N2");
+            lblTotalWeek.Text = "Total Weekly Expense: ₱" + totalWeek.ToString("N2");
+            lblTotalMonth.Text = "Total Monthly Expense: ₱" + totalMonth.ToString("N2");
+            lblTotalAnnual.Text = "Total Annual Expense: ₱" + totalAnnual.ToString("N2");
         }
 
         public void RefreshExpenses()

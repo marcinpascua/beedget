@@ -36,7 +36,7 @@ namespace Beedget
             string targetAmount = tb_targetAmount.Text;
             string currentAmount = tb_currentAmount.Text;
             var categoryname = category.Text;
-            var targetDate = dateTimePicker1.Value;
+            var targetDate = this.targetDate.Value;
 
             if (title == "Title" || title == "")
             {
@@ -71,7 +71,7 @@ namespace Beedget
                     cmd.Parameters.AddWithValue("@CurrentAmount", tb_currentAmount.Text);
                     cmd.Parameters.AddWithValue("@TargetAmount", tb_targetAmount.Text);
                     cmd.Parameters.AddWithValue("@Dateadded", DateTime.Now);
-                    cmd.Parameters.AddWithValue("@TargetDate", dateTimePicker1.Value);
+                    cmd.Parameters.AddWithValue("@TargetDate", this.targetDate.Value);
                     cmd.Parameters.AddWithValue("@isAchieved", false);
                     cmd.Parameters.AddWithValue("@UserID", currentUser.UserID);
                     cmd.Parameters.AddWithValue("@BudgetTypeID", 1);
@@ -100,6 +100,11 @@ namespace Beedget
         }
 
         private void save_btn_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void addedDate_ValueChanged(object sender, EventArgs e)
         {
 
         }

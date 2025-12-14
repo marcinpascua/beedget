@@ -82,8 +82,6 @@ namespace Beedget
                             row["DateAdded"].ToString(),
                             Convert.ToInt32(row["BudgetID"])
                         );
-
-
                         preview.Dock = DockStyle.Top;
                         previewPanel.Controls.Add(preview);
                     }
@@ -116,8 +114,7 @@ namespace Beedget
                     totalDaily = Convert.ToDecimal(cmd.ExecuteScalar());
                 }
             }
-
-            lblTotalToday.Text = $"Total Expenses on {selectedDate:MMMM dd, yyyy}: ₱{totalDaily:N2}";
+            lblTotalToday.Text = "Total Expenses on " + selectedDate.ToString("MMMM dd, yyyy") + ": ₱" + totalDaily.ToString("N2");
         }
 
 

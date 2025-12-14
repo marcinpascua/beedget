@@ -50,7 +50,6 @@ namespace Beedget
                         dt = filteredRows.Any() ? filteredRows.CopyToDataTable() : dt.Clone();
                     }
 
-
                     foreach (DataRow row in dt.Rows)
                     {
                         SavingsPreviewControl preview = new SavingsPreviewControl(

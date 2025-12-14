@@ -36,7 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tb_targetAmount = new System.Windows.Forms.TextBox();
             this.save_btn = new System.Windows.Forms.FlowLayoutPanel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.targetDate = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.addedDate = new System.Windows.Forms.DateTimePicker();
@@ -54,7 +54,7 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.tb_targetAmount);
             this.panel3.Controls.Add(this.save_btn);
-            this.panel3.Controls.Add(this.dateTimePicker1);
+            this.panel3.Controls.Add(this.targetDate);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.addedDate);
@@ -138,20 +138,20 @@
             this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
             this.save_btn.Paint += new System.Windows.Forms.PaintEventHandler(this.save_btn_Paint);
             // 
-            // dateTimePicker1
+            // targetDate
             // 
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.White;
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.White;
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.Black;
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.Black;
-            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.Black;
-            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Yu Gothic UI", 16F);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(256, 234);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(194, 43);
-            this.dateTimePicker1.TabIndex = 11;
+            this.targetDate.CalendarForeColor = System.Drawing.Color.White;
+            this.targetDate.CalendarMonthBackground = System.Drawing.Color.White;
+            this.targetDate.CalendarTitleBackColor = System.Drawing.Color.Black;
+            this.targetDate.CalendarTitleForeColor = System.Drawing.Color.Black;
+            this.targetDate.CalendarTrailingForeColor = System.Drawing.Color.Black;
+            this.targetDate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.targetDate.Font = new System.Drawing.Font("Yu Gothic UI", 16F);
+            this.targetDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.targetDate.Location = new System.Drawing.Point(256, 234);
+            this.targetDate.Name = "targetDate";
+            this.targetDate.Size = new System.Drawing.Size(194, 43);
+            this.targetDate.TabIndex = 11;
             // 
             // label3
             // 
@@ -191,6 +191,7 @@
             this.addedDate.Name = "addedDate";
             this.addedDate.Size = new System.Drawing.Size(194, 43);
             this.addedDate.TabIndex = 5;
+            this.addedDate.ValueChanged += new System.EventHandler(this.addedDate_ValueChanged);
             // 
             // category
             // 
@@ -253,7 +254,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tb_targetAmount;
         private System.Windows.Forms.FlowLayoutPanel save_btn;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker targetDate;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker addedDate;
