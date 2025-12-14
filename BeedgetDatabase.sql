@@ -53,4 +53,8 @@ WHERE BudgetID = 0
 SELECT * FROM Budget
 INNER JOIN Users ON Budget.UserID = Users.UserID
 
+ALTER TABLE Budget
+ALTER COLUMN Dateadded DATETIME;
+
+
 
