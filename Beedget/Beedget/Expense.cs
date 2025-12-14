@@ -21,6 +21,7 @@ namespace Beedget
             InitializeComponent();
             this.parent = parent;
             this.currentUser = currentUser;
+
         }
 
         private void Expense_Load(object sender, EventArgs e)
